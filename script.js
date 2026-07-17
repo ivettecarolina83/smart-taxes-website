@@ -19,35 +19,34 @@ window.addEventListener('resize', () => {
   if (window.innerWidth > 900) closeMenu();
 });
 
-const revealObserver = new IntersectionObserver(
-  (entries, observer) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('visible');
-        observer.unobserve(entry.target);
-      }
-    });
-  },
-  { threshold: 0.12 }
-);
+const revealElements = document.querySelectorAll('.reveal');
 
-document.querySelectorAll('.reveal').forEach((element) => revealObserver.observe(element));
+if ('IntersectionObserver' in window) {
+  const revealObserver = new IntersectionObserver(
+    (entries, observer) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.12 }
+  );
+
+  revealElements.forEach((element) => revealObserver.observe(element));
+} else {
+  revealElements.forEach((element) => element.classList.add('visible'));
+}
 
 document.querySelectorAll('.accordion details').forEach((item) => {
   item.addEventListener('toggle', () => {
     if (!item.open) return;
+
     document.querySelectorAll('.accordion details').forEach((otherItem) => {
       if (otherItem !== item) otherItem.removeAttribute('open');
     });
   });
-});
-
-const contactForm = document.querySelector('#contact-form');
-const formStatus = document.querySelector('#form-status');
-
-contactForm.addEventListener('submit', (event) => {
-  event.preventDefault();
-  formStatus.textContent = 'Gracias. El formulario es demostrativo y todavÃ­a no envÃ­a datos.';
 });
 
 document.querySelector('#year').textContent = new Date().getFullYear();

@@ -1,28 +1,30 @@
 # Smart Taxes Website
 
-Sitio web inicial de **Smart Taxes**, diseÃ±ado para presentar sus servicios a la comunidad hispana residente en Estados Unidos.
+Sitio web inicial de **Smart Taxes**, diseñado para presentar sus servicios a la comunidad hispana residente en Estados Unidos.
 
-## TecnologÃ­as
+## Tecnologías
 
-- HTML5 semÃ¡ntico
-- CSS3 adaptable a computadoras, tabletas y telÃ©fonos
+- HTML5 semántico
+- CSS3 adaptable a computadoras, tabletas y teléfonos
 - JavaScript sin dependencias
 
 ## Ver el proyecto
 
-Abre `index.html` directamente en un navegador. No es necesario instalar dependencias ni ejecutar un proceso de compilaciÃ³n.
+Abre `index.html` directamente en un navegador. No es necesario instalar dependencias ni ejecutar un proceso de compilación.
 
 ## Estructura
 
 ```text
 .
-â”œâ”€â”€ images/
-â”œâ”€â”€ index.html
-â”œâ”€â”€ script.js
-â”œâ”€â”€ styles.css
-â””â”€â”€ README.md
+├── assets/
+│   └── images/
+│       └── logo-smart-taxes.png
+├── index.html
+├── script.js
+├── styles.css
+└── README.md
 ```
 
-## Nota sobre el formulario
+## Contenido pendiente
 
-El formulario de contacto es provisional y no transmite ni almacena informaciÃ³n. Antes de publicar el sitio se deberÃ¡ conectar a un servicio de formularios o a un backend aprobado.
+Los servicios, la información institucional y los canales de contacto se incorporarán cuando Smart Taxes proporcione los datos oficiales.
