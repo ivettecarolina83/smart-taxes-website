@@ -32,6 +32,15 @@ img { display: block; max-width: 100%; }
 .main-nav { display: flex; align-items: center; gap: 30px; color: var(--ink); font-size: .88rem; font-weight: 600; }
 .main-nav a { transition: color .2s; }
 .main-nav a:hover { color: var(--blue); }
+.nav-dropdown { position: relative; }
+.services-toggle { display: flex; align-items: center; gap: 6px; padding: 8px 0; color: var(--ink); background: transparent; border: 0; font-size: inherit; font-weight: 600; }
+.services-toggle:hover, .services-toggle[aria-expanded="true"] { color: var(--blue); }
+.services-toggle span { font-size: 1rem; transition: transform .2s; }
+.services-toggle[aria-expanded="true"] span { transform: rotate(180deg); }
+.services-menu { position: absolute; top: calc(100% + 14px); left: 50%; width: 270px; padding: 10px; background: var(--white); border: 1px solid var(--line); border-radius: 8px; box-shadow: var(--shadow); opacity: 0; visibility: hidden; transform: translate(-50%, -8px); transition: opacity .2s, transform .2s, visibility .2s; }
+.nav-dropdown.open .services-menu { opacity: 1; visibility: visible; transform: translate(-50%, 0); }
+.services-menu a { display: block; padding: 11px 13px; border-radius: 5px; font-size: .8rem; }
+.services-menu a:hover { color: var(--blue); background: var(--blue-soft); }
 .nav-cta { padding: 9px 18px; color: var(--white) !important; background: var(--blue); border-radius: 6px; }
 .menu-toggle { display: none; padding: 8px; background: none; border: 0; }
 .menu-toggle span:not(.sr-only) { display: block; width: 25px; height: 2px; margin: 5px; background: var(--ink); transition: transform .25s, opacity .25s; }
@@ -95,6 +104,20 @@ h1, h2 { color: var(--ink); font-family: "Anton", Impact, sans-serif; font-weigh
 .accordion details[open] summary span { transform: rotate(45deg); }
 .accordion details p { margin: 0; padding: 0 24px 20px; color: var(--muted); font-size: .85rem; }
 
+.service-detail-hero { padding: 80px 0 60px; color: var(--white); background: linear-gradient(135deg, var(--blue-dark), var(--blue)); text-align: center; }
+.service-detail-hero .eyebrow { color: #c7dcf6; }
+.service-detail-hero h1 { max-width: 850px; margin: 0 auto 16px; color: var(--white); font-size: clamp(2.7rem, 5vw, 4.7rem); }
+.service-detail-hero p { max-width: 720px; margin: auto; color: #dce9f8; }
+.service-detail-content { padding: 70px 0; }
+.detail-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 22px; }
+.detail-card { padding: 30px; }
+.detail-card h2 { margin: 0 0 18px; font-family: "Poppins", Arial, sans-serif; font-size: 1.12rem; font-weight: 700; text-transform: none; }
+.detail-card p { color: var(--muted); font-size: .88rem; }
+.detail-card ul { margin: 0; padding-left: 20px; color: var(--muted); font-size: .88rem; }
+.detail-card li + li { margin-top: 8px; }
+.detail-card li::marker { color: var(--blue); }
+.detail-actions { margin-top: 34px; display: flex; justify-content: center; gap: 14px; flex-wrap: wrap; }
+
 .contact { padding: 65px 0; color: var(--white); background: var(--blue-dark); text-align: center; }
 .section-title.light span { background: rgba(255,255,255,.25); }
 .section-title.light h2 { color: var(--white); }
@@ -131,6 +154,12 @@ h1, h2 { color: var(--ink); font-family: "Anton", Impact, sans-serif; font-weigh
   .main-nav { position: fixed; inset: 78px 0 auto; display: flex; flex-direction: column; align-items: stretch; gap: 5px; padding: 24px 20px 32px; background: var(--white); border-bottom: 1px solid var(--line); box-shadow: var(--shadow); transform: translateY(-130%); visibility: hidden; transition: transform .3s, visibility .3s; }
   .main-nav.open { transform: none; visibility: visible; }
   .main-nav a { padding: 10px 12px; }
+  .nav-dropdown { width: 100%; }
+  .services-toggle { width: 100%; justify-content: space-between; padding: 10px 12px; }
+  .services-menu { position: static; width: 100%; max-height: 0; padding: 0 8px; border: 0; box-shadow: none; opacity: 1; visibility: visible; overflow: hidden; transform: none; transition: max-height .25s, padding .25s; }
+  .nav-dropdown.open .services-menu { max-height: 260px; padding: 6px 8px 10px; transform: none; }
+  .services-menu a { padding-left: 20px; }
+  .detail-grid { grid-template-columns: 1fr; }
   .nav-cta { text-align: center; }
   .hero-copy { padding-top: 44px; }
   .hero h1 { font-size: 3rem; }
