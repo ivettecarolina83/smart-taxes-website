@@ -39,13 +39,14 @@ img { display: block; max-width: 100%; }
 .menu-toggle[aria-expanded="true"] span:nth-child(3) { opacity: 0; }
 .menu-toggle[aria-expanded="true"] span:nth-child(4) { transform: translateY(-7px) rotate(-45deg); }
 
-.hero { position: relative; min-height: 740px; padding: 184px 0 100px; overflow: hidden; background: linear-gradient(115deg, #f9fbfe 0%, var(--blue-light) 58%, #f7f9fc 100%); }
-.hero-grid { position: relative; z-index: 2; display: grid; grid-template-columns: 1.1fr 0.72fr; align-items: center; gap: 85px; }
+.hero { position: relative; min-height: 820px; padding: 150px 0 96px; overflow: hidden; background: linear-gradient(115deg, #f9fbfe 0%, var(--blue-light) 58%, #f7f9fc 100%); }
+.hero-grid { position: relative; z-index: 2; display: grid; grid-template-columns: 1.28fr 0.72fr; align-items: center; gap: 64px; }
 .eyebrow { margin: 0 0 16px; color: var(--blue); font-size: 0.74rem; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; }
 .hero h1, .section h2 { margin: 0; font-family: "Anton", Impact, sans-serif; font-weight: 400; line-height: 1.04; letter-spacing: 0.01em; text-transform: uppercase; }
-.hero h1 { max-width: 760px; font-size: clamp(3.8rem, 7vw, 6.7rem); }
-.hero h1 span { color: var(--blue); }
-.hero-lead { max-width: 580px; margin: 26px 0 34px; color: var(--muted); font-size: 1.08rem; }
+.hero h1 { max-width: 760px; color: var(--blue); font-size: clamp(3rem, 5vw, 4.8rem); }
+.hero-about { max-width: 720px; margin: 24px 0 0; }
+.hero-about p { margin: 0 0 16px; color: var(--muted); font-size: 0.93rem; line-height: 1.75; }
+.hero-slogan { margin: 26px 0 30px; padding: 16px 0 16px 22px; color: var(--blue-dark); border-left: 3px solid var(--blue); font-size: 1rem; font-weight: 600; }
 .hero-actions { display: flex; align-items: center; flex-wrap: wrap; gap: 28px; }
 .button { display: inline-flex; align-items: center; justify-content: center; min-height: 51px; padding: 12px 25px; border: 0; border-radius: 100px; font-size: 0.9rem; font-weight: 600; transition: transform 0.2s, box-shadow 0.2s, background 0.2s; }
 .button:hover { transform: translateY(-2px); }
@@ -159,8 +160,9 @@ img { display: block; max-width: 100%; }
   .brand { width: 96px; height: 60px; }
   .main-nav { inset: 72px 0 auto; }
   .hero { min-height: auto; padding: 126px 0 76px; }
-  .hero h1 { font-size: 3.35rem; }
-  .hero-lead { font-size: 0.96rem; }
+  .hero h1 { font-size: 3.1rem; }
+  .hero-about p { font-size: 0.9rem; }
+  .hero-slogan { margin-bottom: 26px; }
   .hero-actions { align-items: flex-start; flex-direction: column; gap: 18px; }
   .hero-media { width: min(100%, 330px); height: 330px; border-radius: 22px; }
   .hero-media figcaption { left: 20px; right: 20px; bottom: 17px; }
