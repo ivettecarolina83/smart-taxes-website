@@ -53,7 +53,7 @@ img { display: block; max-width: 100%; }
 .button-primary:hover { background: var(--blue-dark); }
 .text-link { color: var(--blue); font-size: 0.9rem; font-weight: 600; }
 .text-link span { margin-left: 5px; }
-.hero-media { position: relative; height: 510px; margin: 0; overflow: hidden; background: var(--blue-light); border-radius: 28px; box-shadow: var(--shadow); }
+.hero-media { position: relative; width: min(100%, 350px); height: 420px; justify-self: end; margin: 0; overflow: hidden; background: var(--blue-light); border-radius: 28px; box-shadow: var(--shadow); }
 .hero-media::after { content: ""; position: absolute; inset: auto 0 0; height: 38%; background: linear-gradient(to top, rgba(8, 29, 57, 0.72), transparent); pointer-events: none; }
 .hero-media img { width: 100%; height: 100%; object-fit: cover; object-position: center top; }
 .hero-media figcaption { position: absolute; z-index: 1; left: 26px; right: 26px; bottom: 22px; color: var(--white); font-size: 0.78rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; }
@@ -144,7 +144,7 @@ img { display: block; max-width: 100%; }
   .hero { padding-top: 150px; }
   .hero-grid, .about-grid, .faq-grid, .contact-card { grid-template-columns: 1fr; }
   .hero-grid, .about-grid, .faq-grid { gap: 50px; }
-  .hero-media { width: min(100%, 590px); height: 460px; }
+  .hero-media { width: min(100%, 500px); height: 400px; justify-self: center; }
   .section-heading { align-items: start; flex-direction: column; gap: 18px; }
   .about-visual { min-height: 420px; }
   .reason-grid { grid-template-columns: 1fr; }
@@ -162,7 +162,7 @@ img { display: block; max-width: 100%; }
   .hero h1 { font-size: 3.35rem; }
   .hero-lead { font-size: 0.96rem; }
   .hero-actions { align-items: flex-start; flex-direction: column; gap: 18px; }
-  .hero-media { height: 390px; border-radius: 22px; }
+  .hero-media { width: min(100%, 330px); height: 330px; border-radius: 22px; }
   .hero-media figcaption { left: 20px; right: 20px; bottom: 17px; }
   .section { padding: 70px 0; }
   .section-heading h2, .about-copy h2, .faq-intro h2, .contact-copy h2 { font-size: 2.75rem; }
