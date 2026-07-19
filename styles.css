@@ -53,12 +53,10 @@ img { display: block; max-width: 100%; }
 .button-primary:hover { background: var(--blue-dark); }
 .text-link { color: var(--blue); font-size: 0.9rem; font-weight: 600; }
 .text-link span { margin-left: 5px; }
-.hero-card { padding: 38px 34px; color: var(--white); background: linear-gradient(145deg, var(--blue), var(--blue-dark)); border-radius: 28px; box-shadow: var(--shadow); }
-.hero-card-label { margin: 0 0 35px; color: #bdd5f4; font-size: 0.72rem; font-weight: 700; letter-spacing: 0.13em; text-transform: uppercase; }
-.hero-card h2 { margin: 0; font-family: "Anton", Impact, sans-serif; font-size: 2.55rem; font-weight: 400; line-height: 1.08; text-transform: uppercase; }
-.hero-card > p:not(.hero-card-label, .hero-card-quote) { color: #d9e6f6; font-size: 0.92rem; }
-.hero-card-line { width: 72px; height: 2px; margin: 28px 0; background: #8cb4e7; }
-.hero-card-quote { margin: 0; font-weight: 600; }
+.hero-media { position: relative; height: 510px; margin: 0; overflow: hidden; background: var(--blue-light); border-radius: 28px; box-shadow: var(--shadow); }
+.hero-media::after { content: ""; position: absolute; inset: auto 0 0; height: 38%; background: linear-gradient(to top, rgba(8, 29, 57, 0.72), transparent); pointer-events: none; }
+.hero-media img { width: 100%; height: 100%; object-fit: cover; object-position: center top; }
+.hero-media figcaption { position: absolute; z-index: 1; left: 26px; right: 26px; bottom: 22px; color: var(--white); font-size: 0.78rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; }
 .hero-shape { position: absolute; border-radius: 50%; }
 .hero-shape-one { width: 420px; height: 420px; right: -180px; top: 80px; background: rgba(24, 80, 155, 0.08); }
 .hero-shape-two { width: 240px; height: 240px; left: -120px; bottom: -20px; background: rgba(24, 80, 155, 0.06); }
@@ -146,7 +144,7 @@ img { display: block; max-width: 100%; }
   .hero { padding-top: 150px; }
   .hero-grid, .about-grid, .faq-grid, .contact-card { grid-template-columns: 1fr; }
   .hero-grid, .about-grid, .faq-grid { gap: 50px; }
-  .hero-card { max-width: 590px; }
+  .hero-media { width: min(100%, 590px); height: 460px; }
   .section-heading { align-items: start; flex-direction: column; gap: 18px; }
   .about-visual { min-height: 420px; }
   .reason-grid { grid-template-columns: 1fr; }
@@ -164,8 +162,8 @@ img { display: block; max-width: 100%; }
   .hero h1 { font-size: 3.35rem; }
   .hero-lead { font-size: 0.96rem; }
   .hero-actions { align-items: flex-start; flex-direction: column; gap: 18px; }
-  .hero-card { padding: 28px 24px; }
-  .hero-card h2 { font-size: 2.15rem; }
+  .hero-media { height: 390px; border-radius: 22px; }
+  .hero-media figcaption { left: 20px; right: 20px; bottom: 17px; }
   .section { padding: 70px 0; }
   .section-heading h2, .about-copy h2, .faq-intro h2, .contact-copy h2 { font-size: 2.75rem; }
   .pending-card { align-items: flex-start; flex-direction: column; padding: 26px; }
