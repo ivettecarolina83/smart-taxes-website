@@ -239,6 +239,76 @@
               </div>
             </article>
           </div>
+          <div class="consultation-panel reveal" id="asesoria">
+            <div class="consultation-intro">
+              <p class="eyebrow">Solicitud de asesoría</p>
+              <h3>Cuéntanos cómo podemos ayudarte</h3>
+              <p>Completa este formulario y un preparador podrá comunicarse contigo por el medio seleccionado.</p>
+            </div>
+            <form class="consultation-form" id="consultation-form" data-endpoint="" novalidate>
+              <div class="form-grid">
+                <div class="form-field">
+                  <label for="form-name">Nombre y apellido <span aria-hidden="true">*</span></label>
+                  <input id="form-name" name="nombre" type="text" autocomplete="name" maxlength="100" required />
+                </div>
+                <div class="form-field">
+                  <label for="form-phone">Teléfono <span aria-hidden="true">*</span></label>
+                  <input id="form-phone" name="telefono" type="tel" autocomplete="tel" maxlength="25" required />
+                </div>
+                <div class="form-field">
+                  <label for="form-email">Correo electrónico <span aria-hidden="true">*</span></label>
+                  <input id="form-email" name="correo" type="email" autocomplete="email" maxlength="120" required />
+                </div>
+                <div class="form-field">
+                  <label for="form-contact-method">Medio de contacto preferido <span aria-hidden="true">*</span></label>
+                  <select id="form-contact-method" name="contacto_preferido" required>
+                    <option value="">Selecciona una opción</option>
+                    <option value="Llamada">Llamada</option>
+                    <option value="Mensaje de texto">Mensaje de texto</option>
+                    <option value="Correo electrónico">Correo electrónico</option>
+                  </select>
+                </div>
+                <div class="form-field">
+                  <label for="form-preparer">Preparador preferido</label>
+                  <select id="form-preparer" name="preparador">
+                    <option value="Cualquiera disponible">Cualquiera disponible</option>
+                    <option value="Luis Munoz">Luis Munoz</option>
+                    <option value="Liz Villarreal">Liz Villarreal</option>
+                  </select>
+                </div>
+                <div class="form-field">
+                  <label for="form-service">Servicio requerido <span aria-hidden="true">*</span></label>
+                  <select id="form-service" name="servicio" required>
+                    <option value="">Selecciona un servicio</option>
+                    <option value="Preparación de impuestos">Preparación de impuestos</option>
+                    <option value="Contabilidad y nómina">Contabilidad y nómina</option>
+                    <option value="Resolución con el IRS">Resolución con el IRS</option>
+                    <option value="Protección financiera">Protección financiera</option>
+                    <option value="Otra consulta">Otra consulta</option>
+                  </select>
+                </div>
+                <div class="form-field form-field-wide">
+                  <label for="form-message">Breve descripción de tu consulta <span aria-hidden="true">*</span></label>
+                  <textarea id="form-message" name="mensaje" rows="5" maxlength="1200" required></textarea>
+                  <small>No incluyas SSN, ITIN, información bancaria, contraseñas ni documentos fiscales.</small>
+                </div>
+                <div class="form-honeypot" aria-hidden="true">
+                  <label for="form-website">Sitio web</label>
+                  <input id="form-website" name="website" type="text" tabindex="-1" autocomplete="off" />
+                </div>
+                <div class="form-field form-field-wide form-consent">
+                  <label>
+                    <input name="consentimiento" type="checkbox" value="Sí" required />
+                    <span>Autorizo a Smart Taxes a contactarme en relación con esta solicitud. <span aria-hidden="true">*</span></span>
+                  </label>
+                </div>
+              </div>
+              <input type="hidden" name="origen" value="Sitio web de Smart Taxes" />
+              <button class="button button-primary form-submit" type="submit">Enviar solicitud</button>
+              <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+              <p class="form-disclaimer">El envío de este formulario no establece automáticamente una relación profesional. No envíes información fiscal o financiera confidencial.</p>
+            </form>
+          </div>
           <p class="social-heading">También puedes seguir a Smart Taxes en sus canales oficiales.</p>
           <div class="social-links" aria-label="Redes sociales de Smart Taxes">
             <a href="https://www.facebook.com/smartaxesusa" target="_blank" rel="noopener noreferrer" aria-label="Smart Taxes en Facebook">
