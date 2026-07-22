@@ -149,3 +149,53 @@ if (carousel) {
 
   startAutoplay();
 }
+
+const consultationForm = document.querySelector('#consultation-form');
+
+if (consultationForm) {
+  const formStatus = consultationForm.querySelector('#form-status');
+  const submitButton = consultationForm.querySelector('.form-submit');
+
+  consultationForm.addEventListener('submit', async (event) => {
+    event.preventDefault();
+    formStatus.className = 'form-status';
+
+    if (!consultationForm.checkValidity()) {
+      consultationForm.reportValidity();
+      formStatus.textContent = 'Revisa los campos obligatorios antes de enviar.';
+      formStatus.classList.add('error');
+      return;
+    }
+
+    const endpoint = consultationForm.dataset.endpoint?.trim();
+
+    if (!endpoint) {
+      formStatus.textContent = 'El formulario está listo, pero falta conectar la URL de Google Apps Script.';
+      formStatus.classList.add('error');
+      return;
+    }
+
+    submitButton.disabled = true;
+    submitButton.textContent = 'Enviando…';
+    formStatus.textContent = 'Enviando tu solicitud…';
+
+    try {
+      await fetch(endpoint, {
+        method: 'POST',
+        mode: 'no-cors',
+        body: new FormData(consultationForm)
+      });
+
+      consultationForm.reset();
+      formStatus.textContent = 'Solicitud enviada. Smart Taxes podrá comunicarse contigo por el medio indicado.';
+      formStatus.classList.add('success');
+    } catch (error) {
+      formStatus.textContent = 'No pudimos enviar la solicitud. Intenta nuevamente o utiliza los botones de llamada o mensaje.';
+      formStatus.classList.add('error');
+    } finally {
+      submitButton.disabled = false;
+      submitButton.textContent = 'Enviar solicitud';
+    }
+  });
+}
+
