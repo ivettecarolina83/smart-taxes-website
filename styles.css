@@ -109,7 +109,9 @@ h1, h2 { color: var(--ink); font-family: "Anton", Impact, sans-serif; font-weigh
 .card-link { margin-top: auto; padding-top: 18px; color: var(--blue); border-top: 1px solid var(--line); font-size: .82rem; font-weight: 700; }
 .service-note { background: var(--blue-soft); }
 
-.audience { background: var(--gray); border-block: 1px solid #e6eaf0; }
+.audience { background: #545454; border-block: 1px solid #474747; }
+.audience .section-title h2 { color: var(--white); }
+.audience .section-title span { background: rgba(255,255,255,.45); }
 .audience-card { max-width: 780px; margin: auto; display: flex; align-items: center; gap: 28px; padding: 30px 34px; background: var(--white); border: 1px solid var(--line); border-radius: 7px; box-shadow: var(--shadow); }
 .audience-symbol { flex: 0 0 auto; width: 76px; height: 76px; display: grid; place-items: center; color: var(--white); background: var(--blue); border-radius: 50%; font-family: "Anton", Impact, sans-serif; font-size: 1.5rem; }
 .reason-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; }
