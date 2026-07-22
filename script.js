@@ -82,7 +82,6 @@ if (carousel) {
   const dots = Array.from(carousel.querySelectorAll('.carousel-dot'));
   const previousButton = carousel.querySelector('.carousel-prev');
   const nextButton = carousel.querySelector('.carousel-next');
-  const pauseButton = carousel.querySelector('.carousel-pause');
   const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   let currentSlide = 0;
   let autoplayTimer;
@@ -111,16 +110,8 @@ if (carousel) {
   function startAutoplay() {
     stopAutoplay();
     if (!isPaused) {
-      autoplayTimer = window.setInterval(() => showSlide(currentSlide + 1), 5000);
+      autoplayTimer = window.setInterval(() => showSlide(currentSlide + 1), 3000);
     }
-  }
-
-  function setPaused(paused) {
-    isPaused = paused;
-    pauseButton.setAttribute('aria-pressed', String(paused));
-    pauseButton.setAttribute('aria-label', paused ? 'Reanudar carrusel' : 'Pausar carrusel');
-    pauseButton.textContent = paused ? '▶' : 'Ⅱ';
-    startAutoplay();
   }
 
   previousButton.addEventListener('click', () => {
@@ -132,8 +123,6 @@ if (carousel) {
     showSlide(currentSlide + 1);
     startAutoplay();
   });
-
-  pauseButton.addEventListener('click', () => setPaused(!isPaused));
 
   dots.forEach((dot, index) => {
     dot.addEventListener('click', () => {
@@ -158,5 +147,5 @@ if (carousel) {
     startAutoplay();
   }, { passive: true });
 
-  setPaused(isPaused);
+  startAutoplay();
 }
