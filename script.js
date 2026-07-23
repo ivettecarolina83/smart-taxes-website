@@ -150,6 +150,41 @@ if (carousel) {
   startAutoplay();
 }
 
+const consultationDialog = document.querySelector('#consultation-dialog');
+const openConsultationButton = document.querySelector('#open-consultation');
+const closeConsultationButton = document.querySelector('#close-consultation');
+
+function openConsultationDialog() {
+  if (!consultationDialog) return;
+  consultationDialog.showModal();
+  document.body.classList.add('modal-open');
+}
+
+function closeConsultationDialog() {
+  if (!consultationDialog?.open) return;
+  consultationDialog.close();
+}
+
+openConsultationButton?.addEventListener('click', openConsultationDialog);
+closeConsultationButton?.addEventListener('click', closeConsultationDialog);
+
+consultationDialog?.addEventListener('click', (event) => {
+  if (event.target === consultationDialog) closeConsultationDialog();
+});
+
+consultationDialog?.addEventListener('close', () => {
+  document.body.classList.remove('modal-open');
+  openConsultationButton?.focus();
+});
+
+consultationDialog?.addEventListener('cancel', () => {
+  document.body.classList.remove('modal-open');
+});
+
+if (window.location.hash === '#asesoria') {
+  openConsultationDialog();
+}
+
 const consultationForm = document.querySelector('#consultation-form');
 
 if (consultationForm) {
