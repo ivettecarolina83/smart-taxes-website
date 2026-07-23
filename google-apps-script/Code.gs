@@ -6,7 +6,6 @@ const ALLOWED_SERVICES = [
   'Protección financiera',
   'Otra consulta'
 ];
-const ALLOWED_PREPARERS = ['Cualquiera disponible', 'Luis Munoz', 'Liz Villarreal'];
 const ALLOWED_CONTACT_METHODS = ['Llamada', 'Mensaje de texto', 'Correo electrónico'];
 
 function doPost(e) {
@@ -22,7 +21,6 @@ function doPost(e) {
     const phone = clean_(data.telefono, 25);
     const email = clean_(data.correo, 120).toLowerCase();
     const contactMethod = clean_(data.contacto_preferido, 40);
-    const preparer = clean_(data.preparador, 40) || 'Cualquiera disponible';
     const service = clean_(data.servicio, 80);
     const message = clean_(data.mensaje, 1200);
     const consent = clean_(data.consentimiento, 5);
@@ -33,7 +31,6 @@ function doPost(e) {
 
     if (
       ALLOWED_SERVICES.indexOf(service) === -1 ||
-      ALLOWED_PREPARERS.indexOf(preparer) === -1 ||
       ALLOWED_CONTACT_METHODS.indexOf(contactMethod) === -1
     ) {
       return response_({ ok: false, error: 'Selección inválida.' });
@@ -51,7 +48,6 @@ function doPost(e) {
       'Teléfono: ' + phone,
       'Correo: ' + email,
       'Contacto preferido: ' + contactMethod,
-      'Preparador preferido: ' + preparer,
       'Servicio: ' + service,
       '',
       'Consulta:',
@@ -68,6 +64,36 @@ function doPost(e) {
       replyTo: email,
       name: 'Formulario web de Smart Taxes'
     });
+
+    const confirmationBody = [
+      'Hola ' + name + ',',
+      '',
+      'Hemos recibido tu solicitud de asesoría en Smart Taxes.',
+      '',
+      'Servicio solicitado: ' + service,
+      'Medio de contacto preferido: ' + contactMethod,
+      '',
+      'Nuestro equipo revisará la información y podrá comunicarse contigo por el medio indicado.',
+      '',
+      'Por tu seguridad, no respondas con números de Seguro Social, ITIN, información bancaria, contraseñas ni documentos fiscales.',
+      '',
+      'Tu tranquilidad es nuestra especialidad. Somos tu punto de contacto.',
+      'Smart Taxes',
+      '',
+      'Este es un mensaje automático de confirmación.'
+    ].join('\n');
+
+    try {
+      MailApp.sendEmail({
+        to: email,
+        subject: 'Recibimos tu solicitud | Smart Taxes',
+        body: confirmationBody,
+        replyTo: RECIPIENT_EMAIL,
+        name: 'Smart Taxes'
+      });
+    } catch (confirmationError) {
+      console.error('No se pudo enviar la confirmación al cliente:', confirmationError);
+    }
 
     return response_({ ok: true });
   } catch (error) {
