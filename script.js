@@ -186,6 +186,26 @@ if (window.location.hash === '#asesoria') {
 }
 
 const consultationForm = document.querySelector('#consultation-form');
+const isEnglishPage = document.documentElement.lang === 'en';
+const formMessages = isEnglishPage
+  ? {
+      invalid: 'Review the required fields before submitting.',
+      notConnected: 'The form is ready, but the Google Apps Script URL has not been connected.',
+      sending: 'Sending your request…',
+      sent: 'Request sent. Smart Taxes may contact you through your selected method.',
+      failed: 'We could not send your request. Please try again or use the call or text buttons.',
+      submit: 'Submit request',
+      submitting: 'Sending…'
+    }
+  : {
+      invalid: formMessages.invalid,
+      notConnected: formMessages.notConnected,
+      sending: formMessages.sending,
+      sent: formMessages.sent,
+      failed: formMessages.failed,
+      submit: formMessages.submit,
+      submitting: formMessages.submitting
+    };
 
 if (consultationForm) {
   const formStatus = consultationForm.querySelector('#form-status');
@@ -197,7 +217,7 @@ if (consultationForm) {
 
     if (!consultationForm.checkValidity()) {
       consultationForm.reportValidity();
-      formStatus.textContent = 'Revisa los campos obligatorios antes de enviar.';
+      formStatus.textContent = formMessages.invalid;
       formStatus.classList.add('error');
       return;
     }
@@ -205,14 +225,14 @@ if (consultationForm) {
     const endpoint = consultationForm.dataset.endpoint?.trim();
 
     if (!endpoint) {
-      formStatus.textContent = 'El formulario está listo, pero falta conectar la URL de Google Apps Script.';
+      formStatus.textContent = formMessages.notConnected;
       formStatus.classList.add('error');
       return;
     }
 
     submitButton.disabled = true;
-    submitButton.textContent = 'Enviando…';
-    formStatus.textContent = 'Enviando tu solicitud…';
+    submitButton.textContent = formMessages.submitting;
+    formStatus.textContent = formMessages.sending;
 
     try {
       await fetch(endpoint, {
@@ -222,14 +242,14 @@ if (consultationForm) {
       });
 
       consultationForm.reset();
-      formStatus.textContent = 'Solicitud enviada. Smart Taxes podrá comunicarse contigo por el medio indicado.';
+      formStatus.textContent = formMessages.sent;
       formStatus.classList.add('success');
     } catch (error) {
-      formStatus.textContent = 'No pudimos enviar la solicitud. Intenta nuevamente o utiliza los botones de llamada o mensaje.';
+      formStatus.textContent = formMessages.failed;
       formStatus.classList.add('error');
     } finally {
       submitButton.disabled = false;
-      submitButton.textContent = 'Enviar solicitud';
+      submitButton.textContent = formMessages.submit;
     }
   });
 }
