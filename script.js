@@ -198,13 +198,13 @@ const formMessages = isEnglishPage
       submitting: 'Sending…'
     }
   : {
-      invalid: formMessages.invalid,
-      notConnected: formMessages.notConnected,
-      sending: formMessages.sending,
-      sent: formMessages.sent,
-      failed: formMessages.failed,
-      submit: formMessages.submit,
-      submitting: formMessages.submitting
+      invalid: 'Revisa los campos obligatorios antes de enviar.',
+      notConnected: 'El formulario está listo, pero falta conectar la URL de Google Apps Script.',
+      sending: 'Enviando tu solicitud…',
+      sent: 'Solicitud enviada. Smart Taxes podrá comunicarse contigo por el medio indicado.',
+      failed: 'No pudimos enviar la solicitud. Intenta nuevamente o utiliza los botones de llamada o mensaje.',
+      submit: 'Enviar solicitud',
+      submitting: 'Enviando…'
     };
 
 if (consultationForm) {
