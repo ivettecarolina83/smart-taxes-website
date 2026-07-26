@@ -483,7 +483,7 @@ body.modal-open { overflow: hidden; }
   background:
     radial-gradient(circle at 50% 52%, rgba(224, 239, 255, .92), transparent 34%),
     linear-gradient(145deg, #ffffff 0%, #f3f7fc 100%);
-  animation: intro-overlay-out .75s ease 4.25s forwards;
+  animation: intro-overlay-out .75s ease 5s forwards;
 }
 
 body.intro-active { overflow: hidden; }
@@ -495,7 +495,7 @@ body.intro-active { overflow: hidden; }
   overflow: hidden;
   clip-path: inset(100% 0 0 0);
   filter: drop-shadow(0 12px 24px rgba(24, 80, 155, .18));
-  animation: intro-logo-form 2.2s cubic-bezier(.3, .05, .18, 1) .55s forwards;
+  animation: intro-logo-form 1.65s cubic-bezier(.3, .05, .18, 1) 2.05s forwards;
 }
 
 .intro-logo {
@@ -508,30 +508,72 @@ body.intro-active { overflow: hidden; }
   z-index: 3;
   top: -18vh;
   left: 50%;
-  width: 16px;
+  width: 22px;
   height: 68vh;
   min-height: 320px;
-  border-radius: 0 0 50% 50%;
-  background: linear-gradient(
-    180deg,
-    rgba(255,255,255,0) 0%,
-    rgba(73,151,222,.28) 16%,
-    rgba(24,80,155,.9) 74%,
-    rgba(135,199,242,.5) 100%
-  );
-  box-shadow: 0 0 18px rgba(52,133,205,.35);
+  overflow: hidden;
+  border-radius: 42% 58% 48% 52% / 4% 6% 10% 8%;
+  background:
+    linear-gradient(90deg,
+      rgba(255,255,255,.08) 0%,
+      rgba(185,226,251,.62) 16%,
+      rgba(65,150,218,.9) 38%,
+      rgba(24,80,155,.96) 61%,
+      rgba(112,193,239,.72) 82%,
+      rgba(255,255,255,.12) 100%
+    ),
+    linear-gradient(180deg,
+      rgba(255,255,255,0) 0%,
+      rgba(83,169,228,.68) 22%,
+      rgba(24,80,155,.95) 72%,
+      rgba(145,211,247,.55) 100%
+    );
+  background-size: 100% 190px, 100% 230px;
+  box-shadow:
+    inset 3px 0 5px rgba(255,255,255,.52),
+    inset -4px 0 6px rgba(8,53,111,.34),
+    0 0 12px rgba(52,133,205,.3);
+  filter: drop-shadow(0 5px 5px rgba(24,80,155,.2));
   transform: translateX(-50%) scaleY(0);
-  transform-origin: top;
-  animation: intro-water-pour 2.75s cubic-bezier(.22,.65,.2,1) .08s forwards;
+  transform-origin: 50% 0;
+  animation:
+    intro-water-pour 2.75s cubic-bezier(.22,.65,.2,1) .08s forwards,
+    intro-water-shimmer .5s linear .08s infinite;
+}
+
+.intro-water::before,
+.intro-water::after {
+  content: "";
+  position: absolute;
+  top: 4%;
+  bottom: 2%;
+  pointer-events: none;
+}
+
+.intro-water::before {
+  left: 18%;
+  width: 16%;
+  background: linear-gradient(180deg, transparent, rgba(255,255,255,.8), transparent 72%);
+  filter: blur(.45px);
+  opacity: .78;
+}
+
+.intro-water::after {
+  right: 13%;
+  width: 11%;
+  background: linear-gradient(180deg, rgba(255,255,255,.15), rgba(203,236,255,.7) 45%, transparent 88%);
+  filter: blur(.6px);
+  opacity: .65;
+  transform: skewX(-4deg);
 }
 
 .intro-water span {
   position: absolute;
   bottom: -8px;
-  width: 8px;
-  height: 18px;
-  border-radius: 50% 50% 55% 55%;
-  background: rgba(65,143,211,.58);
+  width: 5px;
+  height: 15px;
+  border-radius: 48% 52% 58% 42% / 35% 38% 62% 65%;
+  background: linear-gradient(90deg, rgba(190,230,252,.75), rgba(39,115,184,.72));
   opacity: 0;
   animation: intro-droplet .9s ease-out .72s forwards;
 }
@@ -550,17 +592,25 @@ body.intro-active { overflow: hidden; }
   letter-spacing: .14em;
   opacity: 0;
   transform: translateY(12px);
-  animation: intro-tagline-in .8s ease 3.05s forwards;
+  animation: intro-tagline-in .8s ease 3.9s forwards;
 }
 
 .brand-intro.is-finished { display: none; }
 
 @keyframes intro-water-pour {
-  0% { transform: translateX(-50%) scaleY(0); opacity: 0; }
-  10% { opacity: 1; }
-  72% { transform: translateX(-50%) scaleY(1); opacity: 1; }
-  90% { transform: translateX(-50%) scaleY(1); opacity: .9; }
-  100% { transform: translateX(-50%) scaleY(1); opacity: 0; }
+  0% { transform: translateX(-50%) scaleX(.55) scaleY(0); opacity: 0; }
+  10% { transform: translateX(calc(-50% - 1px)) scaleX(.78) scaleY(.12); opacity: 1; }
+  28% { transform: translateX(calc(-50% + 1px)) scaleX(1.08) scaleY(.36); }
+  46% { transform: translateX(calc(-50% - 2px)) scaleX(.88) scaleY(.62); }
+  64% { transform: translateX(calc(-50% + 1px)) scaleX(1.12) scaleY(.86); }
+  76% { transform: translateX(-50%) scaleX(.94) scaleY(1); opacity: 1; }
+  90% { transform: translateX(calc(-50% - 1px)) scaleX(1.05) scaleY(1); opacity: .9; }
+  100% { transform: translateX(-50%) scaleX(.72) scaleY(1); opacity: 0; }
+}
+
+@keyframes intro-water-shimmer {
+  from { background-position: 0 -190px, 0 -230px; }
+  to { background-position: 0 190px, 0 230px; }
 }
 
 @keyframes intro-droplet {
