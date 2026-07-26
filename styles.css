@@ -597,7 +597,7 @@ body.intro-active { overflow: hidden; }
   opacity: 0;
   clip-path: inset(0 100% 0 0);
   transform: translate(-50%, -50%);
-  animation: intro-tagline-in 1.45s cubic-bezier(.22,.7,.2,1) 2.7s forwards;
+  animation: intro-tagline-in 1.6s cubic-bezier(.22,.7,.2,1) 2.7s forwards;
 }
 
 .brand-intro.is-finished { display: none; }
@@ -614,12 +614,19 @@ body.intro-active { overflow: hidden; }
 
 @keyframes intro-tagline-in {
   0% {
-    opacity: .2;
+    opacity: 0;
     clip-path: inset(0 100% 0 0);
+    filter: blur(4px);
+  }
+  45% {
+    opacity: .58;
+    clip-path: inset(0 52% 0 0);
+    filter: blur(1.5px);
   }
   100% {
     opacity: 1;
     clip-path: inset(0 0 0 0);
+    filter: blur(0);
   }
 }
 
