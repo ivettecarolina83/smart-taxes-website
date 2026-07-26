@@ -509,8 +509,8 @@ body.intro-active { overflow: hidden; }
   top: -18vh;
   left: 50%;
   width: 16px;
-  height: 122vh;
-  min-height: 100vh;
+  height: 68vh;
+  min-height: 320px;
   border-radius: 0 0 50% 50%;
   background: linear-gradient(
     180deg,
@@ -588,7 +588,7 @@ body.intro-active { overflow: hidden; }
   .brand-intro { gap: 15px; }
   .intro-logo-wrap { width: min(76vw, 300px); }
   .intro-tagline { letter-spacing: .09em; }
-  .intro-water { height: 122vh; }
+  .intro-water { height: 68vh; }
 }
 
 @media (prefers-reduced-motion: reduce) {
