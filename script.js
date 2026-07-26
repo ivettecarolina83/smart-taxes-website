@@ -14,7 +14,7 @@ if (brandIntro) {
     brandIntro.addEventListener('animationend', (event) => {
       if (event.animationName === 'intro-overlay-out') finishBrandIntro();
     });
-    window.setTimeout(finishBrandIntro, 4700);
+    window.setTimeout(finishBrandIntro, 4100);
   }
 }
 const menuButton = document.querySelector('.menu-toggle');
