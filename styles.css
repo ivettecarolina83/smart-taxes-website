@@ -483,7 +483,7 @@ body.modal-open { overflow: hidden; }
   background:
     radial-gradient(circle at 50% 52%, rgba(224, 239, 255, .92), transparent 34%),
     linear-gradient(145deg, #ffffff 0%, #f3f7fc 100%);
-  animation: intro-overlay-out .7s ease 3.2s forwards;
+  animation: intro-overlay-out .7s ease 4.35s forwards;
 }
 
 body.intro-active { overflow: hidden; }
@@ -571,7 +571,7 @@ body.intro-active { overflow: hidden; }
   overflow: hidden;
   clip-path: inset(100% 0 0 0);
   filter: drop-shadow(0 12px 24px rgba(24, 80, 155, .18));
-  animation: intro-logo-form 1.9s linear .15s forwards;
+  animation: intro-logo-form 1.9s linear .15s forwards, intro-logo-out .55s ease-in 2.25s forwards;
 }
 
 .intro-logo {
@@ -583,12 +583,16 @@ body.intro-active { overflow: hidden; }
 .intro-tagline {
   margin: 0;
   color: #545454;
-  font-size: clamp(.9rem, 2vw, 1.25rem);
-  font-weight: 600;
-  letter-spacing: .14em;
+  max-width: min(90vw, 980px);
+  font-family: "Anton", Impact, sans-serif;
+  font-size: clamp(2.5rem, 8vw, 7rem);
+  font-weight: 400;
+  line-height: 1.05;
+  letter-spacing: .045em;
+  text-align: center;
   opacity: 0;
-  transform: translateY(12px);
-  animation: intro-tagline-in .7s ease-out 2.25s forwards;
+  transform: translateY(24px) scale(.94);
+  animation: intro-tagline-in .8s cubic-bezier(.2,.8,.2,1) 2.7s forwards;
 }
 
 .brand-intro.is-finished { display: none; }
@@ -599,8 +603,12 @@ body.intro-active { overflow: hidden; }
   to { clip-path: inset(0 0 0 0); }
 }
 
+@keyframes intro-logo-out {
+  to { opacity: 0; transform: scale(.94); }
+}
+
 @keyframes intro-tagline-in {
-  to { opacity: 1; transform: none; }
+  to { opacity: 1; transform: translateY(0) scale(1); }
 }
 
 @keyframes intro-overlay-out {
@@ -610,7 +618,11 @@ body.intro-active { overflow: hidden; }
 @media (max-width: 600px) {
   .brand-intro { gap: 15px; }
   .intro-logo-wrap { width: min(76vw, 300px); }
-  .intro-tagline { letter-spacing: .09em; }
+  .intro-tagline {
+    max-width: 92vw;
+    font-size: clamp(2.15rem, 12vw, 4rem);
+    letter-spacing: .025em;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
