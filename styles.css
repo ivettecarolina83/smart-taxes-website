@@ -77,8 +77,8 @@ h1, h2 { color: var(--ink); font-family: "Anton", Impact, sans-serif; font-weigh
 .hero-media img { width: 100%; height: 100%; object-fit: cover; object-position: center top; background: transparent; border: 0; border-radius: 0; box-shadow: none; }
 .hero-media img,
 .hero-media::after {
-  -webkit-mask-image: radial-gradient(ellipse at center, #000 52%, rgba(0, 0, 0, .9) 66%, rgba(0, 0, 0, .35) 82%, transparent 100%);
-  mask-image: radial-gradient(ellipse at center, #000 52%, rgba(0, 0, 0, .9) 66%, rgba(0, 0, 0, .35) 82%, transparent 100%);
+  -webkit-mask-image: radial-gradient(ellipse at center, #000 44%, rgba(0, 0, 0, .92) 58%, rgba(0, 0, 0, .62) 72%, rgba(0, 0, 0, .24) 86%, transparent 100%);
+  mask-image: radial-gradient(ellipse at center, #000 44%, rgba(0, 0, 0, .92) 58%, rgba(0, 0, 0, .62) 72%, rgba(0, 0, 0, .24) 86%, transparent 100%);
 }
 .carousel-track { position: absolute; inset: 0; background: transparent; border: 0; box-shadow: none; }
 .carousel-slide { position: absolute; inset: 0; opacity: 0; background: transparent; border: 0; border-radius: 0; box-shadow: none; transition: opacity .75s ease; }
