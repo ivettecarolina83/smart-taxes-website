@@ -128,8 +128,10 @@ h1, h2 { color: var(--ink); font-family: "Anton", Impact, sans-serif; font-weigh
 .accordion details + details { border-top: 1px solid var(--line); }
 .accordion summary { display: flex; align-items: center; justify-content: space-between; gap: 20px; padding: 19px 24px; color: var(--ink); font-size: .9rem; font-weight: 700; cursor: pointer; list-style: none; }
 .accordion summary::-webkit-details-marker { display: none; }
-.accordion summary span { color: var(--blue); font-size: 1.3rem; transition: transform .2s; }
-.accordion details[open] summary span { transform: rotate(45deg); }
+.accordion summary span { flex: 0 0 auto; width: 20px; height: 20px; display: grid; place-items: center; color: transparent; font-size: 0; }
+.accordion summary span::before { content: ""; width: 7px; height: 7px; border-right: 1.5px solid var(--blue); border-bottom: 1.5px solid var(--blue); transform: translateY(-2px) rotate(45deg); transform-origin: center; transition: transform .38s cubic-bezier(.22,1,.36,1), border-color .2s ease; }
+.accordion summary:hover span::before { border-color: var(--blue-dark); }
+.accordion details[open] > summary span::before { transform: translateY(2px) rotate(225deg); }
 .accordion details p { margin: 0; padding: 0 24px 20px; color: var(--muted); font-size: .85rem; }
 .accordion .faq-answer { padding: 0 24px 20px; color: var(--muted); font-size: .85rem; }
 .accordion .faq-answer p { margin: 0 0 12px; padding: 0; }
