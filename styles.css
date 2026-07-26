@@ -498,25 +498,6 @@ body.intro-active { overflow: hidden; }
   animation: intro-logo-form 2.2s cubic-bezier(.3, .05, .18, 1) .55s forwards;
 }
 
-.intro-logo-wrap::before {
-  content: "";
-  position: absolute;
-  z-index: 2;
-  top: auto;
-  bottom: -22px;
-  left: -7%;
-  width: 114%;
-  height: 34px;
-  border-radius: 42% 58% 48% 52%;
-  background:
-    radial-gradient(ellipse at 18% 25%, rgba(255,255,255,.8) 0 8%, transparent 9%),
-    radial-gradient(ellipse at 70% 70%, rgba(133,202,244,.75) 0 13%, transparent 14%),
-    linear-gradient(180deg, rgba(112,188,237,.55), rgba(24,80,155,.92));
-  box-shadow: 0 5px 16px rgba(24,80,155,.3);
-  transform: translateY(0);
-  animation: intro-liquid-front 2.2s cubic-bezier(.3, .05, .18, 1) .55s forwards;
-}
-
 .intro-logo {
   width: 100%;
   height: auto;
@@ -525,11 +506,11 @@ body.intro-active { overflow: hidden; }
 .intro-water {
   position: absolute;
   z-index: 3;
-  top: -22vh;
+  top: -18vh;
   left: 50%;
   width: 16px;
-  height: calc(50vh - 70px);
-  min-height: 190px;
+  height: 122vh;
+  min-height: 100vh;
   border-radius: 0 0 50% 50%;
   background: linear-gradient(
     180deg,
@@ -576,9 +557,9 @@ body.intro-active { overflow: hidden; }
 
 @keyframes intro-water-pour {
   0% { transform: translateX(-50%) scaleY(0); opacity: 0; }
-  12% { opacity: 1; }
-  62% { transform: translateX(-50%) scaleY(1); opacity: 1; }
-  82% { transform: translateX(-50%) scaleY(1); opacity: .85; }
+  10% { opacity: 1; }
+  72% { transform: translateX(-50%) scaleY(1); opacity: 1; }
+  90% { transform: translateX(-50%) scaleY(1); opacity: .9; }
   100% { transform: translateX(-50%) scaleY(1); opacity: 0; }
 }
 
@@ -595,13 +576,6 @@ body.intro-active { overflow: hidden; }
   100% { clip-path: inset(0 0 0 0); }
 }
 
-@keyframes intro-liquid-front {
-  0% { transform: translateY(0) scaleX(.82); opacity: .25; }
-  12% { opacity: .9; }
-  50% { transform: translateY(-105px) scaleX(1); opacity: .9; }
-  100% { transform: translateY(-245px) scaleX(.9); opacity: 0; }
-}
-
 @keyframes intro-tagline-in {
   to { opacity: 1; transform: none; }
 }
@@ -614,13 +588,7 @@ body.intro-active { overflow: hidden; }
   .brand-intro { gap: 15px; }
   .intro-logo-wrap { width: min(76vw, 300px); }
   .intro-tagline { letter-spacing: .09em; }
-  .intro-water { height: calc(50vh - 55px); }
-  @keyframes intro-liquid-front {
-    0% { transform: translateY(0) scaleX(.82); opacity: .25; }
-    12% { opacity: .9; }
-    50% { transform: translateY(-75px) scaleX(1); opacity: .9; }
-    100% { transform: translateY(-185px) scaleX(.9); opacity: 0; }
-  }
+  .intro-water { height: 122vh; }
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -629,8 +597,7 @@ body.intro-active { overflow: hidden; }
     animation-delay: .01ms;
   }
 
-  .intro-water,
-  .intro-logo-wrap::before {
+  .intro-water {
     display: none;
   }
 
