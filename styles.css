@@ -36,7 +36,7 @@ img { display: block; max-width: 100%; }
 .nav-dropdown { position: relative; }
 .services-toggle { display: flex; align-items: center; gap: 6px; padding: 8px 0; color: var(--ink); background: transparent; border: 0; font-size: inherit; font-weight: 600; }
 .services-toggle:hover, .services-toggle[aria-expanded="true"] { color: var(--blue); }
-.services-toggle span { font-size: 1rem; transition: transform .2s; }
+.services-toggle span { display: inline-block; font-size: .72rem; line-height: 1; transform-origin: center; transition: transform .2s ease; }
 .services-toggle[aria-expanded="true"] span { transform: rotate(180deg); }
 .services-menu { position: absolute; top: calc(100% + 14px); left: 50%; width: 270px; padding: 10px; background: var(--white); border: 1px solid var(--line); border-radius: 8px; box-shadow: var(--shadow); opacity: 0; visibility: hidden; transform: translate(-50%, -8px); transition: opacity .2s, transform .2s, visibility .2s; }
 .nav-dropdown.open .services-menu { opacity: 1; visibility: visible; transform: translate(-50%, 0); }
@@ -77,8 +77,8 @@ h1, h2 { color: var(--ink); font-family: "Anton", Impact, sans-serif; font-weigh
 .hero-media img { width: 100%; height: 100%; object-fit: cover; object-position: center top; background: transparent; border: 0; border-radius: 0; box-shadow: none; }
 .hero-media img,
 .hero-media::after {
-  -webkit-mask-image: radial-gradient(ellipse at center, #000 52%, rgba(0, 0, 0, .9) 66%, rgba(0, 0, 0, .35) 82%, transparent 100%);
-  mask-image: radial-gradient(ellipse at center, #000 52%, rgba(0, 0, 0, .9) 66%, rgba(0, 0, 0, .35) 82%, transparent 100%);
+  -webkit-mask-image: radial-gradient(ellipse at center, #000 44%, rgba(0, 0, 0, .92) 58%, rgba(0, 0, 0, .62) 72%, rgba(0, 0, 0, .24) 86%, transparent 100%);
+  mask-image: radial-gradient(ellipse at center, #000 44%, rgba(0, 0, 0, .92) 58%, rgba(0, 0, 0, .62) 72%, rgba(0, 0, 0, .24) 86%, transparent 100%);
 }
 .carousel-track { position: absolute; inset: 0; background: transparent; border: 0; box-shadow: none; }
 .carousel-slide { position: absolute; inset: 0; opacity: 0; background: transparent; border: 0; border-radius: 0; box-shadow: none; transition: opacity .75s ease; }
@@ -605,16 +605,17 @@ body.intro-active { overflow: hidden; }
   right: clamp(18px, 3vw, 42px);
   bottom: clamp(18px, 3vw, 34px);
   z-index: 3;
-  min-height: 42px;
-  padding: 9px 18px;
+  min-height: 20px;
+  padding: 1px 8px;
   color: var(--blue-dark);
   background: rgba(255,255,255,.78);
   border: 1px solid rgba(24,80,155,.3);
   border-radius: 999px;
   box-shadow: 0 6px 18px rgba(13,49,95,.12);
   backdrop-filter: blur(8px);
-  font-size: .78rem;
+  font-size: .6rem;
   font-weight: 700;
+  line-height: 1.2;
   transition: color .2s, background .2s, transform .2s;
 }
 
@@ -684,22 +685,4 @@ body.intro-active { overflow: hidden; }
     transform: none;
     animation: none;
   }
-}
-
-/* Flecha del botón Servicios */
-.services-toggle span {
-  width: 9px;
-  height: 9px;
-  display: inline-block;
-  flex: 0 0 auto;
-  font-size: 0;
-  border-right: 2px solid currentColor;
-  border-bottom: 2px solid currentColor;
-  transform: rotate(45deg);
-  transform-origin: center;
-  transition: transform .25s ease;
-}
-
-.services-toggle[aria-expanded="true"] span {
-  transform: rotate(225deg);
 }
