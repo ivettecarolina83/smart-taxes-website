@@ -1,3 +1,22 @@
+
+
+const brandIntro = document.querySelector('.brand-intro');
+
+if (brandIntro) {
+  const finishBrandIntro = () => {
+    brandIntro.classList.add('is-finished');
+    document.body.classList.remove('intro-active');
+  };
+
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    window.setTimeout(finishBrandIntro, 350);
+  } else {
+    brandIntro.addEventListener('animationend', (event) => {
+      if (event.animationName === 'intro-overlay-out') finishBrandIntro();
+    });
+    window.setTimeout(finishBrandIntro, 6200);
+  }
+}
 const menuButton = document.querySelector('.menu-toggle');
 const navigation = document.querySelector('.main-nav');
 const servicesDropdown = document.querySelector('.nav-dropdown');
