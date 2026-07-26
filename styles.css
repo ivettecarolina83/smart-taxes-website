@@ -469,6 +469,7 @@ body.modal-open { overflow: hidden; }
   }
 }
 
+
 /* Animación de presentación de Smart Taxes */
 .brand-intro {
   position: fixed;
@@ -482,20 +483,37 @@ body.modal-open { overflow: hidden; }
   background:
     radial-gradient(circle at 50% 52%, rgba(224, 239, 255, .92), transparent 34%),
     linear-gradient(145deg, #ffffff 0%, #f3f7fc 100%);
-  animation: intro-overlay-out .75s ease 3.55s forwards;
+  animation: intro-overlay-out .75s ease 4.25s forwards;
 }
 
-body.intro-active {
-  overflow: hidden;
-}
+body.intro-active { overflow: hidden; }
 
 .intro-logo-wrap {
   position: relative;
   width: min(62vw, 430px);
-  opacity: 0;
-  clip-path: inset(100% 0 0 0);
+  opacity: 1;
+  overflow: hidden;
+  clip-path: inset(0 0 100% 0);
   filter: drop-shadow(0 12px 24px rgba(24, 80, 155, .18));
-  animation: intro-logo-form 1.55s cubic-bezier(.2, .72, .2, 1) .6s forwards;
+  animation: intro-logo-form 2.2s cubic-bezier(.3, .05, .18, 1) .55s forwards;
+}
+
+.intro-logo-wrap::before {
+  content: "";
+  position: absolute;
+  z-index: 2;
+  top: -22px;
+  left: -7%;
+  width: 114%;
+  height: 34px;
+  border-radius: 42% 58% 48% 52%;
+  background:
+    radial-gradient(ellipse at 18% 25%, rgba(255,255,255,.8) 0 8%, transparent 9%),
+    radial-gradient(ellipse at 70% 70%, rgba(133,202,244,.75) 0 13%, transparent 14%),
+    linear-gradient(180deg, rgba(112,188,237,.55), rgba(24,80,155,.92));
+  box-shadow: 0 5px 16px rgba(24,80,155,.3);
+  transform: translateY(0);
+  animation: intro-liquid-front 2.2s cubic-bezier(.3, .05, .18, 1) .55s forwards;
 }
 
 .intro-logo {
@@ -505,35 +523,37 @@ body.intro-active {
 
 .intro-water {
   position: absolute;
-  top: -20vh;
+  z-index: 3;
+  top: -22vh;
   left: 50%;
-  width: 18px;
-  height: 68vh;
+  width: 16px;
+  height: calc(50vh - 70px);
+  min-height: 190px;
   border-radius: 0 0 50% 50%;
   background: linear-gradient(
     180deg,
     rgba(255,255,255,0) 0%,
-    rgba(73,151,222,.28) 18%,
-    rgba(24,80,155,.9) 70%,
-    rgba(135,199,242,.22) 100%
+    rgba(73,151,222,.28) 16%,
+    rgba(24,80,155,.9) 74%,
+    rgba(135,199,242,.5) 100%
   );
-  box-shadow: 0 0 18px rgba(52, 133, 205, .35);
+  box-shadow: 0 0 18px rgba(52,133,205,.35);
   transform: translateX(-50%) scaleY(0);
   transform-origin: top;
-  animation: intro-water-pour 2.15s cubic-bezier(.2,.7,.25,1) .1s forwards;
+  animation: intro-water-pour 2.75s cubic-bezier(.22,.65,.2,1) .08s forwards;
 }
 
 .intro-water::after {
   content: "";
   position: absolute;
   left: 50%;
-  bottom: -32px;
-  width: 150px;
-  height: 42px;
-  border: 3px solid rgba(45,126,199,.32);
+  bottom: -20px;
+  width: min(56vw, 350px);
+  height: 34px;
+  border: 3px solid rgba(45,126,199,.38);
   border-radius: 50%;
-  transform: translateX(-50%) scale(0);
-  animation: intro-water-ripple .85s ease-out 1.5s forwards;
+  transform: translateX(-50%) scale(.1);
+  animation: intro-water-ripple 1s ease-out .58s forwards;
 }
 
 .intro-water span {
@@ -544,14 +564,14 @@ body.intro-active {
   border-radius: 50% 50% 55% 55%;
   background: rgba(65,143,211,.58);
   opacity: 0;
-  animation: intro-droplet .8s ease-out 1.42s forwards;
+  animation: intro-droplet .9s ease-out .72s forwards;
 }
 
-.intro-water span:nth-child(1) { left: -40px; --drop-x: -42px; animation-delay: 1.38s; }
-.intro-water span:nth-child(2) { left: -18px; --drop-x: -22px; animation-delay: 1.48s; }
-.intro-water span:nth-child(3) { left: 5px; --drop-x: 12px; animation-delay: 1.4s; }
-.intro-water span:nth-child(4) { left: 22px; --drop-x: 35px; animation-delay: 1.52s; }
-.intro-water span:nth-child(5) { left: 42px; --drop-x: 52px; animation-delay: 1.44s; }
+.intro-water span:nth-child(1) { left: -40px; --drop-x: -42px; animation-delay: .72s; }
+.intro-water span:nth-child(2) { left: -18px; --drop-x: -22px; animation-delay: .82s; }
+.intro-water span:nth-child(3) { left: 5px; --drop-x: 12px; animation-delay: .75s; }
+.intro-water span:nth-child(4) { left: 22px; --drop-x: 35px; animation-delay: .86s; }
+.intro-water span:nth-child(5) { left: 42px; --drop-x: 52px; animation-delay: .79s; }
 
 .intro-tagline {
   margin: 0;
@@ -561,34 +581,42 @@ body.intro-active {
   letter-spacing: .14em;
   opacity: 0;
   transform: translateY(12px);
-  animation: intro-tagline-in .8s ease 2.25s forwards;
+  animation: intro-tagline-in .8s ease 3.05s forwards;
 }
 
-.brand-intro.is-finished {
-  display: none;
-}
+.brand-intro.is-finished { display: none; }
 
 @keyframes intro-water-pour {
   0% { transform: translateX(-50%) scaleY(0); opacity: 0; }
-  16% { opacity: 1; }
-  70% { transform: translateX(-50%) scaleY(1); opacity: 1; }
+  12% { opacity: 1; }
+  62% { transform: translateX(-50%) scaleY(1); opacity: 1; }
+  82% { transform: translateX(-50%) scaleY(1); opacity: .85; }
   100% { transform: translateX(-50%) scaleY(1); opacity: 0; }
 }
 
 @keyframes intro-water-ripple {
-  0% { opacity: .7; transform: translateX(-50%) scale(.15); }
-  100% { opacity: 0; transform: translateX(-50%) scale(1.7); }
+  0% { opacity: .75; transform: translateX(-50%) scale(.1); }
+  100% { opacity: 0; transform: translateX(-50%) scale(1.35); }
 }
 
 @keyframes intro-droplet {
-  0% { opacity: .7; transform: translate(0, 0) scale(1); }
+  0% { opacity: .75; transform: translate(0, 0) scale(1); }
   100% { opacity: 0; transform: translate(var(--drop-x), 55px) scale(.35); }
 }
 
 @keyframes intro-logo-form {
-  0% { opacity: 0; clip-path: inset(100% 0 0 0); transform: scale(.97); }
-  25% { opacity: .45; }
-  100% { opacity: 1; clip-path: inset(0 0 0 0); transform: scale(1); }
+  0% { clip-path: inset(0 0 100% 0); }
+  12% { clip-path: inset(0 0 88% 0); }
+  38% { clip-path: inset(0 0 62% 0); }
+  66% { clip-path: inset(0 0 34% 0); }
+  100% { clip-path: inset(0 0 0 0); }
+}
+
+@keyframes intro-liquid-front {
+  0% { transform: translateY(0) scaleX(.82); opacity: .25; }
+  12% { opacity: .9; }
+  50% { transform: translateY(105px) scaleX(1); opacity: .9; }
+  100% { transform: translateY(245px) scaleX(.9); opacity: 0; }
 }
 
 @keyframes intro-tagline-in {
@@ -603,7 +631,13 @@ body.intro-active {
   .brand-intro { gap: 15px; }
   .intro-logo-wrap { width: min(76vw, 300px); }
   .intro-tagline { letter-spacing: .09em; }
-  .intro-water { height: 64vh; }
+  .intro-water { height: calc(50vh - 55px); }
+  @keyframes intro-liquid-front {
+    0% { transform: translateY(0) scaleX(.82); opacity: .25; }
+    12% { opacity: .9; }
+    50% { transform: translateY(75px) scaleX(1); opacity: .9; }
+    100% { transform: translateY(185px) scaleX(.9); opacity: 0; }
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -612,7 +646,8 @@ body.intro-active {
     animation-delay: .01ms;
   }
 
-  .intro-water {
+  .intro-water,
+  .intro-logo-wrap::before {
     display: none;
   }
 
