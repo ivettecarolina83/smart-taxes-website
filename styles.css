@@ -138,10 +138,10 @@ h1, h2 { color: var(--ink); font-family: "Anton", Impact, sans-serif; font-weigh
 .accordion .faq-answer li + li { margin-top: 5px; }
 .faq-notice { max-width: 900px; margin: 22px auto 0; padding: 18px 22px; color: var(--ink); background: #eef4fb; border-left: 4px solid var(--blue); border-radius: 7px; font-size: .8rem; line-height: 1.65; }
 .faq .section-title h2 { font-size: 25px; }
-.faq .accordion summary { font-size: 10px; }
+.faq .accordion summary { font-size: 12px; }
 .faq .accordion .faq-answer,
 .faq .accordion .faq-answer p,
-.faq .accordion .faq-answer li,
+.faq .accordion .faq-answer li { font-size: 12px; }
 .faq .faq-notice { font-size: 10px; }
 .faq-category-grid { max-width: 1100px; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); align-items: start; gap: 16px; margin: auto; }
 .faq-category { background: var(--white); border: 1px solid var(--line); border-radius: 8px; box-shadow: var(--shadow); overflow: hidden; }
