@@ -483,7 +483,7 @@ body.modal-open { overflow: hidden; }
   background:
     radial-gradient(circle at 50% 52%, rgba(224, 239, 255, .92), transparent 34%),
     linear-gradient(145deg, #ffffff 0%, #f3f7fc 100%);
-  animation: intro-overlay-out .7s ease 4.35s forwards;
+  animation: intro-overlay-out .7s ease 5.15s forwards;
 }
 
 body.intro-active { overflow: hidden; }
@@ -595,8 +595,9 @@ body.intro-active { overflow: hidden; }
   letter-spacing: .045em;
   text-align: center;
   opacity: 0;
-  transform: translate(-50%, calc(-50% + 24px)) scale(.94);
-  animation: intro-tagline-in .8s cubic-bezier(.2,.8,.2,1) 2.7s forwards;
+  clip-path: inset(0 100% 0 0);
+  transform: translate(-50%, -50%);
+  animation: intro-tagline-in 1.45s cubic-bezier(.22,.7,.2,1) 2.7s forwards;
 }
 
 .brand-intro.is-finished { display: none; }
@@ -612,7 +613,14 @@ body.intro-active { overflow: hidden; }
 }
 
 @keyframes intro-tagline-in {
-  to { opacity: 1; transform: translate(-50%, -50%) scale(1); }
+  0% {
+    opacity: .2;
+    clip-path: inset(0 100% 0 0);
+  }
+  100% {
+    opacity: 1;
+    clip-path: inset(0 0 0 0);
+  }
 }
 
 @keyframes intro-overlay-out {
