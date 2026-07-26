@@ -605,15 +605,15 @@ body.intro-active { overflow: hidden; }
   right: clamp(18px, 3vw, 42px);
   bottom: clamp(18px, 3vw, 34px);
   z-index: 3;
-  min-height: 42px;
-  padding: 9px 18px;
+  min-height: 36px;
+  padding: 6px 14px;
   color: var(--blue-dark);
   background: rgba(255,255,255,.78);
   border: 1px solid rgba(24,80,155,.3);
   border-radius: 999px;
   box-shadow: 0 6px 18px rgba(13,49,95,.12);
   backdrop-filter: blur(8px);
-  font-size: .78rem;
+  font-size: .68rem;
   font-weight: 700;
   transition: color .2s, background .2s, transform .2s;
 }
