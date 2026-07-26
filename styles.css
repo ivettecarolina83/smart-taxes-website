@@ -147,8 +147,10 @@ h1, h2 { color: var(--ink); font-family: "Anton", Impact, sans-serif; font-weigh
 .faq-category { background: var(--white); border: 1px solid var(--line); border-radius: 8px; box-shadow: var(--shadow); overflow: hidden; }
 .faq-category-title { display: flex; align-items: center; justify-content: space-between; gap: 18px; padding: 17px 19px; color: var(--ink); font-size: 12px; font-weight: 700; cursor: pointer; list-style: none; }
 .faq-category-title::-webkit-details-marker { display: none; }
-.faq-category-title span { flex: 0 0 auto; color: var(--blue); font-size: 18px; line-height: 1; transition: transform .2s; }
-.faq-category[open] > .faq-category-title span { transform: rotate(45deg); }
+.faq-category-title span { flex: 0 0 auto; width: 28px; height: 28px; display: grid; place-items: center; color: transparent; background: var(--blue-soft); border: 1px solid rgba(24,80,155,.16); border-radius: 50%; font-size: 0; transition: background .2s, transform .25s ease; }
+.faq-category-title span::before { content: ""; width: 7px; height: 7px; border-right: 2px solid var(--blue); border-bottom: 2px solid var(--blue); transform: translateY(-2px) rotate(45deg); }
+.faq-category[open] > .faq-category-title span { background: var(--blue); transform: rotate(180deg); }
+.faq-category[open] > .faq-category-title span::before { border-color: var(--white); }
 .faq-category-questions.accordion { max-width: none; margin: 0 14px 14px; border-radius: 6px; box-shadow: none; }
 @media (max-width: 760px) { .faq-category-grid { grid-template-columns: 1fr; } }
 
