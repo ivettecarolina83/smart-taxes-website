@@ -581,6 +581,10 @@ body.intro-active { overflow: hidden; }
 
 
 .intro-tagline {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: min(90vw, 980px);
   margin: 0;
   color: #545454;
   max-width: min(90vw, 980px);
@@ -591,7 +595,7 @@ body.intro-active { overflow: hidden; }
   letter-spacing: .045em;
   text-align: center;
   opacity: 0;
-  transform: translateY(24px) scale(.94);
+  transform: translate(-50%, calc(-50% + 24px)) scale(.94);
   animation: intro-tagline-in .8s cubic-bezier(.2,.8,.2,1) 2.7s forwards;
 }
 
@@ -608,7 +612,7 @@ body.intro-active { overflow: hidden; }
 }
 
 @keyframes intro-tagline-in {
-  to { opacity: 1; transform: translateY(0) scale(1); }
+  to { opacity: 1; transform: translate(-50%, -50%) scale(1); }
 }
 
 @keyframes intro-overlay-out {
