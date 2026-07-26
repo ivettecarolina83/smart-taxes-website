@@ -1,12 +1,18 @@
 
 
 const brandIntro = document.querySelector('.brand-intro');
+const introSkipButton = document.querySelector('.intro-skip');
 
 if (brandIntro) {
   const finishBrandIntro = () => {
     brandIntro.classList.add('is-finished');
     document.body.classList.remove('intro-active');
   };
+
+  introSkipButton?.addEventListener('click', () => {
+    brandIntro.classList.add('is-skipping');
+    window.setTimeout(finishBrandIntro, 320);
+  });
 
   if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
     window.setTimeout(finishBrandIntro, 350);
