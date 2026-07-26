@@ -55,7 +55,7 @@ img { display: block; max-width: 100%; }
 
 .hero { position: relative; overflow: hidden; background-image: linear-gradient(90deg, #f8fbff 0%, #f3f7fc 56%, #e7eef7 100%); border-bottom: 1px solid var(--line); }
 .hero-grid { min-height: 610px; display: grid; grid-template-columns: 1.16fr .84fr; align-items: center; gap: 44px; }
-.hero-brand { width: min(100%, 220px); display: block; margin: 0 auto 28px 0; }
+.hero-brand { width: min(100%, 180px); display: block; margin: 0 auto 28px 0; }
 .hero-brand img { width: 100%; height: auto; object-fit: contain; }
 .hero-copy > .eyebrow { font-size: 1rem; font-style: italic; }
 .hero-copy { position: relative; z-index: 3; align-self: center; padding: 54px 0; }
@@ -247,7 +247,7 @@ body.modal-open { overflow: hidden; }
   .form-field-wide { grid-column: auto; }
   .nav-cta { text-align: center; }
   .language-switch { align-self: flex-start; margin: 7px 12px; }
-  .hero-brand { width: min(100%, 200px); margin: 0 auto 24px 0; }
+  .hero-brand { width: min(100%, 160px); margin: 0 auto 24px 0; }
   .hero-copy { padding-top: 44px; }
   .hero h1 { font-size: 3rem; }
   .hero-media { width: min(100%, 360px); height: 320px; }
