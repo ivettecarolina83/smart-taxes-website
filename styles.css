@@ -493,7 +493,7 @@ body.intro-active { overflow: hidden; }
   width: min(62vw, 430px);
   opacity: 1;
   overflow: hidden;
-  clip-path: inset(0 0 100% 0);
+  clip-path: inset(100% 0 0 0);
   filter: drop-shadow(0 12px 24px rgba(24, 80, 155, .18));
   animation: intro-logo-form 2.2s cubic-bezier(.3, .05, .18, 1) .55s forwards;
 }
@@ -502,7 +502,8 @@ body.intro-active { overflow: hidden; }
   content: "";
   position: absolute;
   z-index: 2;
-  top: -22px;
+  top: auto;
+  bottom: -22px;
   left: -7%;
   width: 114%;
   height: 34px;
@@ -543,19 +544,6 @@ body.intro-active { overflow: hidden; }
   animation: intro-water-pour 2.75s cubic-bezier(.22,.65,.2,1) .08s forwards;
 }
 
-.intro-water::after {
-  content: "";
-  position: absolute;
-  left: 50%;
-  bottom: -20px;
-  width: min(56vw, 350px);
-  height: 34px;
-  border: 3px solid rgba(45,126,199,.38);
-  border-radius: 50%;
-  transform: translateX(-50%) scale(.1);
-  animation: intro-water-ripple 1s ease-out .58s forwards;
-}
-
 .intro-water span {
   position: absolute;
   bottom: -8px;
@@ -594,29 +582,24 @@ body.intro-active { overflow: hidden; }
   100% { transform: translateX(-50%) scaleY(1); opacity: 0; }
 }
 
-@keyframes intro-water-ripple {
-  0% { opacity: .75; transform: translateX(-50%) scale(.1); }
-  100% { opacity: 0; transform: translateX(-50%) scale(1.35); }
-}
-
 @keyframes intro-droplet {
   0% { opacity: .75; transform: translate(0, 0) scale(1); }
   100% { opacity: 0; transform: translate(var(--drop-x), 55px) scale(.35); }
 }
 
 @keyframes intro-logo-form {
-  0% { clip-path: inset(0 0 100% 0); }
-  12% { clip-path: inset(0 0 88% 0); }
-  38% { clip-path: inset(0 0 62% 0); }
-  66% { clip-path: inset(0 0 34% 0); }
+  0% { clip-path: inset(100% 0 0 0); }
+  12% { clip-path: inset(88% 0 0 0); }
+  38% { clip-path: inset(62% 0 0 0); }
+  66% { clip-path: inset(34% 0 0 0); }
   100% { clip-path: inset(0 0 0 0); }
 }
 
 @keyframes intro-liquid-front {
   0% { transform: translateY(0) scaleX(.82); opacity: .25; }
   12% { opacity: .9; }
-  50% { transform: translateY(105px) scaleX(1); opacity: .9; }
-  100% { transform: translateY(245px) scaleX(.9); opacity: 0; }
+  50% { transform: translateY(-105px) scaleX(1); opacity: .9; }
+  100% { transform: translateY(-245px) scaleX(.9); opacity: 0; }
 }
 
 @keyframes intro-tagline-in {
@@ -635,8 +618,8 @@ body.intro-active { overflow: hidden; }
   @keyframes intro-liquid-front {
     0% { transform: translateY(0) scaleX(.82); opacity: .25; }
     12% { opacity: .9; }
-    50% { transform: translateY(75px) scaleX(1); opacity: .9; }
-    100% { transform: translateY(185px) scaleX(.9); opacity: 0; }
+    50% { transform: translateY(-75px) scaleX(1); opacity: .9; }
+    100% { transform: translateY(-185px) scaleX(.9); opacity: 0; }
   }
 }
 
