@@ -1,6 +1,7 @@
 
 
 const brandIntro = document.querySelector('.brand-intro');
+const introSkipButton = document.querySelector('.intro-skip');
 
 if (brandIntro) {
   const finishBrandIntro = () => {
@@ -8,13 +9,24 @@ if (brandIntro) {
     document.body.classList.remove('intro-active');
   };
 
-  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-    window.setTimeout(finishBrandIntro, 350);
+  const skipIntroOnLoad = new URLSearchParams(window.location.search).get('skip-intro') === '1';
+
+  if (skipIntroOnLoad) {
+    finishBrandIntro();
   } else {
-    brandIntro.addEventListener('animationend', (event) => {
-      if (event.animationName === 'intro-overlay-out') finishBrandIntro();
+    introSkipButton?.addEventListener('click', () => {
+      brandIntro.classList.add('is-skipping');
+      window.setTimeout(finishBrandIntro, 320);
     });
-    window.setTimeout(finishBrandIntro, 6200);
+
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      window.setTimeout(finishBrandIntro, 350);
+    } else {
+      brandIntro.addEventListener('animationend', (event) => {
+        if (event.animationName === 'intro-overlay-out') finishBrandIntro();
+      });
+      window.setTimeout(finishBrandIntro, 6200);
+    }
   }
 }
 const menuButton = document.querySelector('.menu-toggle');
