@@ -36,7 +36,7 @@ img { display: block; max-width: 100%; }
 .nav-dropdown { position: relative; }
 .services-toggle { display: flex; align-items: center; gap: 6px; padding: 8px 0; color: var(--ink); background: transparent; border: 0; font-size: inherit; font-weight: 600; }
 .services-toggle:hover, .services-toggle[aria-expanded="true"] { color: var(--blue); }
-.services-toggle span { font-size: 1rem; transition: transform .2s; }
+.services-toggle span { display: inline-block; font-size: .72rem; line-height: 1; transform-origin: center; transition: transform .2s ease; }
 .services-toggle[aria-expanded="true"] span { transform: rotate(180deg); }
 .services-menu { position: absolute; top: calc(100% + 14px); left: 50%; width: 270px; padding: 10px; background: var(--white); border: 1px solid var(--line); border-radius: 8px; box-shadow: var(--shadow); opacity: 0; visibility: hidden; transform: translate(-50%, -8px); transition: opacity .2s, transform .2s, visibility .2s; }
 .nav-dropdown.open .services-menu { opacity: 1; visibility: visible; transform: translate(-50%, 0); }
@@ -684,22 +684,4 @@ body.intro-active { overflow: hidden; }
     transform: none;
     animation: none;
   }
-}
-
-/* Flecha del botón Servicios */
-.services-toggle span {
-  width: 9px;
-  height: 9px;
-  display: inline-block;
-  flex: 0 0 auto;
-  font-size: 0;
-  border-right: 2px solid currentColor;
-  border-bottom: 2px solid currentColor;
-  transform: rotate(45deg);
-  transform-origin: center;
-  transition: transform .25s ease;
-}
-
-.services-toggle[aria-expanded="true"] span {
-  transform: rotate(225deg);
 }
