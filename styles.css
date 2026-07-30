@@ -384,7 +384,7 @@ body.modal-open { overflow: hidden; }
 
 .legal-intro {
   color: #334155;
-  font-size: 12px;
+  font-size: 14px;
   line-height: 1.55;
   max-width: 760px;
 }
@@ -411,13 +411,13 @@ body.modal-open { overflow: hidden; }
 .legal-content h2 {
   color: var(--blue);
   font-family: "Poppins", sans-serif;
-  font-size: 12px;
+  font-size: 16px;
   margin: 0 0 0.45rem;
 }
 
 .legal-content p {
   color: #334155;
-  font-size: 12px;
+  font-size: 14px;
   line-height: 1.5;
   margin: 0.4rem 0;
 }
@@ -432,7 +432,7 @@ body.modal-open { overflow: hidden; }
   border-left: 4px solid var(--blue);
   border-radius: 12px;
   color: #24364b;
-  font-size: 12px;
+  font-size: 14px;
   line-height: 1.5;
   margin: 2rem 0;
   padding: 1.15rem 1.3rem;
@@ -448,7 +448,7 @@ body.modal-open { overflow: hidden; }
   background: #fff;
   border: 1px solid #cfd8e3;
   border-radius: 999px;
-  font-size: 12px;
+  font-size: 14px;
   padding: 0.5rem 0.85rem;
 }
 
