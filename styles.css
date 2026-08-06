@@ -218,6 +218,12 @@ body.modal-open { overflow: hidden; }
 .form-status { min-height: 24px; margin: 14px 0 0; color: var(--blue-dark); font-size: .84rem; font-weight: 700; }
 .form-status.error { color: #9b1c31; }
 .form-status.success { color: #176b43; }
+.form-fallback-actions { margin: 12px 0 0; padding: 14px; color: var(--text); background: #f7f9fc; border: 1px solid #c7d5e7; border-radius: 14px; }
+.form-fallback-actions[hidden] { display: none; }
+.form-fallback-actions p { margin: 0 0 10px; font-size: .76rem; line-height: 1.5; }
+.form-fallback-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; }
+.form-fallback-link { min-height: 38px; display: inline-flex; align-items: center; justify-content: center; padding: 8px 10px; color: var(--blue); background: var(--white); border: 1px solid var(--blue); border-radius: 999px; font-size: .72rem; font-weight: 700; text-align: center; transition: color .2s, background .2s, transform .2s; }
+.form-fallback-link:hover, .form-fallback-link:focus-visible { color: var(--white); background: var(--blue); transform: translateY(-1px); }
 .form-disclaimer { margin: 8px 0 0; color: var(--muted); font-size: .7rem; line-height: 1.5; }
 .contact-note { max-width: 700px; margin: auto; padding: 15px 20px; color: #d9e7f8; background: rgba(255,255,255,.08); border: 1px solid rgba(255,255,255,.18); border-radius: 6px; font-size: .85rem; }
 .contact-note strong { color: var(--white); }
