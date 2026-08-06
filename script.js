@@ -249,8 +249,8 @@ if (consultationForm) {
   const honeypotField = consultationForm.querySelector('[name="website"]');
   const startedAtField = consultationForm.querySelector('[name="form_started_at"]');
   const sensitivePatterns = [
-    /\b\d{3}-\d{2}-\d{4}\b/,
-    /\b9\d{2}-\d{2}-\d{4}\b/,
+    /\b\d{3}[- ]?\d{2}[- ]?\d{4}\b/,
+    /\b9\d{2}[- ]?\d{2}[- ]?\d{4}\b/,
     /(?:\d[ -]?){12,19}/
   ];
 
