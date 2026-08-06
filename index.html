@@ -10,8 +10,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Anton&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
     <link rel="alternate" hreflang="es-US" href="#" />
     <link rel="alternate" hreflang="en-US" href="en/index.html" />
-    <link rel="stylesheet" href="styles.css?v=20260726-1" />
-    <script src="script.js?v=20260726-1" defer></script>
+    <link rel="stylesheet" href="styles.css?v=20260806-1" />
+    <script src="script.js?v=20260806-1" defer></script>
   </head>
   <body class="intro-active">
     <div class="brand-intro" role="status" aria-label="Presentación de Smart Taxes">
@@ -332,6 +332,10 @@
               <h3 id="consultation-title">Cuéntanos cómo podemos ayudarte</h3>
               <p>Completa este formulario y un preparador podrá comunicarse contigo por el medio seleccionado.</p>
             </div>
+            <aside class="form-security-notice" role="note" aria-label="Aviso de seguridad">
+              <strong>Tu seguridad es importante.</strong>
+              <span>Este formulario es solo para contacto inicial. No envíes SSN, ITIN, información bancaria, contraseñas, identificaciones, declaraciones ni documentos fiscales. Smart Taxes te indicará el canal autorizado después del primer contacto.</span>
+            </aside>
             <form class="consultation-form" id="consultation-form" action="https://script.google.com/macros/s/AKfycby90DRk_iihfa6QQbaXVCj49dxgUzibzbwoHLxGJHxdqyK3a1MU0fwW9iyh9krhQCQ-cA/exec" method="post" accept-charset="UTF-8" data-endpoint="https://script.google.com/macros/s/AKfycby90DRk_iihfa6QQbaXVCj49dxgUzibzbwoHLxGJHxdqyK3a1MU0fwW9iyh9krhQCQ-cA/exec" novalidate>
               <div class="form-grid">
                 <div class="form-field">
@@ -378,10 +382,11 @@
                 <div class="form-field form-field-wide form-consent">
                   <label>
                     <input name="consentimiento" type="checkbox" value="Sí" required />
-                    <span>Autorizo a Smart Taxes a contactarme en relación con esta solicitud y confirmo que he leído la <a href="politica-privacidad.html" target="_blank" rel="noopener">Política de privacidad</a>. <span aria-hidden="true">*</span></span>
+                    <span>Autorizo a Smart Taxes a contactarme en relación con esta solicitud y confirmo que he leído la <a href="politica-privacidad.html" target="_blank" rel="noopener noreferrer">Política de privacidad</a>. <span aria-hidden="true">*</span></span>
                   </label>
                 </div>
               </div>
+              <input type="hidden" name="form_started_at" value="" />
               <input type="hidden" name="origen" value="Sitio web de Smart Taxes" />
               <input type="hidden" name="idioma" value="Español" />
               <button class="button button-primary form-submit" type="submit">Enviar solicitud</button>
