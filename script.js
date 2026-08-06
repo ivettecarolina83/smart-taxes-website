@@ -225,7 +225,7 @@ const formMessages = isEnglishPage
       tooFast: 'Please take a moment to review your information before submitting.',
       notConnected: 'The form is ready, but the Google Apps Script URL has not been connected.',
       sending: 'Sending your request…',
-      sent: 'Request sent. Smart Taxes may contact you through your selected method.',
+      sent: 'We are verifying your request. Check your email. Your request is confirmed only when you receive a message from Smart Taxes.',
       failed: 'We could not send your request. Please try again or use the call or text buttons.',
       submit: 'Submit request',
       submitting: 'Sending…'
@@ -236,7 +236,7 @@ const formMessages = isEnglishPage
       tooFast: 'Tómate un momento para revisar la información antes de enviarla.',
       notConnected: 'El formulario está listo, pero falta conectar la URL de Google Apps Script.',
       sending: 'Enviando tu solicitud…',
-      sent: 'Solicitud enviada. Smart Taxes podrá comunicarse contigo por el medio indicado.',
+      sent: 'Estamos verificando tu solicitud. Revisa tu correo electrónico. La solicitud estará confirmada cuando recibas el mensaje de Smart Taxes.',
       failed: 'No pudimos enviar la solicitud. Intenta nuevamente o utiliza los botones de llamada o mensaje.',
       submit: 'Enviar solicitud',
       submitting: 'Enviando…'
