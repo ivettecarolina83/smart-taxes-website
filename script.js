@@ -252,6 +252,7 @@ if (consultationForm) {
   const startedAtField = consultationForm.querySelector('[name="form_started_at"]');
   const requestIdField = consultationForm.querySelector('[name="request_id"]');
   const responseFrame = document.querySelector('#consultation-response-frame');
+  const fallbackActions = consultationForm.querySelector('#form-fallback-actions');
   const sensitivePatterns = [
     /\b\d{6,19}\b/,
     /\b\d{3}[- ]?\d{2}[- ]?\d{4}\b/,
@@ -269,6 +270,10 @@ if (consultationForm) {
     window.clearTimeout(responseTimer);
     submitButton.disabled = false;
     submitButton.textContent = formMessages.submit;
+  }
+
+  function showFallbackActions(show) {
+    if (fallbackActions) fallbackActions.hidden = !show;
   }
 
   function isTrustedFormOrigin(origin) {
@@ -307,6 +312,7 @@ if (consultationForm) {
     pendingRequestId = '';
     finishSubmission();
     formStatus.className = 'form-status';
+    showFallbackActions(false);
 
     if (payload.ok) {
       consultationForm.reset();
@@ -323,13 +329,16 @@ if (consultationForm) {
       invalid: formMessages.invalid
     };
 
-    formStatus.textContent = errorMessages[payload.code] || formMessages.failed;
+    const knownMessage = errorMessages[payload.code];
+    formStatus.textContent = knownMessage || formMessages.failed;
     formStatus.classList.add('error');
+    showFallbackActions(!knownMessage);
   });
 
   consultationForm.addEventListener('submit', (event) => {
     event.preventDefault();
     formStatus.className = 'form-status';
+    showFallbackActions(false);
 
     if (!consultationForm.checkValidity()) {
       consultationForm.reportValidity();
@@ -366,6 +375,7 @@ if (consultationForm) {
     if (!endpoint || !responseFrame || !requestIdField) {
       formStatus.textContent = formMessages.notConnected;
       formStatus.classList.add('error');
+      showFallbackActions(true);
       return;
     }
 
@@ -384,6 +394,7 @@ if (consultationForm) {
       finishSubmission();
       formStatus.className = 'form-status error';
       formStatus.textContent = formMessages.failed;
+      showFallbackActions(true);
     }, 20000);
 
     HTMLFormElement.prototype.submit.call(consultationForm);
