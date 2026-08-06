@@ -221,6 +221,8 @@ const isEnglishPage = document.documentElement.lang === 'en';
 const formMessages = isEnglishPage
   ? {
       invalid: 'Review the required fields before submitting.',
+      sensitive: 'For your security, remove any SSN, ITIN, banking, card, identification, or tax-document information before submitting.',
+      tooFast: 'Please take a moment to review your information before submitting.',
       notConnected: 'The form is ready, but the Google Apps Script URL has not been connected.',
       sending: 'Sending your request…',
       sent: 'Request sent. Smart Taxes may contact you through your selected method.',
@@ -230,6 +232,8 @@ const formMessages = isEnglishPage
     }
   : {
       invalid: 'Revisa los campos obligatorios antes de enviar.',
+      sensitive: 'Por tu seguridad, elimina cualquier SSN, ITIN, dato bancario, número de tarjeta, identificación o información de documentos fiscales antes de enviar.',
+      tooFast: 'Tómate un momento para revisar la información antes de enviarla.',
       notConnected: 'El formulario está listo, pero falta conectar la URL de Google Apps Script.',
       sending: 'Enviando tu solicitud…',
       sent: 'Solicitud enviada. Smart Taxes podrá comunicarse contigo por el medio indicado.',
@@ -241,6 +245,20 @@ const formMessages = isEnglishPage
 if (consultationForm) {
   const formStatus = consultationForm.querySelector('#form-status');
   const submitButton = consultationForm.querySelector('.form-submit');
+  const messageField = consultationForm.querySelector('[name="mensaje"]');
+  const honeypotField = consultationForm.querySelector('[name="website"]');
+  const startedAtField = consultationForm.querySelector('[name="form_started_at"]');
+  const sensitivePatterns = [
+    /\b\d{3}-\d{2}-\d{4}\b/,
+    /\b9\d{2}-\d{2}-\d{4}\b/,
+    /(?:\d[ -]?){12,19}/
+  ];
+
+  function resetFormTimer() {
+    if (startedAtField) startedAtField.value = String(Date.now());
+  }
+
+  resetFormTimer();
 
   consultationForm.addEventListener('submit', async (event) => {
     event.preventDefault();
@@ -250,6 +268,29 @@ if (consultationForm) {
       consultationForm.reportValidity();
       formStatus.textContent = formMessages.invalid;
       formStatus.classList.add('error');
+      return;
+    }
+
+    if (honeypotField?.value.trim()) {
+      consultationForm.reset();
+      resetFormTimer();
+      formStatus.textContent = formMessages.sent;
+      formStatus.classList.add('success');
+      return;
+    }
+
+    const elapsed = Date.now() - Number(startedAtField?.value || 0);
+    if (!Number.isFinite(elapsed) || elapsed < 1500) {
+      formStatus.textContent = formMessages.tooFast;
+      formStatus.classList.add('error');
+      return;
+    }
+
+    const messageValue = messageField?.value.replace(/\s+/g, ' ').trim() || '';
+    if (sensitivePatterns.some((pattern) => pattern.test(messageValue))) {
+      formStatus.textContent = formMessages.sensitive;
+      formStatus.classList.add('error');
+      messageField?.focus();
       return;
     }
 
@@ -273,6 +314,7 @@ if (consultationForm) {
       });
 
       consultationForm.reset();
+      resetFormTimer();
       formStatus.textContent = formMessages.sent;
       formStatus.classList.add('success');
     } catch (error) {
