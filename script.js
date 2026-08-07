@@ -294,7 +294,6 @@ if (consultationForm) {
     if (
       !pendingRequestId ||
       !responseFrame ||
-      event.source !== responseFrame.contentWindow ||
       !isTrustedFormOrigin(event.origin)
     ) {
       return;
