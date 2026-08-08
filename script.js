@@ -273,7 +273,18 @@ if (consultationForm) {
   }
 
   function showFallbackActions(show) {
-    if (fallbackActions) fallbackActions.hidden = !show;
+    if (!fallbackActions) return;
+
+    fallbackActions.hidden = !show;
+
+    if (show) {
+      window.requestAnimationFrame(() => {
+        fallbackActions.scrollIntoView({
+          behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth',
+          block: 'nearest'
+        });
+      });
+    }
   }
 
   function isTrustedFormOrigin(origin) {
@@ -373,6 +384,13 @@ if (consultationForm) {
 
     if (!endpoint || !responseFrame || !requestIdField) {
       formStatus.textContent = formMessages.notConnected;
+      formStatus.classList.add('error');
+      showFallbackActions(true);
+      return;
+    }
+
+    if (!navigator.onLine) {
+      formStatus.textContent = formMessages.failed;
       formStatus.classList.add('error');
       showFallbackActions(true);
       return;
