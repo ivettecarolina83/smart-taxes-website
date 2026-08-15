@@ -44,6 +44,16 @@ El formulario utiliza un proyecto restringido de Google Apps Script.
 - No se deben incluir credenciales, códigos de recuperación ni datos de clientes en copias del repositorio.
 - Después de recuperar el sitio, se verifica que el formulario apunte a la implementación autorizada, sin realizar envíos con datos reales.
 
+## Custodia de mecanismos de recuperación
+
+- Los códigos de recuperación se conservan impresos, separados por servicio y dentro de sobres sellados.
+- Las contraseñas no se guardan junto con los códigos.
+- La responsabilidad administrativa y la custodia física pueden corresponder temporalmente a personas distintas cuando exista separación geográfica.
+- La asignación de responsables, la ubicación física y cualquier transferencia se documentan únicamente en el WISP interno restringido.
+- Los códigos no se fotografían, digitalizan ni transmiten por correo, mensajería o almacenamiento en la nube.
+- Una transferencia se realiza en persona o mediante un método físico autorizado, sellado y rastreable.
+- Si un sobre se abre, un código se utiliza o existe sospecha de exposición, se generan códigos nuevos, se reemplaza la copia anterior y se registra el incidente sin copiar los códigos.
+
 ## Procedimiento de recuperación
 
 1. **Identificar el incidente.** Determinar si afecta archivos, publicación, configuración del formulario o acceso a una cuenta.
