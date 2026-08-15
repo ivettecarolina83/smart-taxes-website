@@ -45,7 +45,11 @@ El registro no debe almacenar:
 
 ## Conservación
 
-La configuración provisional conserva los eventos durante 90 días y mantiene un máximo de 500 registros. Los eventos más antiguos se eliminan automáticamente. Este plazo debe revisarse al aprobar la política general de conservación del WISP.
+La política aprobada conserva los eventos durante 90 días y mantiene un máximo de 500 registros. Los eventos que superan el plazo y los registros más antiguos que exceden el límite se eliminan automáticamente.
+
+Esta política fue comprobada con eventos sintéticos sin datos personales: se eliminó correctamente un evento con 91 días de antigüedad, se conservaron exactamente 500 registros al superar el límite y los eventos reales permanecieron intactos. Los eventos y el archivo temporal de prueba fueron eliminados al finalizar.
+
+Los límites podrán modificarse en el futuro mediante una revisión documentada del WISP. Todo cambio deberá aplicarse también a la configuración técnica y someterse nuevamente a pruebas.
 
 ## Ubicación y acceso
 
