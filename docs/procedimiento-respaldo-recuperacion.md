@@ -79,6 +79,7 @@ El formulario utiliza un proyecto restringido de Google Apps Script.
 - La copia abrió correctamente en español y en inglés.
 - Las páginas legales cargaron en el idioma seleccionado.
 - No se enviaron formularios ni se utilizaron acciones de contacto.
+- El archivo ZIP y la carpeta temporal de prueba fueron eliminados después de la comprobación.
 - La prueba de recuperación desde GitHub fue satisfactoria.
 
 ## Frecuencia de revisión
