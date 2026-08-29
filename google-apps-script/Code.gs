@@ -15,15 +15,12 @@ const ALLOWED_CONTACT_METHODS = ['Llamada', 'Mensaje de texto', 'Correo electró
 const ALLOWED_LANGUAGES = ['Español', 'English'];
 
 function doPost(e) {
-  let requestId = '';
-
   try {
     const data = e && e.parameter ? e.parameter : {};
-    requestId = clean_(data.request_id, 100);
 
     // Campo trampa: los visitantes reales no pueden verlo.
     if (clean_(data.website, 200)) {
-      return response_({ ok: true, requestId: requestId });
+      return response_({ ok: true });
     }
 
     const name = clean_(data.nombre, 100);
@@ -36,7 +33,7 @@ function doPost(e) {
     const language = clean_(data.idioma, 12) || 'Español';
 
     if (!name || !phone || !isEmail_(email) || !message || consent !== 'Sí') {
-      return response_({ ok: false, code: 'invalid', requestId: requestId });
+      return response_({ ok: false, error: 'Datos obligatorios inválidos.' });
     }
 
     if (
@@ -44,11 +41,11 @@ function doPost(e) {
       ALLOWED_CONTACT_METHODS.indexOf(contactMethod) === -1 ||
       ALLOWED_LANGUAGES.indexOf(language) === -1
     ) {
-      return response_({ ok: false, code: 'invalid', requestId: requestId });
+      return response_({ ok: false, error: 'Selección inválida.' });
     }
 
     if (isRateLimited_(email)) {
-      return response_({ ok: false, code: 'rate_limited', requestId: requestId });
+      return response_({ ok: false, error: 'Espera unos minutos antes de enviar otra solicitud.' });
     }
 
     const subject = 'Nueva solicitud web: ' + service;
@@ -126,10 +123,10 @@ function doPost(e) {
       console.error('No se pudo enviar la confirmación al cliente:', confirmationError);
     }
 
-    return response_({ ok: true, requestId: requestId });
+    return response_({ ok: true });
   } catch (error) {
     console.error(error);
-    return response_({ ok: false, code: 'processing_error', requestId: requestId });
+    return response_({ ok: false, error: 'No fue posible procesar la solicitud.' });
   }
 }
 
@@ -157,22 +154,7 @@ function isRateLimited_(email) {
 }
 
 function response_(payload) {
-  const responsePayload = Object.assign(
-    { source: 'smart-taxes-form' },
-    payload
-  );
-  const serializedPayload = JSON.stringify(responsePayload)
-    .replace(/</g, '\\u003c')
-    .replace(/\u2028/g, '\\u2028')
-    .replace(/\u2029/g, '\\u2029');
-
-  return HtmlService
-    .createHtmlOutput(
-      '<!doctype html><html><head><meta charset="UTF-8"></head><body>' +
-      '<script>window.parent.postMessage(' +
-      serializedPayload +
-      ', "https://smartaxesusa.com");</script>' +
-      '</body></html>'
-    )
-    .setXFrameOptionsMode(HtmlService.XFrameOptionsMode.ALLOWALL);
+  return ContentService
+    .createTextOutput(JSON.stringify(payload))
+    .setMimeType(ContentService.MimeType.JSON);
 }
