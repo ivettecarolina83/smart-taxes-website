@@ -69,11 +69,16 @@ const [english, spanish] = await Promise.all([
 let existing = null;
 try { existing = JSON.parse(await readFile(OUTPUT, 'utf8')); } catch {}
 
+const spanishByCanonicalUrl = new Map(
+  spanish.map((item) => [item.url.replace('https://www.irs.gov/es', 'https://www.irs.gov'), item])
+);
+const spanishDisplay = english.map((item) => spanishByCanonicalUrl.get(item.url) || item);
+
 const next = {
   source: 'Internal Revenue Service',
   source_urls: SOURCES,
   updated_at: new Date().toISOString(),
-  locales: { en: english, es: spanish },
+  locales: { en: english, es: spanishDisplay },
 };
 
 if (existing && JSON.stringify(existing.locales) === JSON.stringify(next.locales)) {
@@ -82,4 +87,4 @@ if (existing && JSON.stringify(existing.locales) === JSON.stringify(next.locales
 }
 
 await writeFile(OUTPUT, JSON.stringify(next, null, 2) + '\n', 'utf8');
-console.log(`Updated ${english.length} English and ${spanish.length} Spanish IRS news items.`);
+console.log(`Updated ${english.length} latest IRS items with ${spanish.length} official Spanish releases available.`);
