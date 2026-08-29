@@ -427,24 +427,22 @@ if (newsSection && newsList && newsStatus) {
   const language = newsSection.dataset.newsLanguage === 'en' ? 'en' : 'es';
   const copy = language === 'en'
     ? {
-        read: 'Read on IRS.gov',
-        share: 'Share source',
-        facebook: 'Share on Facebook',
-        linkedin: 'Share on LinkedIn',
-        whatsapp: 'Share on WhatsApp',
+        read: 'Read more',
+        previous: 'Previous news',
+        next: 'Next news',
         loaded: 'Latest official IRS releases.',
         failed: 'Official news is temporarily unavailable.',
         source: 'Open the IRS Newsroom',
+        sourceUrl: 'https://www.irs.gov/newsroom',
       }
     : {
-        read: 'Leer en IRS.gov',
-        share: 'Compartir fuente',
-        facebook: 'Compartir en Facebook',
-        linkedin: 'Compartir en LinkedIn',
-        whatsapp: 'Compartir en WhatsApp',
-        loaded: 'Últimas publicaciones oficiales del IRS.',
+        read: 'Leer más',
+        previous: 'Noticias anteriores',
+        next: 'Noticias siguientes',
+        loaded: 'Últimas publicaciones oficiales del IRS en español.',
         failed: 'Las noticias oficiales no están disponibles temporalmente.',
         source: 'Abrir el Newsroom del IRS',
+        sourceUrl: 'https://www.irs.gov/es/newsroom',
       };
 
   const officialIrsUrl = (value) => {
@@ -467,6 +465,40 @@ if (newsSection && newsList && newsStatus) {
     if (className) link.className = className;
     return link;
   };
+
+  const controls = document.createElement('div');
+  controls.className = 'news-carousel-controls';
+  const previousButton = document.createElement('button');
+  previousButton.type = 'button';
+  previousButton.className = 'news-carousel-button';
+  previousButton.setAttribute('aria-label', copy.previous);
+  previousButton.textContent = '‹';
+  const nextButton = document.createElement('button');
+  nextButton.type = 'button';
+  nextButton.className = 'news-carousel-button';
+  nextButton.setAttribute('aria-label', copy.next);
+  nextButton.textContent = '›';
+  controls.append(previousButton, nextButton);
+  newsList.before(controls);
+
+  const updateControls = () => {
+    const maximum = Math.max(0, newsList.scrollWidth - newsList.clientWidth);
+    previousButton.disabled = newsList.scrollLeft <= 4;
+    nextButton.disabled = newsList.scrollLeft >= maximum - 4;
+    controls.hidden = maximum <= 4;
+  };
+
+  const moveCarousel = (direction) => {
+    newsList.scrollBy({
+      left: direction * Math.max(newsList.clientWidth * 0.9, 280),
+      behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth',
+    });
+  };
+
+  previousButton.addEventListener('click', () => moveCarousel(-1));
+  nextButton.addEventListener('click', () => moveCarousel(1));
+  newsList.addEventListener('scroll', updateControls, { passive: true });
+  window.addEventListener('resize', updateControls);
 
   const renderNews = (items) => {
     const fragment = document.createDocumentFragment();
@@ -493,34 +525,20 @@ if (newsSection && newsList && newsStatus) {
       actions.className = 'news-actions';
       actions.append(externalLink(copy.read, url, 'news-read-link'));
 
-      const share = document.createElement('div');
-      share.className = 'news-share';
-      share.setAttribute('aria-label', copy.share);
-
-      const encodedUrl = encodeURIComponent(url);
-      const encodedText = encodeURIComponent(item.title + ' ' + url);
-      share.append(
-        externalLink('Facebook', 'https://www.facebook.com/sharer/sharer.php?u=' + encodedUrl, 'news-share-link'),
-        externalLink('LinkedIn', 'https://www.linkedin.com/sharing/share-offsite/?url=' + encodedUrl, 'news-share-link'),
-        externalLink('WhatsApp', 'https://wa.me/?text=' + encodedText, 'news-share-link')
-      );
-      share.children[0].setAttribute('aria-label', copy.facebook);
-      share.children[1].setAttribute('aria-label', copy.linkedin);
-      share.children[2].setAttribute('aria-label', copy.whatsapp);
-
-      actions.append(share);
       card.append(meta, title, summary, actions);
       fragment.append(card);
     });
 
     newsList.replaceChildren(fragment);
+    window.requestAnimationFrame(updateControls);
     return newsList.childElementCount;
   };
 
   const showNewsFallback = () => {
+    controls.hidden = true;
     newsStatus.className = 'news-status error';
     newsStatus.textContent = copy.failed + ' ';
-    newsStatus.append(externalLink(copy.source, 'https://www.irs.gov/newsroom'));
+    newsStatus.append(externalLink(copy.source, copy.sourceUrl));
   };
 
   const controller = new AbortController();
@@ -536,7 +554,8 @@ if (newsSection && newsList && newsStatus) {
       return response.json();
     })
     .then((payload) => {
-      if (!Array.isArray(payload.items) || renderNews(payload.items) === 0) {
+      const items = payload.locales?.[language];
+      if (!Array.isArray(items) || renderNews(items) === 0) {
         throw new Error('No valid IRS news');
       }
       newsStatus.className = 'news-status success';
