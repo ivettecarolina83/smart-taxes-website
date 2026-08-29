@@ -171,7 +171,7 @@ function response_(payload) {
       '<!doctype html><html><head><meta charset="UTF-8"></head><body>' +
       '<script>window.parent.postMessage(' +
       serializedPayload +
-      ', "https://smartaxesusa.com");<\\/script>' +
+      ', "https://smartaxesusa.com");</script>' +
       '</body></html>'
     )
     .setXFrameOptionsMode(HtmlService.XFrameOptionsMode.ALLOWALL);
