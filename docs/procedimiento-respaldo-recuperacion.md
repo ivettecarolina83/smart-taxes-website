@@ -76,10 +76,13 @@ El formulario utiliza un proyecto restringido de Google Apps Script.
 
 - Se confirmó la existencia de varios puntos históricos.
 - Se confirmó la generación diaria de copias recientes.
-- La preparación de la copia más reciente finalizó correctamente.
-- La descarga no pudo completarse porque la conexión con el servidor se restableció en dos intentos.
+- La preparación inicial de una copia finalizó correctamente; dos intentos de descarga fallaron por restablecimiento de conexión.
+- El 29 de agosto de 2026 se repitió la prueba con una copia reciente y la descarga se completó correctamente.
+- Se verificó la estructura del respaldo, incluido el contenido operativo dentro de `domains/smartaxesusa.com/public_html`.
+- La página principal del respaldo abrió correctamente de forma local sin enviar el formulario.
 - No se ejecutó ninguna restauración y la página publicada no fue modificada.
-- Queda pendiente repetir la descarga desde otra conexión o solicitar asistencia al proveedor.
+- La copia descargada y la carpeta temporal fueron eliminadas después de la comprobación.
+- La prueba de descarga y recuperación desde Hostinger fue satisfactoria.
 
 ### GitHub
 
