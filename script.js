@@ -503,7 +503,7 @@ if (newsSection && newsList && newsStatus) {
   const renderNews = (items) => {
     const fragment = document.createDocumentFragment();
 
-    items.slice(0, 6).forEach((item) => {
+    items.slice(0, 3).forEach((item) => {
       const url = officialIrsUrl(item.url);
       if (!url || typeof item.title !== 'string' || typeof item.summary !== 'string') return;
 
