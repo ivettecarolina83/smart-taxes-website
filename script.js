@@ -417,3 +417,130 @@ if (consultationForm) {
     HTMLFormElement.prototype.submit.call(consultationForm);
   });
 }
+
+
+const newsSection = document.querySelector('.irs-news');
+const newsList = document.querySelector('#irs-news-list');
+const newsStatus = document.querySelector('#irs-news-status');
+
+if (newsSection && newsList && newsStatus) {
+  const language = newsSection.dataset.newsLanguage === 'en' ? 'en' : 'es';
+  const copy = language === 'en'
+    ? {
+        read: 'Read on IRS.gov',
+        share: 'Share source',
+        facebook: 'Share on Facebook',
+        linkedin: 'Share on LinkedIn',
+        whatsapp: 'Share on WhatsApp',
+        loaded: 'Latest official IRS releases.',
+        failed: 'Official news is temporarily unavailable.',
+        source: 'Open the IRS Newsroom',
+      }
+    : {
+        read: 'Leer en IRS.gov',
+        share: 'Compartir fuente',
+        facebook: 'Compartir en Facebook',
+        linkedin: 'Compartir en LinkedIn',
+        whatsapp: 'Compartir en WhatsApp',
+        loaded: 'Últimas publicaciones oficiales del IRS.',
+        failed: 'Las noticias oficiales no están disponibles temporalmente.',
+        source: 'Abrir el Newsroom del IRS',
+      };
+
+  const officialIrsUrl = (value) => {
+    try {
+      const url = new URL(value);
+      return url.protocol === 'https:' && ['irs.gov', 'www.irs.gov'].includes(url.hostname)
+        ? url.href
+        : '';
+    } catch {
+      return '';
+    }
+  };
+
+  const externalLink = (label, url, className = '') => {
+    const link = document.createElement('a');
+    link.textContent = label;
+    link.href = url;
+    link.target = '_blank';
+    link.rel = 'noopener noreferrer';
+    if (className) link.className = className;
+    return link;
+  };
+
+  const renderNews = (items) => {
+    const fragment = document.createDocumentFragment();
+
+    items.slice(0, 6).forEach((item) => {
+      const url = officialIrsUrl(item.url);
+      if (!url || typeof item.title !== 'string' || typeof item.summary !== 'string') return;
+
+      const card = document.createElement('article');
+      card.className = 'card news-card reveal visible';
+
+      const meta = document.createElement('p');
+      meta.className = 'news-meta';
+      meta.textContent = item.date || 'IRS Newsroom';
+
+      const title = document.createElement('h3');
+      title.textContent = item.title;
+
+      const summary = document.createElement('p');
+      summary.className = 'news-summary';
+      summary.textContent = item.summary;
+
+      const actions = document.createElement('div');
+      actions.className = 'news-actions';
+      actions.append(externalLink(copy.read, url, 'news-read-link'));
+
+      const share = document.createElement('div');
+      share.className = 'news-share';
+      share.setAttribute('aria-label', copy.share);
+
+      const encodedUrl = encodeURIComponent(url);
+      const encodedText = encodeURIComponent(item.title + ' ' + url);
+      share.append(
+        externalLink('Facebook', 'https://www.facebook.com/sharer/sharer.php?u=' + encodedUrl, 'news-share-link'),
+        externalLink('LinkedIn', 'https://www.linkedin.com/sharing/share-offsite/?url=' + encodedUrl, 'news-share-link'),
+        externalLink('WhatsApp', 'https://wa.me/?text=' + encodedText, 'news-share-link')
+      );
+      share.children[0].setAttribute('aria-label', copy.facebook);
+      share.children[1].setAttribute('aria-label', copy.linkedin);
+      share.children[2].setAttribute('aria-label', copy.whatsapp);
+
+      actions.append(share);
+      card.append(meta, title, summary, actions);
+      fragment.append(card);
+    });
+
+    newsList.replaceChildren(fragment);
+    return newsList.childElementCount;
+  };
+
+  const showNewsFallback = () => {
+    newsStatus.className = 'news-status error';
+    newsStatus.textContent = copy.failed + ' ';
+    newsStatus.append(externalLink(copy.source, 'https://www.irs.gov/newsroom'));
+  };
+
+  const controller = new AbortController();
+  const timeout = window.setTimeout(() => controller.abort(), 10000);
+
+  fetch('/api/irs-news.php', {
+    headers: { Accept: 'application/json' },
+    signal: controller.signal,
+  })
+    .then((response) => {
+      if (!response.ok) throw new Error('News request failed');
+      return response.json();
+    })
+    .then((payload) => {
+      if (!Array.isArray(payload.items) || renderNews(payload.items) === 0) {
+        throw new Error('No valid IRS news');
+      }
+      newsStatus.className = 'news-status success';
+      newsStatus.textContent = copy.loaded;
+    })
+    .catch(showNewsFallback)
+    .finally(() => window.clearTimeout(timeout));
+}
