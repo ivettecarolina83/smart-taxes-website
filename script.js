@@ -481,23 +481,60 @@ if (newsSection && newsList && newsStatus) {
   controls.append(previousButton, nextButton);
   newsList.before(controls);
 
+  const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+  let carouselTimer = 0;
+
+  const cards = () => Array.from(newsList.querySelectorAll('.news-card'));
+
+  const currentCardIndex = () => {
+    const available = cards();
+    if (available.length === 0) return 0;
+    return available.reduce((closest, card, index) => {
+      const distance = Math.abs(card.offsetLeft - newsList.scrollLeft);
+      return distance < closest.distance ? { index, distance } : closest;
+    }, { index: 0, distance: Infinity }).index;
+  };
+
   const updateControls = () => {
-    const maximum = Math.max(0, newsList.scrollWidth - newsList.clientWidth);
-    previousButton.disabled = newsList.scrollLeft <= 4;
-    nextButton.disabled = newsList.scrollLeft >= maximum - 4;
-    controls.hidden = maximum <= 4;
+    const hasMultiple = cards().length > 1;
+    controls.hidden = !hasMultiple;
+    previousButton.disabled = !hasMultiple;
+    nextButton.disabled = !hasMultiple;
   };
 
   const moveCarousel = (direction) => {
-    newsList.scrollBy({
-      left: direction * Math.max(newsList.clientWidth * 0.9, 280),
-      behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth',
+    const available = cards();
+    if (available.length < 2) return;
+    const targetIndex = (currentCardIndex() + direction + available.length) % available.length;
+    newsList.scrollTo({
+      left: available[targetIndex].offsetLeft,
+      behavior: reducedMotion.matches ? 'auto' : 'smooth',
     });
   };
 
-  previousButton.addEventListener('click', () => moveCarousel(-1));
-  nextButton.addEventListener('click', () => moveCarousel(1));
-  newsList.addEventListener('scroll', updateControls, { passive: true });
+  const stopAutomaticCarousel = () => {
+    window.clearInterval(carouselTimer);
+    carouselTimer = 0;
+  };
+
+  const startAutomaticCarousel = () => {
+    stopAutomaticCarousel();
+    if (reducedMotion.matches || cards().length < 2) return;
+    carouselTimer = window.setInterval(() => moveCarousel(1), 6500);
+  };
+
+  previousButton.addEventListener('click', () => {
+    moveCarousel(-1);
+    startAutomaticCarousel();
+  });
+  nextButton.addEventListener('click', () => {
+    moveCarousel(1);
+    startAutomaticCarousel();
+  });
+  newsList.addEventListener('mouseenter', stopAutomaticCarousel);
+  newsList.addEventListener('mouseleave', startAutomaticCarousel);
+  newsList.addEventListener('focusin', stopAutomaticCarousel);
+  newsList.addEventListener('focusout', startAutomaticCarousel);
   window.addEventListener('resize', updateControls);
 
   const renderNews = (items) => {
@@ -530,7 +567,10 @@ if (newsSection && newsList && newsStatus) {
     });
 
     newsList.replaceChildren(fragment);
-    window.requestAnimationFrame(updateControls);
+    window.requestAnimationFrame(() => {
+      updateControls();
+      startAutomaticCarousel();
+    });
     return newsList.childElementCount;
   };
 
