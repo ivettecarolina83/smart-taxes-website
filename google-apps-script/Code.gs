@@ -126,7 +126,7 @@ function doPost(e) {
       console.error('No se pudo enviar la confirmación al cliente:', confirmationError);
     }
 
-    return response_({ ok: true });
+    return response_({ ok: true, requestId: requestId });
   } catch (error) {
     console.error(error);
     return response_({ ok: false, code: 'processing_error', requestId: requestId });
