@@ -10,8 +10,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Anton&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
     <link rel="alternate" hreflang="es-US" href="#" />
     <link rel="alternate" hreflang="en-US" href="en/index.html" />
-    <link rel="stylesheet" href="styles.css?v=20260806-4" />
-    <script src="script.js?v=20260808-1" defer></script>
+    <link rel="stylesheet" href="styles.css?v=20260829-2" />
+    <script src="script.js?v=20260829-2" defer></script>
   </head>
   <body class="intro-active">
     <div class="brand-intro" role="status" aria-label="Presentación de Smart Taxes">
@@ -46,6 +46,7 @@
             </div>
           </div>
           <a href="#razones">¿Por qué elegirnos?</a>
+          <a href="#noticias">Noticias</a>
           <a href="#preguntas">Preguntas</a>
           <div class="language-switch" aria-label="Selector de idioma">
             <a class="active" href="#" lang="es" aria-current="page">ES</a>
@@ -221,6 +222,23 @@
             <article class="card reason-card reveal"><span class="check" aria-hidden="true">✓</span><h3>Trato humano y cercano</h3><p>Asesorías adaptadas a la situación particular de cada cliente.</p></article>
             <article class="card reason-card reveal"><span class="check" aria-hidden="true">✓</span><h3>Atención online</h3><p>Posibilidad de ofrecer asesorías online en todos los estados.</p></article>
           </div>
+        </div>
+      </section>
+
+      <section class="section irs-news" id="noticias" aria-labelledby="news-title" data-news-language="es">
+        <div class="container">
+          <div class="section-title reveal"><span></span><h2 id="news-title">Noticias oficiales del IRS</h2><span></span></div>
+          <div class="news-intro reveal">
+            <div>
+              <p class="eyebrow">Fuente principal: IRS.gov</p>
+              <p>Consulta las publicaciones más recientes del Servicio de Impuestos Internos. Cada tarjeta abre la noticia original en el sitio oficial.</p>
+            </div>
+            <a class="button-link news-source-link" href="https://www.irs.gov/newsroom" target="_blank" rel="noopener noreferrer">Visitar IRS Newsroom</a>
+          </div>
+          <p class="news-status" id="irs-news-status" role="status">Cargando noticias oficiales…</p>
+          <div class="news-grid" id="irs-news-list" aria-live="polite"></div>
+          <noscript><p class="news-fallback">Activa JavaScript para ver las noticias aquí o visita directamente el <a href="https://www.irs.gov/newsroom">Newsroom del IRS</a>.</p></noscript>
+          <aside class="news-disclaimer">Smart Taxes no está afiliada ni respaldada por el IRS. Este contenido es informativo; ante cualquier diferencia, prevalece la publicación original en IRS.gov.</aside>
         </div>
       </section>
 
