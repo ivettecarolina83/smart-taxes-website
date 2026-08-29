@@ -734,3 +734,176 @@ body.intro-active { overflow: hidden; }
 }
 .form-security-notice strong { color: var(--blue-dark); font-size: .8rem; }
 .form-security-notice span { display: block; }
+
+
+/* Official IRS news */
+.irs-news {
+  background: linear-gradient(180deg, #f6f9fd 0%, #ffffff 100%);
+}
+
+.news-intro {
+  align-items: center;
+  display: flex;
+  gap: 2rem;
+  justify-content: space-between;
+  margin-bottom: 1.25rem;
+}
+
+.news-intro > div {
+  max-width: 720px;
+}
+
+.news-source-link,
+.news-read-link {
+  background: var(--blue);
+  border-radius: 999px;
+  color: #fff;
+  display: inline-flex;
+  font-weight: 700;
+  justify-content: center;
+  padding: .75rem 1.1rem;
+  text-decoration: none;
+}
+
+.news-source-link {
+  flex: 0 0 auto;
+}
+
+.news-status {
+  color: var(--gray);
+  margin: 0 0 1rem;
+}
+
+.news-status.success {
+  color: #17603a;
+}
+
+.news-status.error {
+  background: #fff4f4;
+  border-left: 4px solid #a52424;
+  color: #7f1d1d;
+  padding: .85rem 1rem;
+}
+
+.news-status.error a {
+  color: inherit;
+  font-weight: 700;
+}
+
+.news-grid {
+  display: grid;
+  gap: 1.25rem;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.news-card {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+
+.news-card h3 {
+  color: var(--navy);
+  font-size: 1.08rem;
+  line-height: 1.45;
+  margin: 0 0 .75rem;
+}
+
+.news-meta {
+  color: var(--blue);
+  font-size: .82rem;
+  font-weight: 700;
+  letter-spacing: .02em;
+  margin: 0 0 .65rem;
+  text-transform: uppercase;
+}
+
+.news-summary {
+  flex: 1;
+  font-size: .94rem;
+  line-height: 1.65;
+}
+
+.news-actions {
+  align-items: flex-start;
+  border-top: 1px solid rgba(13, 49, 95, .12);
+  display: flex;
+  flex-direction: column;
+  gap: .8rem;
+  margin-top: 1rem;
+  padding-top: 1rem;
+}
+
+.news-read-link {
+  padding: .6rem .9rem;
+}
+
+.news-share {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .45rem;
+}
+
+.news-share::before {
+  color: var(--gray);
+  content: "Compartir:";
+  flex-basis: 100%;
+  font-size: .76rem;
+  font-weight: 600;
+}
+
+html[lang="en"] .news-share::before {
+  content: "Share:";
+}
+
+.news-share-link {
+  border: 1px solid rgba(13, 49, 95, .25);
+  border-radius: 999px;
+  color: var(--navy);
+  font-size: .76rem;
+  font-weight: 600;
+  padding: .35rem .6rem;
+  text-decoration: none;
+}
+
+.news-source-link:hover,
+.news-read-link:hover,
+.news-source-link:focus-visible,
+.news-read-link:focus-visible {
+  background: var(--navy);
+}
+
+.news-share-link:hover,
+.news-share-link:focus-visible {
+  background: #edf4fc;
+  border-color: var(--blue);
+}
+
+.news-disclaimer,
+.news-fallback {
+  background: #eef5fb;
+  border-radius: 12px;
+  color: var(--gray);
+  font-size: .84rem;
+  line-height: 1.55;
+  margin-top: 1.25rem;
+  padding: 1rem;
+}
+
+@media (max-width: 900px) {
+  .news-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 640px) {
+  .news-intro {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .news-grid {
+    grid-template-columns: 1fr;
+  }
+}
