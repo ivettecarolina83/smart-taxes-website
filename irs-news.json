@@ -4,7 +4,7 @@
     "en": "https://www.irs.gov/newsroom",
     "es": "https://www.irs.gov/es/newsroom"
   },
-  "updated_at": "2026-08-29T20:00:00Z",
+  "updated_at": "2026-08-29T20:15:00Z",
   "locales": {
     "en": [
       {
@@ -46,10 +46,22 @@
     ],
     "es": [
       {
+        "title": "IRS online services spotlight: Taxpayers can get more done online",
+        "date": "Aug. 28, 2026",
+        "summary": "The Internal Revenue Service encouraged taxpayers to explore IRS.gov online tools that can help them quickly and securely take care of common tax tasks.",
+        "url": "https://www.irs.gov/newsroom/irs-online-services-spotlight-taxpayers-can-get-more-done-online"
+      },
+      {
         "title": "Recordatorio del IRS: contribuyentes con prórrogas pueden usar Free File del IRS este verano",
         "date": "26 de agosto de 2026",
         "summary": "El IRS alentó a los contribuyentes que solicitaron una prórroga a presentar su declaración federal de 2025 lo antes posible, en lugar de esperar hasta la fecha límite del 15 de octubre.",
         "url": "https://www.irs.gov/es/newsroom/irs-reminder-extension-filers-can-use-irs-free-file-this-summer"
+      },
+      {
+        "title": "IRS CEO meets with tax professionals at NY tax forum",
+        "date": "Aug. 25, 2026",
+        "summary": "The Internal Revenue Service reported on its engagement with taxpayers and representatives at the IRS Nationwide Tax Forum in New York.",
+        "url": "https://www.irs.gov/newsroom/irs-ceo-meets-with-tax-professionals-at-ny-tax-forum"
       },
       {
         "title": "Recordatorio del IRS: El sistema de presentación electrónica de declaraciones informativas está migrando a una nueva plataforma",
@@ -58,10 +70,16 @@
         "url": "https://www.irs.gov/es/newsroom/irs-reminder-information-return-e-file-system-transitioning-to-a-new-platform"
       },
       {
-        "title": "Profesionales de impuestos deben estar atentos a correos electrónicos de phishing y otros ataques, advierte Cumbre de Seguridad",
-        "date": "4 de agosto de 2026",
-        "summary": "El IRS y los socios de la Cumbre de Seguridad advirtieron a los profesionales de impuestos sobre correos de phishing y otras modalidades diseñadas para robar datos confidenciales.",
-        "url": "https://www.irs.gov/es/newsroom/security-summit-warns-tax-pros-to-watch-out-for-phishing-emails-and-other-attacks"
+        "title": "Interest rates remain the same for the fourth quarter of 2026",
+        "date": "Aug. 21, 2026",
+        "summary": "The Internal Revenue Service announced that interest rates will remain unchanged for the calendar quarter beginning Oct. 1, 2026.",
+        "url": "https://www.irs.gov/newsroom/interest-rates-remain-the-same-for-the-fourth-quarter-of-2026"
+      },
+      {
+        "title": "IRS launches digitally authenticated Tax Compliance Report",
+        "date": "Aug. 20, 2026",
+        "summary": "The Internal Revenue Service announced a digitally authenticated Tax Compliance Report available through IRS Individual Online Account.",
+        "url": "https://www.irs.gov/newsroom/irs-launches-digitally-authenticated-tax-compliance-report"
       }
     ]
   }
