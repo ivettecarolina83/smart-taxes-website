@@ -221,30 +221,135 @@ const isEnglishPage = document.documentElement.lang === 'en';
 const formMessages = isEnglishPage
   ? {
       invalid: 'Review the required fields before submitting.',
+      sensitive: 'For your security, remove any SSN, ITIN, banking, card, identification, or tax-document information before submitting.',
+      tooFast: 'Please take a moment to review your information before submitting.',
+      rateLimited: 'Please wait a few minutes before sending another request.',
       notConnected: 'The form is ready, but the Google Apps Script URL has not been connected.',
-      sending: 'Sending your request…',
-      sent: 'Request sent. Smart Taxes may contact you through your selected method.',
-      failed: 'We could not send your request. Please try again or use the call or text buttons.',
+      sending: 'Verifying and sending your request…',
+      sent: 'Request confirmed. Check your email for the Smart Taxes confirmation message.',
+      failed: 'We could not confirm your request. Your information remains in the form; please try again or use the call or text buttons.',
       submit: 'Submit request',
-      submitting: 'Sending…'
+      submitting: 'Verifying…'
     }
   : {
       invalid: 'Revisa los campos obligatorios antes de enviar.',
+      sensitive: 'Por tu seguridad, elimina cualquier SSN, ITIN, dato bancario, número de tarjeta, identificación o información de documentos fiscales antes de enviar.',
+      tooFast: 'Tómate un momento para revisar la información antes de enviarla.',
+      rateLimited: 'Espera unos minutos antes de enviar otra solicitud.',
       notConnected: 'El formulario está listo, pero falta conectar la URL de Google Apps Script.',
-      sending: 'Enviando tu solicitud…',
-      sent: 'Solicitud enviada. Smart Taxes podrá comunicarse contigo por el medio indicado.',
-      failed: 'No pudimos enviar la solicitud. Intenta nuevamente o utiliza los botones de llamada o mensaje.',
+      sending: 'Verificando y enviando tu solicitud…',
+      sent: 'Solicitud confirmada. Revisa tu correo para encontrar el mensaje de confirmación de Smart Taxes.',
+      failed: 'No pudimos confirmar tu solicitud. Tu información permanece en el formulario; intenta nuevamente o utiliza los botones de llamada o mensaje.',
       submit: 'Enviar solicitud',
-      submitting: 'Enviando…'
+      submitting: 'Verificando…'
     };
 
 if (consultationForm) {
   const formStatus = consultationForm.querySelector('#form-status');
   const submitButton = consultationForm.querySelector('.form-submit');
+  const messageField = consultationForm.querySelector('[name="mensaje"]');
+  const honeypotField = consultationForm.querySelector('[name="website"]');
+  const startedAtField = consultationForm.querySelector('[name="form_started_at"]');
+  const requestIdField = consultationForm.querySelector('[name="request_id"]');
+  const responseFrame = document.querySelector('#consultation-response-frame');
+  const fallbackActions = consultationForm.querySelector('#form-fallback-actions');
+  const sensitivePatterns = [
+    /\b\d{6,19}\b/,
+    /\b\d{3}[- ]?\d{2}[- ]?\d{4}\b/,
+    /\b9\d{2}[- ]?\d{2}[- ]?\d{4}\b/,
+    /(?:\d[ -]?){12,19}/
+  ];
+  let pendingRequestId = '';
+  let responseTimer;
 
-  consultationForm.addEventListener('submit', async (event) => {
+  function resetFormTimer() {
+    if (startedAtField) startedAtField.value = String(Date.now());
+  }
+
+  function finishSubmission() {
+    window.clearTimeout(responseTimer);
+    submitButton.disabled = false;
+    submitButton.textContent = formMessages.submit;
+  }
+
+  function showFallbackActions(show) {
+    if (!fallbackActions) return;
+
+    fallbackActions.hidden = !show;
+
+    if (show) {
+      window.requestAnimationFrame(() => {
+        fallbackActions.scrollIntoView({
+          behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth',
+          block: 'nearest'
+        });
+      });
+    }
+  }
+
+  function isTrustedFormOrigin(origin) {
+    try {
+      const url = new URL(origin);
+      return (
+        url.protocol === 'https:' &&
+        (url.hostname === 'script.google.com' || url.hostname.endsWith('.googleusercontent.com'))
+      );
+    } catch (error) {
+      return false;
+    }
+  }
+
+  resetFormTimer();
+
+  window.addEventListener('message', (event) => {
+    if (
+      !pendingRequestId ||
+      !responseFrame ||
+      event.source !== responseFrame.contentWindow ||
+      !isTrustedFormOrigin(event.origin)
+    ) {
+      return;
+    }
+
+    const payload = event.data;
+    if (
+      !payload ||
+      payload.source !== 'smart-taxes-form' ||
+      payload.requestId !== pendingRequestId
+    ) {
+      return;
+    }
+
+    pendingRequestId = '';
+    finishSubmission();
+    formStatus.className = 'form-status';
+    showFallbackActions(false);
+
+    if (payload.ok) {
+      consultationForm.reset();
+      resetFormTimer();
+      formStatus.textContent = formMessages.sent;
+      formStatus.classList.add('success');
+      return;
+    }
+
+    const errorMessages = {
+      sensitive: formMessages.sensitive,
+      too_fast: formMessages.tooFast,
+      rate_limited: formMessages.rateLimited,
+      invalid: formMessages.invalid
+    };
+
+    const knownMessage = errorMessages[payload.code];
+    formStatus.textContent = knownMessage || formMessages.failed;
+    formStatus.classList.add('error');
+    showFallbackActions(!knownMessage);
+  });
+
+  consultationForm.addEventListener('submit', (event) => {
     event.preventDefault();
     formStatus.className = 'form-status';
+    showFallbackActions(false);
 
     if (!consultationForm.checkValidity()) {
       consultationForm.reportValidity();
@@ -253,35 +358,63 @@ if (consultationForm) {
       return;
     }
 
-    const endpoint = consultationForm.dataset.endpoint?.trim();
+    if (honeypotField?.value.trim()) {
+      consultationForm.reset();
+      resetFormTimer();
+      formStatus.textContent = formMessages.sent;
+      formStatus.classList.add('success');
+      return;
+    }
 
-    if (!endpoint) {
-      formStatus.textContent = formMessages.notConnected;
+    const elapsed = Date.now() - Number(startedAtField?.value || 0);
+    if (!Number.isFinite(elapsed) || elapsed < 1500) {
+      formStatus.textContent = formMessages.tooFast;
       formStatus.classList.add('error');
       return;
     }
+
+    const messageValue = messageField?.value.replace(/\s+/g, ' ').trim() || '';
+    if (sensitivePatterns.some((pattern) => pattern.test(messageValue))) {
+      formStatus.textContent = formMessages.sensitive;
+      formStatus.classList.add('error');
+      messageField?.focus();
+      return;
+    }
+
+    const endpoint = consultationForm.dataset.endpoint?.trim();
+
+    if (!endpoint || !responseFrame || !requestIdField) {
+      formStatus.textContent = formMessages.notConnected;
+      formStatus.classList.add('error');
+      showFallbackActions(true);
+      return;
+    }
+
+    if (!navigator.onLine) {
+      formStatus.textContent = formMessages.failed;
+      formStatus.classList.add('error');
+      showFallbackActions(true);
+      return;
+    }
+
+    pendingRequestId =
+      window.crypto?.randomUUID?.() ||
+      String(Date.now()) + '-' + Math.random().toString(36).slice(2);
+    requestIdField.value = pendingRequestId;
+    consultationForm.action = endpoint;
 
     submitButton.disabled = true;
     submitButton.textContent = formMessages.submitting;
     formStatus.textContent = formMessages.sending;
 
-    try {
-      await fetch(endpoint, {
-        method: 'POST',
-        mode: 'no-cors',
-        body: new FormData(consultationForm)
-      });
-
-      consultationForm.reset();
-      formStatus.textContent = formMessages.sent;
-      formStatus.classList.add('success');
-    } catch (error) {
+    responseTimer = window.setTimeout(() => {
+      pendingRequestId = '';
+      finishSubmission();
+      formStatus.className = 'form-status error';
       formStatus.textContent = formMessages.failed;
-      formStatus.classList.add('error');
-    } finally {
-      submitButton.disabled = false;
-      submitButton.textContent = formMessages.submit;
-    }
+      showFallbackActions(true);
+    }, 20000);
+
+    HTMLFormElement.prototype.submit.call(consultationForm);
   });
 }
-
