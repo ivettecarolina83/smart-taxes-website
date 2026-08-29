@@ -24,12 +24,12 @@ jobs:
         run: node scripts/update-irs-news.mjs
       - name: Commit verified changes
         run: |
-          if git diff --quiet -- data/irs-news.json; then
+          if git diff --quiet -- irs-news.json; then
             echo "No changes"
             exit 0
           fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/irs-news.json
+          git add irs-news.json
           git commit -m "Actualiza noticias oficiales del IRS"
           git push
