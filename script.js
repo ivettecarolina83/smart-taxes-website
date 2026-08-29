@@ -526,7 +526,8 @@ if (newsSection && newsList && newsStatus) {
   const controller = new AbortController();
   const timeout = window.setTimeout(() => controller.abort(), 10000);
 
-  fetch('/api/irs-news.php', {
+  fetch('/data/irs-news.json', {
+    cache: 'no-cache',
     headers: { Accept: 'application/json' },
     signal: controller.signal,
   })
