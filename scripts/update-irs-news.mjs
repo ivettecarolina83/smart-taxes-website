@@ -1,19 +1,11 @@
 import { readFile, writeFile } from 'node:fs/promises';
 
-const SOURCE = 'https://www.irs.gov/newsroom';
+const SOURCES = {
+  en: 'https://www.irs.gov/newsroom',
+  es: 'https://www.irs.gov/es/newsroom',
+};
 const OUTPUT = new URL('../irs-news.json', import.meta.url);
 const LIMIT = 6;
-
-const response = await fetch(SOURCE, {
-  headers: {
-    Accept: 'text/html,application/xhtml+xml',
-    'User-Agent': 'SmartTaxesNewsUpdater/1.0 (+https://smartaxesusa.com)',
-  },
-  signal: AbortSignal.timeout(20000),
-});
-
-if (!response.ok) throw new Error(`IRS Newsroom returned ${response.status}`);
-const html = await response.text();
 
 const decode = (value) =>
   value
@@ -27,40 +19,67 @@ const decode = (value) =>
     .replace(/\s+/g, ' ')
     .trim();
 
-const matches = [...html.matchAll(
-  /<h3[^>]*>[\s\S]*?<a[^>]+href="(\/newsroom\/[^"]+)"[^>]*>([\s\S]*?)<\/a>[\s\S]*?<\/h3>[\s\S]*?<p[^>]*>([\s\S]*?)<\/p>/gi
-)];
+async function fetchLocale(language, source) {
+  const response = await fetch(source, {
+    headers: {
+      Accept: 'text/html,application/xhtml+xml',
+      'User-Agent': 'SmartTaxesNewsUpdater/2.0 (+https://smartaxesusa.com)',
+    },
+    signal: AbortSignal.timeout(20000),
+  });
 
-const items = matches.slice(0, LIMIT).map((match) => {
-  const detail = decode(match[3]);
-  const parts = detail.match(/^(?:IR-\d{4}-\d+,\s*)?([A-Z][a-z]{2}\.\s+\d{1,2},\s+\d{4})\s*[—–-]\s*(.+)$/u);
-  return {
-    title: decode(match[2]),
-    date: parts?.[1] || '',
-    summary: parts?.[2] || detail,
-    url: new URL(match[1], 'https://www.irs.gov').href,
-  };
-}).filter((item) => {
-  const url = new URL(item.url);
-  return item.title && item.summary && url.protocol === 'https:' &&
-    ['irs.gov', 'www.irs.gov'].includes(url.hostname);
-});
+  if (!response.ok) throw new Error(`${language} IRS Newsroom returned ${response.status}`);
+  const html = await response.text();
+  const prefix = language === 'es' ? '/es/newsroom/' : '/newsroom/';
+  const pattern = new RegExp(
+    '<h3[^>]*>[\\s\\S]*?<a[^>]+href="(' + prefix.replaceAll('/', '\\/') +
+      '[^"]+)"[^>]*>([\\s\\S]*?)<\\/a>[\\s\\S]*?<\\/h3>[\\s\\S]*?<p[^>]*>([\\s\\S]*?)<\\/p>',
+    'gi'
+  );
 
-if (items.length < 3) throw new Error('IRS Newsroom structure changed; existing JSON was preserved.');
+  const matches = [...html.matchAll(pattern)];
+  const items = matches.slice(0, LIMIT).map((match) => {
+    const detail = decode(match[3]);
+    const separator = detail.match(/^(?:IR-\d{4}-\d+(?:SP)?,\s*)?(.+?)\s*[—–]\s*(.+)$/u);
+    return {
+      title: decode(match[2]),
+      date: separator?.[1] || '',
+      summary: separator?.[2] || detail,
+      url: new URL(match[1], 'https://www.irs.gov').href,
+    };
+  }).filter((item) => {
+    const url = new URL(item.url);
+    const expectedPath = language === 'es' ? '/es/newsroom/' : '/newsroom/';
+    return item.title && item.summary && url.protocol === 'https:' &&
+      ['irs.gov', 'www.irs.gov'].includes(url.hostname) &&
+      url.pathname.startsWith(expectedPath);
+  });
+
+  if (items.length < 3) {
+    throw new Error(`${language} IRS Newsroom structure changed; existing JSON was preserved.`);
+  }
+  return items;
+}
+
+const [english, spanish] = await Promise.all([
+  fetchLocale('en', SOURCES.en),
+  fetchLocale('es', SOURCES.es),
+]);
 
 let existing = null;
 try { existing = JSON.parse(await readFile(OUTPUT, 'utf8')); } catch {}
+
 const next = {
   source: 'Internal Revenue Service',
-  source_url: SOURCE,
+  source_urls: SOURCES,
   updated_at: new Date().toISOString(),
-  items,
+  locales: { en: english, es: spanish },
 };
 
-if (existing && JSON.stringify(existing.items) === JSON.stringify(next.items)) {
+if (existing && JSON.stringify(existing.locales) === JSON.stringify(next.locales)) {
   console.log('No IRS news changes.');
   process.exit(0);
 }
 
 await writeFile(OUTPUT, JSON.stringify(next, null, 2) + '\n', 'utf8');
-console.log(`Updated ${items.length} IRS news items.`);
+console.log(`Updated ${english.length} English and ${spanish.length} Spanish IRS news items.`);
