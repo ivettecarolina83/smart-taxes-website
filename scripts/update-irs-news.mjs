@@ -1,7 +1,7 @@
 import { readFile, writeFile } from 'node:fs/promises';
 
 const SOURCE = 'https://www.irs.gov/newsroom';
-const OUTPUT = new URL('../data/irs-news.json', import.meta.url);
+const OUTPUT = new URL('../irs-news.json', import.meta.url);
 const LIMIT = 6;
 
 const response = await fetch(SOURCE, {
