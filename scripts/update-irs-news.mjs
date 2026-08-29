@@ -5,7 +5,7 @@ const SOURCES = {
   es: 'https://www.irs.gov/es/newsroom',
 };
 const OUTPUT = new URL('../irs-news.json', import.meta.url);
-const LIMIT = 6;
+const LIMIT = 3;
 
 const decode = (value) =>
   value
