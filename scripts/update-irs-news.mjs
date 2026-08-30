@@ -32,8 +32,12 @@ async function fetchLocale(language, source) {
   const html = await response.text();
   const prefix = language === 'es' ? '/es/newsroom/' : '/newsroom/';
   const pattern = new RegExp(
-    '<h3[^>]*>[\\s\\S]*?<a[^>]+href="(' + prefix.replaceAll('/', '\\/') +
-      '[^"]+)"[^>]*>([\\s\\S]*?)<\\/a>[\\s\\S]*?<\\/h3>[\\s\\S]*?<p[^>]*>([\\s\\S]*?)<\\/p>',
+    '<div[^>]+class="[^"]*views-row[^"]*"[^>]*>[\\s\\S]*?' +
+      '<h3[^>]*>[\\s\\S]*?<a[^>]+href="(' + prefix.replaceAll('/', '\\/') +
+      '[^"]+)"[^>]*>([\\s\\S]*?)<\\/a>[\\s\\S]*?<\\/h3>[\\s\\S]*?' +
+      '<div[^>]+class="[^"]*views-field-field-pup-description-abstract[^"]*"[^>]*>[\\s\\S]*?' +
+      '(?:<p[^>]*>|<div[^>]+class="[^"]*field-content[^"]*"[^>]*>)' +
+      '([\\s\\S]*?)(?:<\\/p>|<\\/div>)',
     'gi'
   );
 
