@@ -4,9 +4,15 @@
     "en": "https://www.irs.gov/newsroom",
     "es": "https://www.irs.gov/es/newsroom"
   },
-  "updated_at": "2026-09-03T16:25:29.010Z",
+  "updated_at": "2026-09-03T21:02:24.012Z",
   "locales": {
     "en": [
+      {
+        "title": "IRS Reminder: Disaster preparedness starts with tax records",
+        "date": "Sept. 3, 2026",
+        "summary": "The Internal Revenue Service today encouraged taxpayers to protect important tax and financial records before disaster strikes.",
+        "url": "https://www.irs.gov/newsroom/irs-reminder-disaster-preparedness-starts-with-tax-records"
+      },
       {
         "title": "Treasury, IRS Move to End Tax-Exempt Status for Discriminatory Practices in Private Schools",
         "date": "Sep. 3, 2026",
@@ -18,15 +24,15 @@
         "date": "Aug. 28, 2026",
         "summary": "The Internal Revenue Service today encouraged taxpayers to explore the growing number of IRS.gov online tools that can help them quickly and securely take care of common tax tasks.",
         "url": "https://www.irs.gov/newsroom/irs-online-services-spotlight-taxpayers-can-get-more-done-online"
-      },
-      {
-        "title": "IRS reminder: Extension filers can use IRS Free File this summer",
-        "date": "Aug. 26, 2026",
-        "summary": "The Internal Revenue Service today encouraged taxpayers who requested an extension to file their 2025 federal tax return as soon as possible, rather than waiting until the Oct. 15 deadline.",
-        "url": "https://www.irs.gov/newsroom/irs-reminder-extension-filers-can-use-irs-free-file-this-summer"
       }
     ],
     "es": [
+      {
+        "title": "Recordatorio del IRS: La preparación ante desastres comienza con los registros tributarios",
+        "date": "3 de septiembre de 2026",
+        "summary": "El Servicio de Impuestos Internos instó hoy a los contribuyentes a proteger sus registros tributarios y financieros antes de que ocurra un desastre.",
+        "url": "https://www.irs.gov/es/newsroom/irs-reminder-disaster-preparedness-starts-with-tax-records"
+      },
       {
         "title": "Treasury, IRS Move to End Tax-Exempt Status for Discriminatory Practices in Private Schools",
         "date": "Sep. 3, 2026",
@@ -38,12 +44,6 @@
         "date": "28 de agosto de 2026",
         "summary": "El IRS por sus siglas en inglés) animó hoy a los contribuyentes a explorar el creciente número de herramientas en línea disponibles en IRS.gov, las cuales pueden ayudarles a realizar trámites tributarios comunes de manera rápida y segura.",
         "url": "https://www.irs.gov/es/newsroom/irs-online-services-spotlight-taxpayers-can-get-more-done-online"
-      },
-      {
-        "title": "Recordatorio del IRS: contribuyentes con prórrogas pueden usar Free File del IRS este verano",
-        "date": "26 de agosto de 2026",
-        "summary": "El IRS alentó hoy a los contribuyentes que solicitaron una prórroga para presentar su declaración de impuestos federales de 2025 a hacerlo lo antes posible, en lugar de esperar hasta la fecha límite del 15 de octubre.",
-        "url": "https://www.irs.gov/es/newsroom/irs-reminder-extension-filers-can-use-irs-free-file-this-summer"
       }
     ]
   }
