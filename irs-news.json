@@ -4,9 +4,15 @@
     "en": "https://www.irs.gov/newsroom",
     "es": "https://www.irs.gov/es/newsroom"
   },
-  "updated_at": "2026-08-31T22:50:43.834Z",
+  "updated_at": "2026-09-03T16:25:29.010Z",
   "locales": {
     "en": [
+      {
+        "title": "Treasury, IRS Move to End Tax-Exempt Status for Discriminatory Practices in Private Schools",
+        "date": "Sep. 3, 2026",
+        "summary": "The Department of the Treasury and the Internal Revenue Service (IRS) have issued proposed regulations to end federal tax-exempt status for private schools that engage in racial discrimination, delivering on President Trump&#039;s Executive Orders ending discrimination and restoring merit-based opportunity.",
+        "url": "https://www.irs.gov/newsroom/treasury-irs-move-to-end-tax-exempt-status-for-discriminatory-practices-in-private-schools"
+      },
       {
         "title": "IRS online services spotlight: Taxpayers can get more done online",
         "date": "Aug. 28, 2026",
@@ -18,15 +24,15 @@
         "date": "Aug. 26, 2026",
         "summary": "The Internal Revenue Service today encouraged taxpayers who requested an extension to file their 2025 federal tax return as soon as possible, rather than waiting until the Oct. 15 deadline.",
         "url": "https://www.irs.gov/newsroom/irs-reminder-extension-filers-can-use-irs-free-file-this-summer"
-      },
-      {
-        "title": "IRS CEO meets with tax professionals at NY tax forum",
-        "date": "Aug. 25, 2026",
-        "summary": "As part of the ongoing effort to engage with taxpayers and their representatives, Internal Revenue Service Chief Executive Officer Frank J. Bisignano last week met with New York-area stakeholders at the IRS Nationwide Tax Forum in New York City.",
-        "url": "https://www.irs.gov/newsroom/irs-ceo-meets-with-tax-professionals-at-ny-tax-forum"
       }
     ],
     "es": [
+      {
+        "title": "Treasury, IRS Move to End Tax-Exempt Status for Discriminatory Practices in Private Schools",
+        "date": "Sep. 3, 2026",
+        "summary": "The Department of the Treasury and the Internal Revenue Service (IRS) have issued proposed regulations to end federal tax-exempt status for private schools that engage in racial discrimination, delivering on President Trump&#039;s Executive Orders ending discrimination and restoring merit-based opportunity.",
+        "url": "https://www.irs.gov/newsroom/treasury-irs-move-to-end-tax-exempt-status-for-discriminatory-practices-in-private-schools"
+      },
       {
         "title": "IRS destaca sus servicios en línea: Contribuyentes pueden realizar más trámites en línea",
         "date": "28 de agosto de 2026",
@@ -38,12 +44,6 @@
         "date": "26 de agosto de 2026",
         "summary": "El IRS alentó hoy a los contribuyentes que solicitaron una prórroga para presentar su declaración de impuestos federales de 2025 a hacerlo lo antes posible, en lugar de esperar hasta la fecha límite del 15 de octubre.",
         "url": "https://www.irs.gov/es/newsroom/irs-reminder-extension-filers-can-use-irs-free-file-this-summer"
-      },
-      {
-        "title": "IRS CEO meets with tax professionals at NY tax forum",
-        "date": "Aug. 25, 2026",
-        "summary": "As part of the ongoing effort to engage with taxpayers and their representatives, Internal Revenue Service Chief Executive Officer Frank J. Bisignano last week met with New York-area stakeholders at the IRS Nationwide Tax Forum in New York City.",
-        "url": "https://www.irs.gov/newsroom/irs-ceo-meets-with-tax-professionals-at-ny-tax-forum"
       }
     ]
   }
