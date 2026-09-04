@@ -4,9 +4,15 @@
     "en": "https://www.irs.gov/newsroom",
     "es": "https://www.irs.gov/es/newsroom"
   },
-  "updated_at": "2026-09-03T21:02:24.012Z",
+  "updated_at": "2026-09-04T16:21:35.954Z",
   "locales": {
     "en": [
+      {
+        "title": "IRS reminder: National Payroll Week is time for a paycheck checkup",
+        "date": "Sept. 4, 2026",
+        "summary": "The Internal Revenue Service today encouraged workers and employers to review withholding and payroll tax responsibilities ahead of National Payroll Week.",
+        "url": "https://www.irs.gov/newsroom/irs-reminder-national-payroll-week-is-time-for-a-paycheck-checkup"
+      },
       {
         "title": "IRS Reminder: Disaster preparedness starts with tax records",
         "date": "Sept. 3, 2026",
@@ -18,15 +24,15 @@
         "date": "Sep. 3, 2026",
         "summary": "The Department of the Treasury and the Internal Revenue Service (IRS) have issued proposed regulations to end federal tax-exempt status for private schools that engage in racial discrimination, delivering on President Trump&#039;s Executive Orders ending discrimination and restoring merit-based opportunity.",
         "url": "https://www.irs.gov/newsroom/treasury-irs-move-to-end-tax-exempt-status-for-discriminatory-practices-in-private-schools"
-      },
-      {
-        "title": "IRS online services spotlight: Taxpayers can get more done online",
-        "date": "Aug. 28, 2026",
-        "summary": "The Internal Revenue Service today encouraged taxpayers to explore the growing number of IRS.gov online tools that can help them quickly and securely take care of common tax tasks.",
-        "url": "https://www.irs.gov/newsroom/irs-online-services-spotlight-taxpayers-can-get-more-done-online"
       }
     ],
     "es": [
+      {
+        "title": "IRS reminder: National Payroll Week is time for a paycheck checkup",
+        "date": "Sept. 4, 2026",
+        "summary": "The Internal Revenue Service today encouraged workers and employers to review withholding and payroll tax responsibilities ahead of National Payroll Week.",
+        "url": "https://www.irs.gov/newsroom/irs-reminder-national-payroll-week-is-time-for-a-paycheck-checkup"
+      },
       {
         "title": "Recordatorio del IRS: La preparación ante desastres comienza con los registros tributarios",
         "date": "3 de septiembre de 2026",
@@ -38,12 +44,6 @@
         "date": "Sep. 3, 2026",
         "summary": "The Department of the Treasury and the Internal Revenue Service (IRS) have issued proposed regulations to end federal tax-exempt status for private schools that engage in racial discrimination, delivering on President Trump&#039;s Executive Orders ending discrimination and restoring merit-based opportunity.",
         "url": "https://www.irs.gov/newsroom/treasury-irs-move-to-end-tax-exempt-status-for-discriminatory-practices-in-private-schools"
-      },
-      {
-        "title": "IRS destaca sus servicios en línea: Contribuyentes pueden realizar más trámites en línea",
-        "date": "28 de agosto de 2026",
-        "summary": "El IRS por sus siglas en inglés) animó hoy a los contribuyentes a explorar el creciente número de herramientas en línea disponibles en IRS.gov, las cuales pueden ayudarles a realizar trámites tributarios comunes de manera rápida y segura.",
-        "url": "https://www.irs.gov/es/newsroom/irs-online-services-spotlight-taxpayers-can-get-more-done-online"
       }
     ]
   }
