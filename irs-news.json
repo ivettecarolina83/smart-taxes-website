@@ -4,9 +4,15 @@
     "en": "https://www.irs.gov/newsroom",
     "es": "https://www.irs.gov/es/newsroom"
   },
-  "updated_at": "2026-09-04T16:21:35.954Z",
+  "updated_at": "2026-09-04T20:45:18.313Z",
   "locales": {
     "en": [
+      {
+        "title": "Security Summit: Strengthen defenses against tax identity theft",
+        "date": "Sept.4, 2026",
+        "summary": "The Internal Revenue Service and the Security Summit today urged tax professionals and taxpayers to strengthen defenses against tax-related identity theft.",
+        "url": "https://www.irs.gov/newsroom/security-summit-strengthen-defenses-against-tax-identity-theft"
+      },
       {
         "title": "IRS reminder: National Payroll Week is time for a paycheck checkup",
         "date": "Sept. 4, 2026",
@@ -18,15 +24,15 @@
         "date": "Sept. 3, 2026",
         "summary": "The Internal Revenue Service today encouraged taxpayers to protect important tax and financial records before disaster strikes.",
         "url": "https://www.irs.gov/newsroom/irs-reminder-disaster-preparedness-starts-with-tax-records"
-      },
-      {
-        "title": "Treasury, IRS Move to End Tax-Exempt Status for Discriminatory Practices in Private Schools",
-        "date": "Sep. 3, 2026",
-        "summary": "The Department of the Treasury and the Internal Revenue Service (IRS) have issued proposed regulations to end federal tax-exempt status for private schools that engage in racial discrimination, delivering on President Trump&#039;s Executive Orders ending discrimination and restoring merit-based opportunity.",
-        "url": "https://www.irs.gov/newsroom/treasury-irs-move-to-end-tax-exempt-status-for-discriminatory-practices-in-private-schools"
       }
     ],
     "es": [
+      {
+        "title": "Security Summit: Strengthen defenses against tax identity theft",
+        "date": "Sept.4, 2026",
+        "summary": "The Internal Revenue Service and the Security Summit today urged tax professionals and taxpayers to strengthen defenses against tax-related identity theft.",
+        "url": "https://www.irs.gov/newsroom/security-summit-strengthen-defenses-against-tax-identity-theft"
+      },
       {
         "title": "IRS reminder: National Payroll Week is time for a paycheck checkup",
         "date": "Sept. 4, 2026",
@@ -38,12 +44,6 @@
         "date": "3 de septiembre de 2026",
         "summary": "El Servicio de Impuestos Internos instó hoy a los contribuyentes a proteger sus registros tributarios y financieros antes de que ocurra un desastre.",
         "url": "https://www.irs.gov/es/newsroom/irs-reminder-disaster-preparedness-starts-with-tax-records"
-      },
-      {
-        "title": "Treasury, IRS Move to End Tax-Exempt Status for Discriminatory Practices in Private Schools",
-        "date": "Sep. 3, 2026",
-        "summary": "The Department of the Treasury and the Internal Revenue Service (IRS) have issued proposed regulations to end federal tax-exempt status for private schools that engage in racial discrimination, delivering on President Trump&#039;s Executive Orders ending discrimination and restoring merit-based opportunity.",
-        "url": "https://www.irs.gov/newsroom/treasury-irs-move-to-end-tax-exempt-status-for-discriminatory-practices-in-private-schools"
       }
     ]
   }
