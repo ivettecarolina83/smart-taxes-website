@@ -182,8 +182,9 @@ if (carousel) {
 }
 
 const consultationDialog = document.querySelector('#consultation-dialog');
-const openConsultationButton = document.querySelector('#open-consultation');
+const openConsultationButtons = document.querySelectorAll('[data-open-consultation], #open-consultation');
 const closeConsultationButton = document.querySelector('#close-consultation');
+let lastConsultationOpener = null;
 
 function openConsultationDialog() {
   if (!consultationDialog) return;
@@ -196,7 +197,12 @@ function closeConsultationDialog() {
   consultationDialog.close();
 }
 
-openConsultationButton?.addEventListener('click', openConsultationDialog);
+openConsultationButtons.forEach((button) => {
+  button.addEventListener('click', () => {
+    lastConsultationOpener = button;
+    openConsultationDialog();
+  });
+});
 closeConsultationButton?.addEventListener('click', closeConsultationDialog);
 
 consultationDialog?.addEventListener('click', (event) => {
@@ -205,7 +211,7 @@ consultationDialog?.addEventListener('click', (event) => {
 
 consultationDialog?.addEventListener('close', () => {
   document.body.classList.remove('modal-open');
-  openConsultationButton?.focus();
+  lastConsultationOpener?.focus();
 });
 
 consultationDialog?.addEventListener('cancel', () => {
@@ -604,3 +610,4 @@ if (newsSection && newsList && newsStatus) {
     .catch(showNewsFallback)
     .finally(() => window.clearTimeout(timeout));
 }
+
