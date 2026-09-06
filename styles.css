@@ -1000,3 +1000,48 @@ body.intro-active { overflow: hidden; }
 
 }
 
+/* Compact home layout. */
+.home-page .section, .home-page .contact { padding: 32px 0; }
+.home-page .section-title { display: block; margin-bottom: 18px; }
+.home-page .section-title > span { display: none; }
+.home-page .section-title h2 { font-family: "Poppins", sans-serif; font-size: clamp(1.35rem, 2.3vw, 1.9rem); font-weight: 600; line-height: 1.3; letter-spacing: -.035em; }
+.home-page .section-intro { max-width: 940px; margin: 0 auto 20px; line-height: 1.65; font-size: .9rem; }
+.home-page .narrow { max-width: 1040px; }
+.home-page .content-section p, .home-page .coverage-section p { margin: 0 0 12px; line-height: 1.7; font-size: .9rem; }
+.home-page .section-slogan { margin-top: 16px; padding: 6px 14px; font-size: .95rem; border-left-width: 2px; }
+.home-page .audience, .home-page .faq { background: #f7f9fc; border: 0; }
+.home-page .audience .section-title h2 { color: var(--ink); }
+.home-page .service-grid, .home-page .profile-grid { gap: 16px; }
+.home-page .compact-grid .service-card { min-height: 0; padding: 22px; }
+.home-page .compact-grid .service-card > h3 { min-height: 0; margin-bottom: 10px; padding-bottom: 0; border: 0; }
+.home-page .card { box-shadow: none; border-radius: 14px; }
+.home-page .card-number { width: auto; height: auto; display: block; margin-bottom: 8px; color: var(--blue); background: none; font-family: inherit; font-size: .8rem; }
+.home-page .card-link { margin-top: 16px; padding-top: 0; border: 0; }
+.home-page .profile-grid .card { padding: 20px; }
+.home-page .profile-grid h3 { font-size: .98rem; margin-bottom: 8px; }
+.home-page .profile-grid p { margin: 0; font-size: .86rem; line-height: 1.65; }
+.home-page .reason-card { min-height: 0; padding: 18px; }
+.home-page .check { width: 28px; height: 28px; margin-bottom: 10px; background: #eef4fb; color: var(--blue); font-size: 1rem; }
+.home-page .news-intro { margin-bottom: 14px; }
+.home-page .news-grid { padding-bottom: 8px; }
+.home-page .news-disclaimer { margin-top: 12px; }
+.home-page .faq-focused { max-width: 1040px; box-shadow: none; border-radius: 12px; }
+.home-page .accordion summary { padding: 14px 18px; font-weight: 500; }
+.home-page .faq-category-grid[hidden] { display: none; }
+.home-page .contact-person { padding: 18px; box-shadow: none; border-radius: 14px; }
+.home-page .contact-team { margin-top: 20px; margin-bottom: 20px; }
+.home-page .site-footer { padding-top: 24px; }
+.home-page .language-switch { gap: 2px; padding: 3px; border: 1px solid #dce3ec; background: transparent; font-weight: 500; }
+.home-page .language-switch > span { display: none; }
+.home-page .language-switch a { display: grid; place-items: center; min-width: 34px; min-height: 32px; padding: 4px 8px; border-radius: 999px; font-size: .7rem; letter-spacing: .04em; }
+.home-page .language-switch a.active { background: #edf2f8; color: var(--blue-dark); }
+.home-page .nav-cta-button, .home-page .hero-actions .button, .home-page .floating-contact-button { border-radius: 999px; font-weight: 500; box-shadow: none; }
+.home-page .nav-cta-button { border: 1px solid var(--blue); padding: 10px 20px; font-size: .82rem; }
+.home-page .floating-contact-button { min-height: 44px; padding: 10px 19px; font-size: .85rem; box-shadow: 0 3px 14px rgba(13,49,95,.12); }
+.home-page .floating-contact-button > span { display: none; }
+.home-page [data-open-consultation]:focus-visible, .home-page .language-switch a:focus-visible { outline: 2px solid var(--blue); outline-offset: 4px; }
+@media (max-width: 640px) {
+  .home-page .section, .home-page .contact { padding: 24px 0; }
+  .home-page .section-title { margin-bottom: 14px; }
+  .home-page .section-intro { margin-bottom: 16px; }
+}
