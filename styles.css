@@ -13,6 +13,29 @@
   --watermark: url("data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%27360%27 height=%27180%27%3E%3Ctext x=%2720%27 y=%2795%27 font-family=%27Poppins,Arial,sans-serif%27 font-size=%2722%27 font-weight=%27600%27 fill=%27%23545454%27 fill-opacity=%27.1%27 transform=%27rotate(-18 180 90)%27%3EWe Do What%27s Right%3C/text%3E%3C/svg%3E");
 }
 
+/* SEO home content */
+.nav-cta-button { cursor: pointer; font: inherit; }
+.section-intro, .narrow { margin-left: auto; margin-right: auto; max-width: 860px; }
+.section-intro { line-height: 1.75; margin-bottom: 2.25rem; text-align: center; }
+.compact-grid .service-group { display: none; }
+.compact-grid .service-card { min-height: 280px; }
+.service-summary { line-height: 1.75; }
+.profile-grid { display: grid; gap: 1.35rem; grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.profile-grid .card { padding: 2rem; }
+.profile-grid h3 { color: var(--navy); margin-top: 0; }
+.content-section p, .coverage-section p { line-height: 1.85; }
+.about-section, .coverage-section { background: rgba(13, 49, 95, .035); }
+.section-slogan { border-left: 4px solid var(--blue); color: var(--navy); font-size: 1.1rem; font-weight: 600; margin: 2rem 0 0; padding: .8rem 1.25rem; }
+.hero-actions { display: flex; flex-wrap: wrap; gap: .85rem; margin-top: 1.5rem; }
+.news-source-note { color: var(--gray); font-size: .85rem; margin-top: 1rem; text-align: center; }
+.site-footer nav button { background: none; border: 0; color: inherit; cursor: pointer; font: inherit; padding: 0; }
+.final-cta { background: var(--navy); color: #fff; text-align: center; }
+.final-cta h2 { color: #fff; font-size: clamp(2rem, 4vw, 3.4rem); margin-top: 0; }
+.final-cta .hero-actions { justify-content: center; }
+.final-cta .button-outline { border-color: #fff; color: #fff; }
+.final-slogan { font-weight: 600; margin-top: 1.6rem; }
+@media (max-width: 760px) { .profile-grid { grid-template-columns: 1fr; } }
+
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; scroll-padding-top: 82px; }
 body { margin: 0; color: var(--text); background-color: var(--white); background-image: var(--watermark); font-family: "Poppins", Arial, sans-serif; line-height: 1.6; -webkit-font-smoothing: antialiased; }
@@ -976,3 +999,4 @@ body.intro-active { overflow: hidden; }
   }
 
 }
+
