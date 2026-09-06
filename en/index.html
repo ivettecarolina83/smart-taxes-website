@@ -3,13 +3,15 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Smart Taxes: tu tranquilidad es nuestra especialidad. Somos tu punto de contacto." />
-    <title>Smart Taxes | Your trusted point of contact</title>
+    <meta name="description" content="Tax preparation, accounting, payroll and IRS assistance for Hispanic clients across the United States. Service in Spanish. Schedule an appointment with Smart Taxes." />
+    <title>Tax Services for Hispanic Clients in the U.S. | Smart Taxes</title>
+    <link rel="canonical" href="https://smartaxesusa.com/en/" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Anton&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
-    <link rel="alternate" hreflang="es-US" href="../index.html" />
-    <link rel="alternate" hreflang="en-US" href="#" />
+    <link rel="alternate" hreflang="es-US" href="https://smartaxesusa.com/" />
+    <link rel="alternate" hreflang="en-US" href="https://smartaxesusa.com/en/" />
+    <link rel="alternate" hreflang="x-default" href="https://smartaxesusa.com/" />
     <link rel="stylesheet" href="../styles.css?v=20260829-5" />
     <script src="../script.js?v=20260829-5" defer></script>
   </head>
@@ -52,7 +54,7 @@
             <span aria-hidden="true">|</span>
             <a class="active" href="#" lang="en" aria-current="page">EN</a>
           </div>
-          <a class="nav-cta" href="#contacto">Contact</a>
+          <button class="nav-cta nav-cta-button" type="button" data-open-consultation>Schedule an appointment</button>
         </nav>
       </div>
     </header>
@@ -64,18 +66,16 @@
             <a class="hero-brand" href="#inicio" aria-label="Smart Taxes, back to home">
               <img src="../assets/images/logo-smart-taxes.png" alt="Smart Taxes" />
             </a>
-            <p class="eyebrow">About Smart Taxes</p>
-            <h1 id="hero-title">Who are we?</h1>
+            <p class="eyebrow">Service in Spanish · Online support · Individuals and businesses</p>
+            <h1 id="hero-title">Tax and accounting services for Hispanic clients across the United States</h1>
             <div class="hero-about">
-              <p>At Smart Taxes, we understand the challenges the Hispanic community faces when filing taxes in the United States. We were created to provide clear, accurate information in a system where rules and laws are often unfamiliar.</p>
-              <p>Our motivation has always been to raise awareness about the importance of complying with government regulations while offering solutions that provide financial peace of mind.</p>
-              <p>We are a group of certified preparers committed to honesty, transparency, and financial education. We stand out for our personal, approachable service and our ability to offer online consultations in every state, always tailored to each client's circumstances so they can pursue the best possible benefits.</p>
-              <p>At Smart Taxes, we work with a clear purpose: to give every person confidence that they are in good hands, guiding them with commitment and professionalism so they can meet their tax obligations correctly and without stress.</p>
+              <p>At Smart Taxes, we help individuals, independent workers and small businesses manage their taxes and financial needs across the United States with clear information, service in Spanish and guidance throughout every process.</p>
+              <p>Tax preparation, bookkeeping, payroll, IRS resolution and financial protection solutions in one place.</p>
             </div>
             <blockquote class="hero-slogan">“Your peace of mind is our specialty. We are your trusted point of contact.”</blockquote>
             <div class="hero-actions">
-              <a class="button button-primary" href="#contacto">Contact us</a>
-              <a class="button button-outline" href="#servicios">View services</a>
+              <button class="button button-primary" type="button" data-open-consultation>Schedule an appointment</button>
+              <a class="button button-outline" href="#servicios">View our services</a>
             </div>
           </div>
           <figure class="hero-media hero-carousel reveal" aria-label="Smart Taxes gallery">
@@ -98,10 +98,12 @@
       <section class="section" id="servicios" aria-labelledby="services-title">
         <div class="container">
           <div class="section-title reveal"><span></span><h2 id="services-title">Our services</h2><span></span></div>
-          <div class="service-grid">
+          <p class="section-intro reveal">Find solutions for your taxes, your business and your financial needs in one place. Learn which service best fits your situation and schedule an appointment with our team.</p>
+          <div class="service-grid compact-grid">
             <article class="card service-card reveal">
               <div class="card-number" aria-hidden="true">01</div>
               <h3>Tax Preparation Services</h3>
+              <p class="service-summary">Personal returns, independent workers and small businesses, with clear guidance throughout the process.</p>
 
               <div class="service-group">
                 <h4>Personal Tax Preparation</h4>
@@ -131,12 +133,13 @@
                   <li>Basic tax guidance for businesses</li>
                 </ul>
               </div>
-              <a class="card-link" href="tax-services.html">View full details →</a>
+              <a class="card-link" href="tax-services.html">View tax services →</a>
             </article>
 
             <article class="card service-card reveal">
               <div class="card-number" aria-hidden="true">02</div>
-              <h3>Accounting and Business Support</h3>
+              <h3>Accounting and Payroll</h3>
+              <p class="service-summary">Bookkeeping and payroll to keep your business finances organized and meet your responsibilities.</p>
 
               <div class="service-group">
                 <h4>Bookkeeping</h4>
@@ -156,12 +159,13 @@
                   <li>Payroll-related reports</li>
                 </ul>
               </div>
-              <a class="card-link" href="accounting-services.html">View full details →</a>
+              <a class="card-link" href="accounting-services.html">View accounting and payroll →</a>
             </article>
 
             <article class="card service-card reveal">
               <div class="card-number" aria-hidden="true">03</div>
-              <h3>IRS Problem Resolution</h3>
+              <h3>IRS Resolution</h3>
+              <p class="service-summary">Guidance for letters, debts, payment plans and other situations that require attention before the IRS.</p>
 
               <div class="service-group">
                 <h4>IRS Debt Resolution</h4>
@@ -174,12 +178,13 @@
                   <li>Guidance regarding IRS notices</li>
                 </ul>
               </div>
-              <a class="card-link" href="irs-resolution.html">View full details →</a>
+              <a class="card-link" href="irs-resolution.html">View IRS solutions →</a>
             </article>
 
             <article class="card service-card reveal">
               <div class="card-number" aria-hidden="true">04</div>
               <h3>Financial Protection</h3>
+              <p class="service-summary">Health and life insurance options to help protect you, your family and your financial stability.</p>
 
               <div class="service-group">
                 <h4>Health Insurance</h4>
@@ -196,7 +201,7 @@
                   <li>Coverage options based on the client's needs</li>
                 </ul>
               </div>
-              <a class="card-link" href="financial-protection.html">View full details →</a>
+              <a class="card-link" href="financial-protection.html">View financial protection →</a>
             </article>
           </div>
         </div>
@@ -204,23 +209,54 @@
 
       <section class="section audience" aria-labelledby="audience-title">
         <div class="container">
-          <div class="section-title reveal"><span></span><h2 id="audience-title">Who do we help?</h2><span></span></div>
-          <div class="audience-card reveal">
-            <div class="audience-symbol" aria-hidden="true">ST</div>
-            <div><h3>Hispanic community in the United States</h3><p>Service designed for people who prefer clear information and communication in Spanish.</p></div>
+          <div class="section-title reveal"><span></span><h2 id="audience-title">Solutions for individuals and businesses across the United States</h2><span></span></div>
+          <p class="section-intro reveal">We address a range of tax and financial needs, from personal returns to small-business obligations and IRS matters.</p>
+          <div class="profile-grid">
+            <article class="card reveal"><h3>Workers and families</h3><p>Support for people with W-2 income, dependents and other situations related to their tax return.</p></article>
+            <article class="card reveal"><h3>Independent workers</h3><p>Guidance for people with 1099 income, self-employed individuals and other forms of independent work.</p></article>
+            <article class="card reveal"><h3>Entrepreneurs and small businesses</h3><p>Tax services, bookkeeping and payroll to help keep your business organized and meet its responsibilities.</p></article>
+            <article class="card reveal"><h3>People facing IRS matters</h3><p>Assistance for people who receive letters, owe tax debt, have unfiled returns or face other situations that require IRS attention.</p></article>
           </div>
+        </div>
+      </section>
+
+      <section class="section content-section" aria-labelledby="spanish-service-title">
+        <div class="container narrow reveal">
+          <div class="section-title"><span></span><h2 id="spanish-service-title">Tax services with support in Spanish</h2><span></span></div>
+          <p>Smart Taxes provides service in Spanish to individuals and businesses that need guidance managing taxes and other financial responsibilities in the United States. Our goal is to help you understand each process through clear information and guidance tailored to your situation.</p>
+          <p>We help you understand and manage matters involving taxes, tax returns, Forms W-2 and 1099, ITINs and IRS communications, using clear language so you understand what you are doing and what comes next.</p>
+          <p>Whether you need to prepare your return, organize your business finances or address an IRS matter, you can receive guidance in Spanish and access the service that matches your needs.</p>
+        </div>
+      </section>
+
+      <section class="section content-section about-section" id="meet-smart-taxes" aria-labelledby="about-title">
+        <div class="container narrow reveal">
+          <div class="section-title"><span></span><h2 id="about-title">Meet Smart Taxes</h2><span></span></div>
+          <p>Smart Taxes offers tax, accounting and financial services for individuals and businesses across the United States, with service in Spanish and an approach centered on clarity, organization and guidance throughout every process.</p>
+          <p>Our purpose is to ensure that every client understands their situation and the available options before making decisions. We explain processes in straightforward terms, maintain close communication and offer solutions suited to each person or business.</p>
+          <blockquote class="section-slogan">“Your peace of mind is our specialty. We are your trusted point of contact.”</blockquote>
         </div>
       </section>
 
       <section class="section" id="razones" aria-labelledby="reasons-title">
         <div class="container">
-          <div class="section-title reveal"><span></span><h2 id="reasons-title">Committed to your peace of mind</h2><span></span></div>
+          <div class="section-title reveal"><span></span><h2 id="reasons-title">Why choose Smart Taxes?</h2><span></span></div>
+          <p class="section-intro reveal">We work to make every process clear, organized and easy to understand, with personal attention and solutions suited to each situation.</p>
           <div class="reason-grid">
-            <article class="card reason-card reveal"><span class="check" aria-hidden="true">✓</span><h3>Honesty</h3><p>A commitment reflected in the way Smart Taxes supports every person.</p></article>
-            <article class="card reason-card reveal"><span class="check" aria-hidden="true">✓</span><h3>Clarity and transparency</h3><p>Information presented in a simple, organized, and easy-to-understand way.</p></article>
-            <article class="card reason-card reveal"><span class="check" aria-hidden="true">✓</span><h3>Personal, approachable service</h3><p>Consultations tailored to each client's individual circumstances.</p></article>
-            <article class="card reason-card reveal"><span class="check" aria-hidden="true">✓</span><h3>Online service</h3><p>Online consultations available in every state.</p></article>
+            <article class="card reason-card reveal"><span class="check" aria-hidden="true">✓</span><h3>Honesty</h3><p>We explain each process transparently so you understand your situation, your options and the next steps.</p></article>
+            <article class="card reason-card reveal"><span class="check" aria-hidden="true">✓</span><h3>Clarity and transparency</h3><p>We avoid confusing explanations and guide you with straightforward information so you can make decisions with greater confidence.</p></article>
+            <article class="card reason-card reveal"><span class="check" aria-hidden="true">✓</span><h3>Personal, approachable service</h3><p>Every person and business has a different situation. We listen, understand and provide personalized attention.</p></article>
+            <article class="card reason-card reveal"><span class="check" aria-hidden="true">✓</span><h3>Online service</h3><p>You can receive guidance and manage services remotely, making them accessible from locations across the United States.</p></article>
           </div>
+        </div>
+      </section>
+
+      <section class="section coverage-section" aria-labelledby="coverage-title">
+        <div class="container narrow reveal">
+          <div class="section-title"><span></span><h2 id="coverage-title">Online service across the United States and in-person appointments in Georgia</h2><span></span></div>
+          <p>Smart Taxes provides online service to individuals and businesses across the United States, making it easier to manage tax, accounting and financial services regardless of distance.</p>
+          <p>We also offer in-person appointments in Georgia for people who prefer to work directly with our team.</p>
+          <p>Whether online or in person, you can receive service in Spanish and schedule an appointment based on your needs.</p>
         </div>
       </section>
 
@@ -230,12 +266,13 @@
           <div class="news-intro reveal">
             <div>
               <p class="eyebrow">Primary source: IRS.gov</p>
-              <p>Read the latest releases from the Internal Revenue Service. Each card opens the original article on the official website.</p>
+              <p>Stay informed with the latest news, releases and updates published by the Internal Revenue Service (IRS). This section is updated using information directly from IRS.gov.</p>
             </div>
             <a class="button-link news-source-link" href="https://www.irs.gov/newsroom" target="_blank" rel="noopener noreferrer">Visit IRS Newsroom</a>
           </div>
           <p class="news-status" id="irs-news-status" role="status">Loading official news…</p>
           <div class="news-grid" id="irs-news-list" aria-live="polite"></div>
+          <p class="news-source-note">Official source: IRS.gov. Publications appear in their original language.</p>
           <noscript><p class="news-fallback">Enable JavaScript to view the news here or visit the <a href="https://www.irs.gov/newsroom">IRS Newsroom</a> directly.</p></noscript>
           <aside class="news-disclaimer">Smart Taxes is not affiliated with or endorsed by the IRS. This content is informational; if there is any difference, the original IRS.gov publication controls.</aside>
         </div>
@@ -244,7 +281,17 @@
       <section class="section faq" id="preguntas" aria-labelledby="faq-title">
         <div class="container">
           <div class="section-title reveal"><span></span><h2 id="faq-title">Frequently asked questions</h2><span></span></div>
-                    <div class="faq-category-grid reveal">
+          <p class="section-intro reveal">Find quick answers about our services, online support and tax processes. If your situation requires an individual review, you can schedule an appointment with our team.</p>
+          <div class="accordion faq-focused reveal">
+            <details><summary>Does Smart Taxes serve clients throughout the United States?<span aria-hidden="true">+</span></summary><div class="faq-answer"><p>Yes. We provide online service to individuals and businesses across the United States. We also offer in-person appointments in Georgia.</p></div></details>
+            <details><summary>Can I manage my tax services entirely online?<span aria-hidden="true">+</span></summary><div class="faq-answer"><p>Yes. Many of our services can be managed remotely, from providing information and documents through following the progress of the process.</p></div></details>
+            <details><summary>Which languages do you offer?<span aria-hidden="true">+</span></summary><div class="faq-answer"><p>Smart Taxes provides service in Spanish and English, so you can communicate and understand each process in the language that is most convenient for you.</p></div></details>
+            <details><summary>What documents do I need to prepare my taxes?<span aria-hidden="true">+</span></summary><div class="faq-answer"><p>The documents depend on your situation. They may include Forms W-2 and 1099, dependent information, proof of income and other documents related to your return. When you schedule your appointment, we will explain what you need to provide.</p></div></details>
+            <details><summary>Can you help me if I received an IRS letter?<span aria-hidden="true">+</span></summary><div class="faq-answer"><p>Yes. We can review the situation and guide you through the appropriate next steps based on the type of notice. Keep the letter and have it available during the consultation.</p></div></details>
+            <details><summary>Do you offer services for independent workers and small businesses?<span aria-hidden="true">+</span></summary><div class="faq-answer"><p>Yes. We serve people with 1099 income, independent workers, entrepreneurs and small businesses that need help with taxes, bookkeeping, payroll and related services.</p></div></details>
+            <details><summary>How can I schedule an appointment?<span aria-hidden="true">+</span></summary><div class="faq-answer"><p>You can request an appointment through our website. Select “Schedule an appointment” and provide the requested information so we can understand which service you need.</p></div></details>
+          </div>
+                    <div class="faq-category-grid reveal" hidden>
             <details class="faq-category">
               <summary class="faq-category-title">Filing and documents<span aria-hidden="true">+</span></summary>
               <div class="faq-category-questions accordion">
@@ -294,6 +341,15 @@
         </div>
       </section>
 
+      <section class="section final-cta" aria-labelledby="final-cta-title">
+        <div class="container narrow reveal">
+          <h2 id="final-cta-title">Need help with your taxes or business?</h2>
+          <p>Schedule an appointment with Smart Taxes and receive guidance tailored to your tax, accounting or financial needs.</p>
+          <div class="hero-actions"><button class="button button-primary" type="button" data-open-consultation>Schedule an appointment</button><a class="button button-outline" href="#servicios">View our services</a></div>
+          <p class="final-slogan">Your peace of mind is our specialty. We are your trusted point of contact.</p>
+        </div>
+      </section>
+
       <section class="contact" id="contacto" aria-labelledby="contact-title">
         <div class="container contact-inner reveal">
           <div class="section-title light"><span></span><h2 id="contact-title">Talk to Smart Taxes</h2><span></span></div>
@@ -336,7 +392,7 @@
       </section>
     </main>
 
-    <button class="floating-contact-button" id="open-consultation" type="button" aria-haspopup="dialog" aria-controls="consultation-dialog">
+    <button class="floating-contact-button" id="open-consultation" data-open-consultation type="button" aria-haspopup="dialog" aria-controls="consultation-dialog">
       <span aria-hidden="true">✉</span>
       Write to us
     </button>
@@ -431,10 +487,11 @@
           <p>Your peace of mind is our specialty. We are your trusted point of contact.</p>
           
         </div>
-        <nav aria-label="Footer navigation"><a href="#servicios">Services</a><a href="#nosotros">About us</a><a href="#preguntas">FAQ</a><a href="#contacto">Contact</a></nav>
+        <nav aria-label="Footer navigation"><a href="#servicios">Services</a><a href="#meet-smart-taxes">Meet Smart Taxes</a><a href="#preguntas">FAQ</a><button type="button" data-open-consultation>Schedule an appointment</button></nav>
       </div>
       <div class="container footer-bottom"><span>© <span id="year"></span> Smart Taxes. All rights reserved.</span><div class="footer-legal"><a href="privacy-policy.html">Privacy</a><a href="terms-and-conditions.html">Terms</a><a href="tax-disclaimer.html">Tax disclaimer</a></div><a href="#inicio">Back to top ↑</a></div>
     </footer>
   </body>
 </html>
+
 
