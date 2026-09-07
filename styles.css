@@ -1080,5 +1080,10 @@ body.intro-active { overflow: hidden; }
 }
 .home-page .hero-media::before,
 .home-page .hero-media::after { content: none; }
-.home-page .hero-media img { object-fit: contain; object-position: center bottom; }
+.home-page .hero-media img {
+  object-fit: contain;
+  object-position: center bottom;
+  -webkit-mask-image: linear-gradient(to bottom, #000 0%, #000 76%, rgba(0, 0, 0, .85) 84%, rgba(0, 0, 0, .35) 94%, transparent 100%);
+  mask-image: linear-gradient(to bottom, #000 0%, #000 76%, rgba(0, 0, 0, .85) 84%, rgba(0, 0, 0, .35) 94%, transparent 100%);
+}
 
