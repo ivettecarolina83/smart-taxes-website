@@ -1045,3 +1045,24 @@ body.intro-active { overflow: hidden; }
   .home-page .section-title { margin-bottom: 14px; }
   .home-page .section-intro { margin-bottom: 16px; }
 }
+
+/* Gray bands requested for the audience and about sections. */
+.home-page .audience,
+.home-page .about-section {
+  background: #545454;
+  color: #fff;
+}
+.home-page .audience .section-title h2,
+.home-page .about-section .section-title h2,
+.home-page .audience > .container > .section-intro,
+.home-page .about-section p,
+.home-page .about-section .section-slogan {
+  color: #fff;
+}
+.home-page .about-section .section-slogan {
+  border-left-color: rgba(255, 255, 255, .65);
+}
+.home-page .audience .card {
+  color: var(--ink);
+}
+
