@@ -1066,3 +1066,19 @@ body.intro-active { overflow: hidden; }
   color: var(--ink);
 }
 
+/* Transparent portraits, without a frame or overlay. */
+.home-page .hero-media,
+.home-page .hero-media .carousel-track,
+.home-page .hero-media img {
+  background: transparent;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+  clip-path: none;
+  mask-image: none;
+  -webkit-mask-image: none;
+}
+.home-page .hero-media::before,
+.home-page .hero-media::after { content: none; }
+.home-page .hero-media img { object-fit: contain; object-position: center bottom; }
+
