@@ -1123,7 +1123,7 @@ body.intro-active { overflow: hidden; }
   position: relative;
   z-index: 1;
   max-width: 920px;
-  padding-block: clamp(78px, 10vw, 128px);
+  padding-block: clamp(42px, 5.5vw, 66px);
 }
 
 .tax-hero .eyebrow {
@@ -1134,22 +1134,22 @@ body.intro-active { overflow: hidden; }
   max-width: 760px;
   margin: 0;
   color: var(--white);
-  font-size: clamp(3.1rem, 7vw, 6.2rem);
+  font-size: clamp(2.8rem, 5.4vw, 4.8rem);
 }
 
 .tax-hero-lead {
   max-width: 760px;
-  margin: 22px 0 0;
+  margin: 14px 0 0;
   color: rgba(255, 255, 255, .88);
-  font-size: clamp(1rem, 1.8vw, 1.2rem);
-  line-height: 1.8;
+  font-size: clamp(.94rem, 1.45vw, 1.08rem);
+  line-height: 1.65;
 }
 
 .tax-actions {
   display: flex;
   flex-wrap: wrap;
   gap: 12px;
-  margin-top: 30px;
+  margin-top: 22px;
 }
 
 .tax-hero .button-primary,
@@ -1456,7 +1456,7 @@ body.intro-active { overflow: hidden; }
 
 @media (max-width: 720px) {
   .tax-hero-inner {
-    padding-block: 66px;
+    padding-block: 42px;
   }
 
   .tax-hero h1 {
