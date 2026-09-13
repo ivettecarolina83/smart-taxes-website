@@ -3,17 +3,19 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Preparación de Impuestos | Smart Taxes" />
-    <title>Preparación de Impuestos | Smart Taxes</title>
+    <meta name="description" content="Prepara tus impuestos con Smart Taxes. Atención presencial en Georgia y servicio virtual para clientes en Estados Unidos. Atención en español e inglés." />
+    <title>Preparación de Impuestos y Taxes | Smart Taxes</title>
+    <link rel="canonical" href="https://smartaxesusa.com/servicios-impuestos.html" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Anton&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
-    <link rel="alternate" hreflang="es-US" href="#" />
-    <link rel="alternate" hreflang="en-US" href="en/tax-services.html" />
-    <link rel="stylesheet" href="styles.css" />
-    <script src="script.js" defer></script>
+    <link rel="alternate" hreflang="es-US" href="https://smartaxesusa.com/servicios-impuestos.html" />
+    <link rel="alternate" hreflang="en-US" href="https://smartaxesusa.com/en/tax-services.html" />
+    <link rel="alternate" hreflang="x-default" href="https://smartaxesusa.com/servicios-impuestos.html" />
+    <link rel="stylesheet" href="styles.css?v=20260913-tax-page-5" />
+    <script src="script.js?v=20260913-tax-page" defer></script>
   </head>
-  <body>
+  <body class="tax-page">
     <a class="skip-link" href="#contenido">Saltar al contenido</a>
     <header class="site-header" id="inicio">
       <div class="container nav-wrap">
@@ -25,80 +27,283 @@
           <div class="nav-dropdown">
             <button class="services-toggle" type="button" aria-expanded="false" aria-controls="services-menu">Servicios <span aria-hidden="true">⌄</span></button>
             <div class="services-menu" id="services-menu">
-              <a href="servicios-impuestos.html">Preparación de impuestos</a>
+              <a href="servicios-impuestos.html" aria-current="page">Preparación de impuestos</a>
               <a href="servicios-contabilidad.html">Contabilidad y nómina</a>
               <a href="servicios-irs.html">Resolución con el IRS</a>
               <a href="servicios-proteccion-financiera.html">Protección financiera</a>
             </div>
           </div>
-          <a href="index.html#nosotros">Sobre nosotros</a>
-          <a href="index.html#razones">Por qué elegirnos</a>
-          <a href="index.html#preguntas">Preguntas</a>
+          <a href="index.html?skip-intro=1#conoce-smart-taxes">Sobre nosotros</a>
+          <a href="index.html?skip-intro=1#razones">Por qué elegirnos</a>
+          <a href="#preguntas">Preguntas</a>
           <div class="language-switch" aria-label="Selector de idioma">
-            <a class="active" href="#" lang="es" aria-current="page">ES</a>
-            <span aria-hidden="true">|</span>
-            <a href="en/tax-services.html" lang="en">EN</a>
+            <a class="active" href="#" lang="es" aria-current="page">ES</a><span aria-hidden="true">|</span><a href="en/tax-services.html" lang="en">EN</a>
           </div>
-          <a class="nav-cta" href="index.html#contacto">Contacto</a>
-        </nav>
+          </nav>
       </div>
     </header>
+
     <main id="contenido">
-      <section class="service-detail-hero">
-        <div class="container">
+      <section class="tax-hero" aria-labelledby="tax-title">
+        <div class="container tax-hero-inner">
           <p class="eyebrow">Servicios de Smart Taxes</p>
-          <h1>Preparación de Impuestos</h1>
-          <p>Servicios fiscales para personas, trabajadores independientes, emprendedores y pequeños negocios.</p>
+          <h1 id="tax-title">Preparación de impuestos</h1>
+          <p class="tax-hero-lead">Preparación de impuestos para trabajadores W-2, contratistas 1099, trabajadores independientes y familias. Atención presencial en Georgia y servicio virtual para clientes en Estados Unidos.</p>
+          <div class="tax-actions">
+            <button class="button button-primary" type="button" data-open-consultation>Agenda tu cita</button>
+            <a class="button button-outline" href="#servicios-fiscales">Conoce nuestros servicios</a>
+          </div>
         </div>
       </section>
-      <section class="service-detail-content">
+
+      <section class="tax-section" id="servicios-fiscales" aria-labelledby="tax-services-title">
         <div class="container">
-          <div class="detail-grid">
-          <article class="card detail-card">
-            <div class="card-number" aria-hidden="true">01</div>
-            <h2>Preparación de Impuestos Personales</h2>
-            
-            <ul>
-              <li>Declaración de impuestos para trabajadores W-2</li>
-              <li>Declaraciones individuales y familiares</li>
-              <li>Primera declaración de impuestos</li>
-              <li>Revisión de información fiscal antes de presentar</li>
-            </ul>
-          </article>
-          <article class="card detail-card">
-            <div class="card-number" aria-hidden="true">02</div>
-            <h2>Trabajadores Independientes (1099)</h2>
-            
-            <ul>
-              <li>Declaración para contratistas independientes</li>
-              <li>Gig workers y trabajadores por cuenta propia</li>
-              <li>Organización de ingresos y gastos</li>
-              <li>Orientación sobre obligaciones fiscales</li>
-            </ul>
-          </article>
-          <article class="card detail-card">
-            <div class="card-number" aria-hidden="true">03</div>
-            <h2>Emprendedores y Pequeños Negocios</h2>
-            
-            <ul>
-              <li>Preparación de impuestos para pequeños negocios</li>
-              <li>Declaraciones relacionadas con actividad comercial</li>
-              <li>Orientación fiscal básica para negocios</li>
-            </ul>
-          </article>
+          <div class="tax-section-heading">
+            <p class="eyebrow">Soluciones según tu situación</p>
+            <h2 id="tax-services-title">Servicios de preparación de impuestos</h2>
+            <p>Cada situación fiscal es diferente. En Smart Taxes te ayudamos a organizar tu información y preparar tu declaración de acuerdo con tus ingresos, documentos fiscales y situación particular.</p>
           </div>
-          <div class="detail-actions">
-            <a class="button button-outline" href="index.html#servicios">Ver todos los servicios</a>
-            <a class="button button-primary" href="index.html#contacto">Contactar</a>
+          <div class="tax-card-grid">
+            <article class="tax-card">
+              <span class="tax-card-number" aria-hidden="true">01</span>
+              <h3>Trabajadores W-2 y familias</h3>
+              <ul>
+                <li>Declaraciones para trabajadores W-2</li>
+                <li>Declaraciones individuales y familiares</li>
+                <li>Primera declaración de impuestos</li>
+                <li>Revisión de información fiscal antes de presentar</li>
+              </ul>
+            </article>
+            <article class="tax-card">
+              <span class="tax-card-number" aria-hidden="true">02</span>
+              <h3>Contratistas 1099 y trabajadores independientes</h3>
+              <ul>
+                <li>Declaraciones para contratistas independientes</li>
+                <li>Trabajadores por cuenta propia y gig workers</li>
+                <li>Revisión de ingresos y gastos relacionados con la actividad</li>
+                <li>Orientación sobre obligaciones fiscales aplicables</li>
+              </ul>
+            </article>
+            <article class="tax-card">
+              <span class="tax-card-number" aria-hidden="true">03</span>
+              <h3>Propietarios de pequeños negocios</h3>
+              <ul>
+                <li>Declaraciones relacionadas con actividades comerciales</li>
+                <li>Preparación fiscal para propietarios de pequeños negocios</li>
+                <li>Revisión de información relacionada con ingresos y gastos</li>
+                <li>Orientación según el tipo de actividad comercial</li>
+              </ul>
+              <a class="tax-text-link" href="index.html?skip-intro=1#servicios">Conoce nuestros servicios de impuestos para negocios →</a>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="tax-section tax-section-soft" aria-labelledby="preparation-title">
+        <div class="container tax-split">
+          <div>
+            <p class="eyebrow">Preparación responsable</p>
+            <h2 id="preparation-title">Más que completar formularios</h2>
+          </div>
+          <div class="tax-prose">
+            <p>Preparar una declaración de impuestos implica mucho más que completar formularios. Es importante revisar correctamente los documentos fiscales, las fuentes de ingreso y la información correspondiente a cada contribuyente.</p>
+            <p>En Smart Taxes trabajamos contigo para organizar y revisar tu información antes de preparar tu declaración federal y, cuando corresponda, estatal.</p>
+            <p>Atendemos diferentes situaciones fiscales, desde trabajadores que reciben un W-2 hasta contratistas 1099, trabajadores independientes y familias.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="tax-section" aria-labelledby="documents-title">
+        <div class="container tax-split">
+          <div>
+            <p class="eyebrow">Antes de comenzar</p>
+            <h2 id="documents-title">Documentos que puedes necesitar</h2>
+            <p>Los documentos necesarios pueden variar según tu situación fiscal. Estos son algunos de los más comunes:</p>
+          </div>
+          <div>
+            <ul class="tax-checklist">
+              <li>Documento de identificación</li>
+              <li>Número de Seguro Social o ITIN, según corresponda</li>
+              <li>Información del cónyuge</li>
+              <li>Información de dependientes</li>
+              <li>Formulario W-2</li>
+              <li>Formularios 1099</li>
+              <li>Documentos relacionados con otros ingresos recibidos durante el año</li>
+              <li>Gastos relacionados con trabajo independiente o actividad comercial</li>
+              <li>Documentos fiscales recibidos durante el año</li>
+              <li>Información relacionada con créditos o deducciones aplicables</li>
+              <li>Declaración de impuestos del año anterior, cuando sea necesaria</li>
+            </ul>
+            <p class="tax-note">Los documentos requeridos pueden variar según cada caso. Durante el proceso te indicaremos qué información necesitamos revisar.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="tax-section tax-process" aria-labelledby="process-title">
+        <div class="container">
+          <div class="tax-section-heading">
+            <p class="eyebrow">Un proceso claro</p>
+            <h2 id="process-title">Cómo preparamos tu declaración</h2>
+          </div>
+          <ol class="tax-steps">
+            <li><span>01</span><p>Selecciona una fecha para conversar con nuestro equipo y comenzar el proceso.</p></li>
+            <li><span>02</span><p>Envíanos o presenta la información y los documentos fiscales necesarios para revisar tu caso.</p></li>
+            <li><span>03</span><p>Verificamos los documentos, ingresos y demás información relevante para preparar tu declaración.</p></li>
+            <li><span>04</span><p>Organizamos la información y preparamos la declaración correspondiente a tu situación fiscal.</p></li>
+            <li><span>05</span><p>Antes de completar el proceso, revisamos contigo la información de tu declaración y aclaramos cualquier duda.</p></li>
+          </ol>
+        </div>
+      </section>
+
+      <section class="tax-section" aria-labelledby="service-area-title">
+        <div class="container tax-split">
+          <div>
+            <p class="eyebrow">Atención accesible</p>
+            <h2 id="service-area-title">Atención presencial y virtual</h2>
+          </div>
+          <div class="tax-prose">
+            <p>Smart Taxes ofrece atención presencial en Georgia y servicios virtuales para clientes ubicados en Estados Unidos.</p>
+            <p>Nuestro proceso permite compartir documentos, recibir orientación y gestionar la preparación de tu declaración de forma remota cuando no puedes visitarnos personalmente.</p>
+            <p>Además, nuestro equipo puede atender clientes tanto en español como en inglés.</p>
+            <p class="tax-highlight">Presencial en Georgia <span>·</span> Atención virtual en Estados Unidos <span>·</span> Servicio bilingüe</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="tax-section tax-section-dark" aria-labelledby="why-title">
+        <div class="container">
+          <div class="tax-section-heading">
+            <p class="eyebrow">Acompañamiento Smart Taxes</p>
+            <h2 id="why-title">Un servicio pensado para tu situación</h2>
+          </div>
+          <div class="tax-benefits">
+            <p>Cada situación fiscal es diferente. Revisamos tu información considerando las características particulares de tu caso.</p>
+            <p>Nuestro equipo puede atenderte en español o en inglés durante el proceso.</p>
+            <p>Puedes recibir atención presencial en Georgia o gestionar el proceso de manera virtual desde otras partes de Estados Unidos.</p>
+            <p>Te explicamos los pasos necesarios y te ayudamos a entender la información relacionada con tu declaración.</p>
+          </div>
+          <a class="tax-text-link tax-text-link-light" href="index.html?skip-intro=1#conoce-smart-taxes">Conoce más sobre Smart Taxes →</a>
+        </div>
+      </section>
+
+      <section class="tax-section tax-faq" id="preguntas" aria-labelledby="faq-title">
+        <div class="container">
+          <div class="tax-section-heading">
+            <p class="eyebrow">Respuestas claras</p>
+            <h2 id="faq-title">Preguntas frecuentes</h2>
+          </div>
+          <div class="accordion tax-accordion">
+            <details><summary>¿Qué documentos necesito para preparar mi declaración?<span aria-hidden="true">+</span></summary><div class="faq-answer"><p>Dependerá de tu situación fiscal. Generalmente se requiere identificación, documentos de ingresos como W-2 o 1099, información de dependientes y otros documentos relacionados con tus ingresos, gastos, créditos o deducciones aplicables.</p></div></details>
+            <details><summary>¿Preparan declaraciones para trabajadores W-2?<span aria-hidden="true">+</span></summary><div class="faq-answer"><p>Sí. Smart Taxes prepara declaraciones para trabajadores que reciben formularios W-2 y revisa la información necesaria antes de preparar la declaración.</p></div></details>
+            <details><summary>¿Atienden contratistas independientes y personas con formularios 1099?<span aria-hidden="true">+</span></summary><div class="faq-answer"><p>Sí. Atendemos contratistas independientes, trabajadores por cuenta propia y personas que reciben diferentes tipos de formularios 1099.</p></div></details>
+            <details><summary>¿Pueden ayudarme a organizar ingresos y gastos de mi actividad?<span aria-hidden="true">+</span></summary><div class="faq-answer"><p>Sí. Podemos ayudarte a organizar y revisar información relacionada con ingresos y gastos de tu actividad antes de preparar tu declaración.</p></div></details>
+            <details><summary>¿Ofrecen preparación de impuestos virtual?<span aria-hidden="true">+</span></summary><div class="faq-answer"><p>Sí. Smart Taxes ofrece atención virtual para clientes ubicados en Estados Unidos.</p></div></details>
+            <details><summary>¿Ofrecen atención presencial?<span aria-hidden="true">+</span></summary><div class="faq-answer"><p>Sí. La atención presencial está disponible en Georgia y también ofrecemos servicios virtuales para clientes en Estados Unidos.</p></div></details>
+            <details><summary>¿Pueden atenderme en español o en inglés?<span aria-hidden="true">+</span></summary><div class="faq-answer"><p>Sí. Nuestro equipo puede atender clientes tanto en español como en inglés.</p></div></details>
+          </div>
+        </div>
+      </section>
+
+      <section class="tax-final-cta" aria-labelledby="final-title">
+        <div class="container">
+          <h2 id="final-title">Comienza tu preparación de impuestos</h2>
+          <p>Agenda una cita con Smart Taxes y comienza el proceso de preparación de tu declaración con el acompañamiento de nuestro equipo.</p>
+          <div class="tax-actions">
+            <button class="button button-primary" type="button" data-open-consultation>Agenda tu cita</button>
+            <a class="button button-outline" href="index.html?skip-intro=1#contacto">Contacta con Smart Taxes</a>
           </div>
         </div>
       </section>
     </main>
+
+    <dialog class="consultation-dialog" id="consultation-dialog" aria-labelledby="consultation-title">
+      <button class="dialog-close" id="close-consultation" type="button" aria-label="Cerrar formulario">×</button>
+      <div class="consultation-panel">
+            <div class="consultation-intro">
+              <p class="eyebrow">Solicitud de asesoría</p>
+              <h3 id="consultation-title">Cuéntanos cómo podemos ayudarte</h3>
+              <p>Completa este formulario y un preparador podrá comunicarse contigo por el medio seleccionado.</p>
+            </div>
+            <aside class="form-security-notice" role="note" aria-label="Aviso de seguridad">
+              <strong>Tu seguridad es importante.</strong>
+              <span>Este formulario es solo para contacto inicial. No envíes SSN, ITIN, información bancaria, contraseñas, identificaciones, declaraciones ni documentos fiscales. Smart Taxes te indicará el canal autorizado después del primer contacto.</span>
+            </aside>
+            <form class="consultation-form" id="consultation-form" action="https://script.google.com/macros/s/AKfycby90DRk_iihfa6QQbaXVCj49dxgUzibzbwoHLxGJHxdqyK3a1MU0fwW9iyh9krhQCQ-cA/exec" method="post" accept-charset="UTF-8" data-endpoint="https://script.google.com/macros/s/AKfycby90DRk_iihfa6QQbaXVCj49dxgUzibzbwoHLxGJHxdqyK3a1MU0fwW9iyh9krhQCQ-cA/exec" novalidate target="consultation-response-frame">
+              <div class="form-grid">
+                <div class="form-field">
+                  <label for="form-name">Nombre y apellido <span aria-hidden="true">*</span></label>
+                  <input id="form-name" name="nombre" type="text" autocomplete="name" maxlength="100" required />
+                </div>
+                <div class="form-field">
+                  <label for="form-phone">Teléfono <span aria-hidden="true">*</span></label>
+                  <input id="form-phone" name="telefono" type="tel" autocomplete="tel" maxlength="25" required />
+                </div>
+                <div class="form-field">
+                  <label for="form-email">Correo electrónico <span aria-hidden="true">*</span></label>
+                  <input id="form-email" name="correo" type="email" autocomplete="email" maxlength="120" required />
+                </div>
+                <div class="form-field">
+                  <label for="form-contact-method">Medio de contacto preferido <span aria-hidden="true">*</span></label>
+                  <select id="form-contact-method" name="contacto_preferido" required>
+                    <option value="">Selecciona una opción</option>
+                    <option value="Llamada">Llamada</option>
+                    <option value="Mensaje de texto">Mensaje de texto</option>
+                    <option value="Correo electrónico">Correo electrónico</option>
+                  </select>
+                </div>
+                <div class="form-field">
+                  <label for="form-service">Servicio requerido <span aria-hidden="true">*</span></label>
+                  <select id="form-service" name="servicio" required>
+                    <option value="">Selecciona un servicio</option>
+                    <option value="Preparación de impuestos">Preparación de impuestos</option>
+                    <option value="Contabilidad y nómina">Contabilidad y nómina</option>
+                    <option value="Resolución con el IRS">Resolución con el IRS</option>
+                    <option value="Protección financiera">Protección financiera</option>
+                    <option value="Otra consulta">Otra consulta</option>
+                  </select>
+                </div>
+                <div class="form-field form-field-wide">
+                  <label for="form-message">Breve descripción de tu consulta <span aria-hidden="true">*</span></label>
+                  <textarea id="form-message" name="mensaje" rows="5" maxlength="1200" required></textarea>
+                  <small>No incluyas SSN, ITIN, información bancaria, contraseñas ni documentos fiscales.</small>
+                </div>
+                <div class="form-honeypot" aria-hidden="true">
+                  <label for="form-website">Sitio web</label>
+                  <input id="form-website" name="website" type="text" tabindex="-1" autocomplete="off" />
+                </div>
+                <div class="form-field form-field-wide form-consent">
+                  <label>
+                    <input name="consentimiento" type="checkbox" value="Sí" required />
+                    <span>Autorizo a Smart Taxes a contactarme en relación con esta solicitud y confirmo que he leído la <a href="politica-privacidad.html" target="_blank" rel="noopener noreferrer">Política de privacidad</a>. <span aria-hidden="true">*</span></span>
+                  </label>
+                </div>
+              </div>
+              <input type="hidden" name="request_id" value="" />
+              <input type="hidden" name="form_started_at" value="" />
+              <input type="hidden" name="origen" value="Sitio web de Smart Taxes" />
+              <input type="hidden" name="idioma" value="Español" />
+              <button class="button button-primary form-submit" type="submit">Enviar solicitud</button>
+              <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+              <div class="form-fallback-actions" id="form-fallback-actions" hidden>
+                <p>Puedes comunicarte directamente con Smart Taxes mientras conservamos la información escrita en el formulario.</p>
+                <div class="form-fallback-grid">
+                  <a class="form-fallback-link" href="tel:+16785217305">Llamar a Luis</a>
+                  <a class="form-fallback-link" href="sms:+16785217305">Mensaje a Luis</a>
+                  <a class="form-fallback-link" href="tel:+16784381021">Llamar a Liz</a>
+                  <a class="form-fallback-link" href="sms:+16784381021">Mensaje a Liz</a>
+                </div>
+              </div>
+              <p class="form-disclaimer">El envío de este formulario no establece automáticamente una relación profesional. No envíes información fiscal o financiera confidencial.</p>
+            </form>
+          <iframe class="form-response-frame" id="consultation-response-frame" name="consultation-response-frame" title="Respuesta del formulario" hidden></iframe>
+          </div>
+    </dialog>
+
     <footer class="site-footer">
       <div class="container footer-inner">
-        <a class="footer-brand" href="index.html#inicio" aria-label="Smart Taxes, volver al inicio"><img src="assets/images/logo-smart-taxes.png" alt="Smart Taxes" /></a>
+        <a class="footer-brand" href="index.html?skip-intro=1#inicio" aria-label="Smart Taxes, volver al inicio"><img src="assets/images/logo-smart-taxes.png" alt="Smart Taxes" /></a>
         <p>Tu tranquilidad es nuestra especialidad. Somos tu punto de contacto.</p>
-        <nav aria-label="Navegación del pie de página"><a href="index.html#servicios">Servicios</a><a href="index.html#nosotros">Sobre nosotros</a><a href="index.html#preguntas">Preguntas</a><a href="index.html#contacto">Contacto</a></nav>
+        <nav aria-label="Navegación del pie de página"><a href="index.html?skip-intro=1#servicios">Servicios</a><a href="index.html?skip-intro=1#conoce-smart-taxes">Sobre nosotros</a><a href="#preguntas">Preguntas</a><a href="index.html?skip-intro=1#contacto">Contacto</a></nav>
       </div>
       <div class="container footer-bottom"><span>© <span id="year"></span> Smart Taxes. Todos los derechos reservados.</span><a href="#inicio">Volver arriba ↑</a></div>
     </footer>
