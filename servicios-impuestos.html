@@ -12,7 +12,7 @@
     <link rel="alternate" hreflang="es-US" href="https://smartaxesusa.com/servicios-impuestos.html" />
     <link rel="alternate" hreflang="en-US" href="https://smartaxesusa.com/en/tax-services.html" />
     <link rel="alternate" hreflang="x-default" href="https://smartaxesusa.com/servicios-impuestos.html" />
-    <link rel="stylesheet" href="styles.css?v=20260913-tax-page" />
+    <link rel="stylesheet" href="styles.css?v=20260913-tax-page-2" />
     <script src="script.js?v=20260913-tax-page" defer></script>
   </head>
   <body class="tax-page">
@@ -39,7 +39,7 @@
           <div class="language-switch" aria-label="Selector de idioma">
             <a class="active" href="#" lang="es" aria-current="page">ES</a><span aria-hidden="true">|</span><a href="en/tax-services.html" lang="en">EN</a>
           </div>
-          <a class="nav-cta" href="index.html?skip-intro=1#asesoria">Agenda una cita</a>
+          <button class="nav-cta nav-cta-button" type="button" data-open-consultation>Agenda una cita</button>
         </nav>
       </div>
     </header>
@@ -51,7 +51,7 @@
           <h1 id="tax-title">Preparación de impuestos</h1>
           <p class="tax-hero-lead">Preparación de impuestos para trabajadores W-2, contratistas 1099, trabajadores independientes y familias. Atención presencial en Georgia y servicio virtual para clientes en Estados Unidos.</p>
           <div class="tax-actions">
-            <a class="button button-primary" href="index.html?skip-intro=1#asesoria">Agenda tu cita</a>
+            <button class="button button-primary" type="button" data-open-consultation>Agenda tu cita</button>
             <a class="button button-outline" href="#servicios-fiscales">Conoce nuestros servicios</a>
           </div>
         </div>
@@ -110,7 +110,7 @@
             <p>Preparar una declaración de impuestos implica mucho más que completar formularios. Es importante revisar correctamente los documentos fiscales, las fuentes de ingreso y la información correspondiente a cada contribuyente.</p>
             <p>En Smart Taxes trabajamos contigo para organizar y revisar tu información antes de preparar tu declaración federal y, cuando corresponda, estatal.</p>
             <p>Atendemos diferentes situaciones fiscales, desde trabajadores que reciben un W-2 hasta contratistas 1099, trabajadores independientes y familias.</p>
-            <a class="button button-primary" href="index.html?skip-intro=1#asesoria">Agenda una cita</a>
+            <button class="button button-primary" type="button" data-open-consultation>Agenda una cita</button>
           </div>
         </div>
       </section>
@@ -154,7 +154,7 @@
             <li><span>04</span><p>Organizamos la información y preparamos la declaración correspondiente a tu situación fiscal.</p></li>
             <li><span>05</span><p>Antes de completar el proceso, revisamos contigo la información de tu declaración y aclaramos cualquier duda.</p></li>
           </ol>
-          <div class="tax-centered-action"><a class="button button-primary" href="index.html?skip-intro=1#asesoria">Comienza tu preparación de impuestos</a></div>
+          <div class="tax-centered-action"><button class="button button-primary" type="button" data-open-consultation>Comienza tu preparación de impuestos</button></div>
         </div>
       </section>
 
@@ -212,12 +212,95 @@
           <h2 id="final-title">Comienza tu preparación de impuestos</h2>
           <p>Agenda una cita con Smart Taxes y comienza el proceso de preparación de tu declaración con el acompañamiento de nuestro equipo.</p>
           <div class="tax-actions">
-            <a class="button button-primary" href="index.html?skip-intro=1#asesoria">Agenda tu cita</a>
+            <button class="button button-primary" type="button" data-open-consultation>Agenda tu cita</button>
             <a class="button button-outline" href="index.html?skip-intro=1#contacto">Contacta con Smart Taxes</a>
           </div>
         </div>
       </section>
     </main>
+
+    <dialog class="consultation-dialog" id="consultation-dialog" aria-labelledby="consultation-title">
+      <button class="dialog-close" id="close-consultation" type="button" aria-label="Cerrar formulario">×</button>
+      <div class="consultation-panel">
+            <div class="consultation-intro">
+              <p class="eyebrow">Solicitud de asesoría</p>
+              <h3 id="consultation-title">Cuéntanos cómo podemos ayudarte</h3>
+              <p>Completa este formulario y un preparador podrá comunicarse contigo por el medio seleccionado.</p>
+            </div>
+            <aside class="form-security-notice" role="note" aria-label="Aviso de seguridad">
+              <strong>Tu seguridad es importante.</strong>
+              <span>Este formulario es solo para contacto inicial. No envíes SSN, ITIN, información bancaria, contraseñas, identificaciones, declaraciones ni documentos fiscales. Smart Taxes te indicará el canal autorizado después del primer contacto.</span>
+            </aside>
+            <form class="consultation-form" id="consultation-form" action="https://script.google.com/macros/s/AKfycby90DRk_iihfa6QQbaXVCj49dxgUzibzbwoHLxGJHxdqyK3a1MU0fwW9iyh9krhQCQ-cA/exec" method="post" accept-charset="UTF-8" data-endpoint="https://script.google.com/macros/s/AKfycby90DRk_iihfa6QQbaXVCj49dxgUzibzbwoHLxGJHxdqyK3a1MU0fwW9iyh9krhQCQ-cA/exec" novalidate target="consultation-response-frame">
+              <div class="form-grid">
+                <div class="form-field">
+                  <label for="form-name">Nombre y apellido <span aria-hidden="true">*</span></label>
+                  <input id="form-name" name="nombre" type="text" autocomplete="name" maxlength="100" required />
+                </div>
+                <div class="form-field">
+                  <label for="form-phone">Teléfono <span aria-hidden="true">*</span></label>
+                  <input id="form-phone" name="telefono" type="tel" autocomplete="tel" maxlength="25" required />
+                </div>
+                <div class="form-field">
+                  <label for="form-email">Correo electrónico <span aria-hidden="true">*</span></label>
+                  <input id="form-email" name="correo" type="email" autocomplete="email" maxlength="120" required />
+                </div>
+                <div class="form-field">
+                  <label for="form-contact-method">Medio de contacto preferido <span aria-hidden="true">*</span></label>
+                  <select id="form-contact-method" name="contacto_preferido" required>
+                    <option value="">Selecciona una opción</option>
+                    <option value="Llamada">Llamada</option>
+                    <option value="Mensaje de texto">Mensaje de texto</option>
+                    <option value="Correo electrónico">Correo electrónico</option>
+                  </select>
+                </div>
+                <div class="form-field">
+                  <label for="form-service">Servicio requerido <span aria-hidden="true">*</span></label>
+                  <select id="form-service" name="servicio" required>
+                    <option value="">Selecciona un servicio</option>
+                    <option value="Preparación de impuestos">Preparación de impuestos</option>
+                    <option value="Contabilidad y nómina">Contabilidad y nómina</option>
+                    <option value="Resolución con el IRS">Resolución con el IRS</option>
+                    <option value="Protección financiera">Protección financiera</option>
+                    <option value="Otra consulta">Otra consulta</option>
+                  </select>
+                </div>
+                <div class="form-field form-field-wide">
+                  <label for="form-message">Breve descripción de tu consulta <span aria-hidden="true">*</span></label>
+                  <textarea id="form-message" name="mensaje" rows="5" maxlength="1200" required></textarea>
+                  <small>No incluyas SSN, ITIN, información bancaria, contraseñas ni documentos fiscales.</small>
+                </div>
+                <div class="form-honeypot" aria-hidden="true">
+                  <label for="form-website">Sitio web</label>
+                  <input id="form-website" name="website" type="text" tabindex="-1" autocomplete="off" />
+                </div>
+                <div class="form-field form-field-wide form-consent">
+                  <label>
+                    <input name="consentimiento" type="checkbox" value="Sí" required />
+                    <span>Autorizo a Smart Taxes a contactarme en relación con esta solicitud y confirmo que he leído la <a href="politica-privacidad.html" target="_blank" rel="noopener noreferrer">Política de privacidad</a>. <span aria-hidden="true">*</span></span>
+                  </label>
+                </div>
+              </div>
+              <input type="hidden" name="request_id" value="" />
+              <input type="hidden" name="form_started_at" value="" />
+              <input type="hidden" name="origen" value="Sitio web de Smart Taxes" />
+              <input type="hidden" name="idioma" value="Español" />
+              <button class="button button-primary form-submit" type="submit">Enviar solicitud</button>
+              <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+              <div class="form-fallback-actions" id="form-fallback-actions" hidden>
+                <p>Puedes comunicarte directamente con Smart Taxes mientras conservamos la información escrita en el formulario.</p>
+                <div class="form-fallback-grid">
+                  <a class="form-fallback-link" href="tel:+16785217305">Llamar a Luis</a>
+                  <a class="form-fallback-link" href="sms:+16785217305">Mensaje a Luis</a>
+                  <a class="form-fallback-link" href="tel:+16784381021">Llamar a Liz</a>
+                  <a class="form-fallback-link" href="sms:+16784381021">Mensaje a Liz</a>
+                </div>
+              </div>
+              <p class="form-disclaimer">El envío de este formulario no establece automáticamente una relación profesional. No envíes información fiscal o financiera confidencial.</p>
+            </form>
+          <iframe class="form-response-frame" id="consultation-response-frame" name="consultation-response-frame" title="Respuesta del formulario" hidden></iframe>
+          </div>
+    </dialog>
 
     <footer class="site-footer">
       <div class="container footer-inner">
