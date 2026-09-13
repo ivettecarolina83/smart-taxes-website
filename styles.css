@@ -1520,3 +1520,38 @@ body.intro-active { overflow: hidden; }
     font-size: clamp(1.8rem, 9vw, 2.4rem);
   }
 }
+
+
+/* Elegant pill actions on the tax page */
+.tax-hero .tax-actions .button,
+.tax-final-cta .tax-actions .button {
+  min-height: 43px;
+  padding: 9px 25px;
+  border-radius: 999px;
+  box-shadow: 0 8px 22px rgba(8, 34, 70, .12);
+  font-size: .82rem;
+  letter-spacing: .01em;
+  transition: transform .2s ease, box-shadow .2s ease, background .2s ease;
+}
+
+.tax-hero .tax-actions .button:hover,
+.tax-hero .tax-actions .button:focus-visible,
+.tax-final-cta .tax-actions .button:hover,
+.tax-final-cta .tax-actions .button:focus-visible {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 28px rgba(8, 34, 70, .18);
+}
+
+.tax-hero .tax-actions .button-outline,
+.tax-final-cta .tax-actions .button-outline {
+  background: rgba(255, 255, 255, .06);
+  backdrop-filter: blur(5px);
+}
+
+@media (max-width: 720px) {
+  .tax-hero .tax-actions .button,
+  .tax-final-cta .tax-actions .button {
+    min-height: 42px;
+    padding-inline: 20px;
+  }
+}
