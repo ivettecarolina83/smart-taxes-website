@@ -4,9 +4,15 @@
     "en": "https://www.irs.gov/newsroom",
     "es": "https://www.irs.gov/es/newsroom"
   },
-  "updated_at": "2026-09-10T16:24:06.437Z",
+  "updated_at": "2026-09-15T21:20:41.827Z",
   "locales": {
     "en": [
+      {
+        "title": "IRS announces extension of tax relief for farmers and ranchers affected by drought in 49 states, other regions",
+        "date": "Sept. 15, 2026",
+        "summary": "The Internal Revenue Service today issued guidance that provides an extension of tax relief for farmers and ranchers in most states and other regions who sold or exchanged livestock because of drought conditions.",
+        "url": "https://www.irs.gov/newsroom/irs-announces-extension-of-tax-relief-for-farmers-and-ranchers-affected-by-drought-in-49-states-other-regions"
+      },
       {
         "title": "IRS reminder: Direct Pay offers free, easy way to pay taxes",
         "date": "Sept.10, 2026",
@@ -18,15 +24,15 @@
         "date": "Sept. 8, 2026",
         "summary": "The Internal Revenue Service today issued guidance on the Section 45Z Clean Fuels Production Tax Credit to empower America’s crop and livestock farmers, ranchers, and fuel producers across the country and help them access the growing domestic biofuels market in a way that makes the Clean Fuels Production Credit work for them.",
         "url": "https://www.irs.gov/newsroom/irs-issues-notice-on-45z-clean-fuel-production-tax-credit-to-support-domestic-biofuel-production-and-american-agriculture"
-      },
-      {
-        "title": "IRS accepting applicants for 2027 Compliance Assurance Process",
-        "date": "Sept. 8, 2026",
-        "summary": "The IRS today announced the opening of the application period for the 2027 Compliance Assurance Process (CAP) program for corporations. Applications will be accepted until Oct. 30, 2026.",
-        "url": "https://www.irs.gov/newsroom/irs-accepting-applicants-for-2027-compliance-assurance-process"
       }
     ],
     "es": [
+      {
+        "title": "IRS announces extension of tax relief for farmers and ranchers affected by drought in 49 states, other regions",
+        "date": "Sept. 15, 2026",
+        "summary": "The Internal Revenue Service today issued guidance that provides an extension of tax relief for farmers and ranchers in most states and other regions who sold or exchanged livestock because of drought conditions.",
+        "url": "https://www.irs.gov/newsroom/irs-announces-extension-of-tax-relief-for-farmers-and-ranchers-affected-by-drought-in-49-states-other-regions"
+      },
       {
         "title": "Recordatorio del IRS: Pago directo ofrece manera gratuita y sencilla de pagar impuestos",
         "date": "10 de septiembre de 2026",
@@ -38,12 +44,6 @@
         "date": "Sept. 8, 2026",
         "summary": "The Internal Revenue Service today issued guidance on the Section 45Z Clean Fuels Production Tax Credit to empower America’s crop and livestock farmers, ranchers, and fuel producers across the country and help them access the growing domestic biofuels market in a way that makes the Clean Fuels Production Credit work for them.",
         "url": "https://www.irs.gov/newsroom/irs-issues-notice-on-45z-clean-fuel-production-tax-credit-to-support-domestic-biofuel-production-and-american-agriculture"
-      },
-      {
-        "title": "IRS accepting applicants for 2027 Compliance Assurance Process",
-        "date": "Sept. 8, 2026",
-        "summary": "The IRS today announced the opening of the application period for the 2027 Compliance Assurance Process (CAP) program for corporations. Applications will be accepted until Oct. 30, 2026.",
-        "url": "https://www.irs.gov/newsroom/irs-accepting-applicants-for-2027-compliance-assurance-process"
       }
     ]
   }
