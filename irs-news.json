@@ -4,9 +4,15 @@
     "en": "https://www.irs.gov/newsroom",
     "es": "https://www.irs.gov/es/newsroom"
   },
-  "updated_at": "2026-09-17T04:52:29.616Z",
+  "updated_at": "2026-09-18T16:23:53.548Z",
   "locales": {
     "en": [
+      {
+        "title": "IRS warns of tax credit scams targeting the tribal community",
+        "date": "Sept. 18, 2026",
+        "summary": "The Internal Revenue Service today warned taxpayers, tribal communities, businesses and tax professionals about promoters selling fake “Tribal Tax Credits” that do not exist under federal law.",
+        "url": "https://www.irs.gov/newsroom/irs-warns-of-tax-credit-scams-targeting-the-tribal-community"
+      },
       {
         "title": "Security Summit closes summer series with data security reminder for tax pros",
         "date": "Sept. 16, 2026",
@@ -18,15 +24,15 @@
         "date": "Sept. 15, 2026",
         "summary": "The Internal Revenue Service today issued guidance that provides an extension of tax relief for farmers and ranchers in most states and other regions who sold or exchanged livestock because of drought conditions.",
         "url": "https://www.irs.gov/newsroom/irs-announces-extension-of-tax-relief-for-farmers-and-ranchers-affected-by-drought-in-49-states-other-regions"
-      },
-      {
-        "title": "IRS reminder: Direct Pay offers free, easy way to pay taxes",
-        "date": "Sept. 10, 2026",
-        "summary": "The Internal Revenue Service today reminded taxpayers who have bank accounts that Direct Pay offers a free, secure way to pay federal taxes directly from a checking or savings account.",
-        "url": "https://www.irs.gov/newsroom/irs-reminder-direct-pay-offers-free-easy-way-to-pay-taxes"
       }
     ],
     "es": [
+      {
+        "title": "IRS warns of tax credit scams targeting the tribal community",
+        "date": "Sept. 18, 2026",
+        "summary": "The Internal Revenue Service today warned taxpayers, tribal communities, businesses and tax professionals about promoters selling fake “Tribal Tax Credits” that do not exist under federal law.",
+        "url": "https://www.irs.gov/newsroom/irs-warns-of-tax-credit-scams-targeting-the-tribal-community"
+      },
       {
         "title": "Security Summit closes summer series with data security reminder for tax pros",
         "date": "Sept. 16, 2026",
@@ -38,12 +44,6 @@
         "date": "15 de septiembre de 2026",
         "summary": "El IRS emitió hoy un aviso que brinda alivio tributario a los agricultores y ganaderos en la mayoría de los estados y regiones correspondientes que vendieron o intercambiaron ganado debido a las condiciones de sequía. Bajo este aviso, los agricultores y ganaderos podrán tomarse más tiempo para reemplazar su ganado y posponer los impuestos en cualquier ganancia proveniente de las ventas o intercambios forzados.",
         "url": "https://www.irs.gov/es/newsroom/irs-announces-extension-of-tax-relief-for-farmers-and-ranchers-affected-by-drought-in-49-states-other-regions"
-      },
-      {
-        "title": "Recordatorio del IRS: Pago directo ofrece manera gratuita y sencilla de pagar impuestos",
-        "date": "10 de septiembre de 2026",
-        "summary": "El Servicio de Impuestos Internos les recordó hoy a los contribuyentes con cuentas bancarias que Pago directo ofrece una manera gratuita y segura de pagar los impuestos federales directamente desde una cuenta corriente o de ahorros.",
-        "url": "https://www.irs.gov/es/newsroom/irs-reminder-direct-pay-offers-free-easy-way-to-pay-taxes"
       }
     ]
   }
