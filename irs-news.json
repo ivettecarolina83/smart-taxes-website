@@ -4,9 +4,15 @@
     "en": "https://www.irs.gov/newsroom",
     "es": "https://www.irs.gov/es/newsroom"
   },
-  "updated_at": "2026-09-18T20:54:14.669Z",
+  "updated_at": "2026-09-21T21:58:26.669Z",
   "locales": {
     "en": [
+      {
+        "title": "IRS wraps up successful Nationwide Tax Forums with nearly 13,000 attendees",
+        "date": "Sept. 21, 2026",
+        "summary": "The Internal Revenue Service last week wrapped up the fifth and final 2026 Tax Forum in San Diego with nearly 13,000 attending the five forums where tax professionals participated in workshops and seminars and received one-on-one assistance with taxpayer cases.",
+        "url": "https://www.irs.gov/newsroom/irs-wraps-up-successful-nationwide-tax-forums-with-nearly-13000-attendees"
+      },
       {
         "title": "IRS warns of tax credit scams targeting the tribal community",
         "date": "Sept. 18, 2026",
@@ -18,15 +24,15 @@
         "date": "Sept. 16, 2026",
         "summary": "The Internal Revenue Service and the Security Summit partners today urged tax professionals to stay vigilant against identity theft.",
         "url": "https://www.irs.gov/newsroom/security-summit-closes-summer-series-with-data-security-reminder-for-tax-pros"
-      },
-      {
-        "title": "IRS announces extension of tax relief for farmers and ranchers affected by drought in 49 states, other regions",
-        "date": "Sept. 15, 2026",
-        "summary": "The Internal Revenue Service today issued guidance that provides an extension of tax relief for farmers and ranchers in most states and other regions who sold or exchanged livestock because of drought conditions.",
-        "url": "https://www.irs.gov/newsroom/irs-announces-extension-of-tax-relief-for-farmers-and-ranchers-affected-by-drought-in-49-states-other-regions"
       }
     ],
     "es": [
+      {
+        "title": "IRS wraps up successful Nationwide Tax Forums with nearly 13,000 attendees",
+        "date": "Sept. 21, 2026",
+        "summary": "The Internal Revenue Service last week wrapped up the fifth and final 2026 Tax Forum in San Diego with nearly 13,000 attending the five forums where tax professionals participated in workshops and seminars and received one-on-one assistance with taxpayer cases.",
+        "url": "https://www.irs.gov/newsroom/irs-wraps-up-successful-nationwide-tax-forums-with-nearly-13000-attendees"
+      },
       {
         "title": "IRS envía alerta sobre estafas de crédito tributario con el enfoque hacia los Gobiernos tribales indígenas",
         "date": "18 de septiembre de 2026",
@@ -38,12 +44,6 @@
         "date": "Sept. 16, 2026",
         "summary": "The Internal Revenue Service and the Security Summit partners today urged tax professionals to stay vigilant against identity theft.",
         "url": "https://www.irs.gov/newsroom/security-summit-closes-summer-series-with-data-security-reminder-for-tax-pros"
-      },
-      {
-        "title": "El IRS emite aviso de extensión que brinda alivio tributario a los agricultores y ganaderos afectado por sequía en 49 estados y regiones",
-        "date": "15 de septiembre de 2026",
-        "summary": "El IRS emitió hoy un aviso que brinda alivio tributario a los agricultores y ganaderos en la mayoría de los estados y regiones correspondientes que vendieron o intercambiaron ganado debido a las condiciones de sequía. Bajo este aviso, los agricultores y ganaderos podrán tomarse más tiempo para reemplazar su ganado y posponer los impuestos en cualquier ganancia proveniente de las ventas o intercambios forzados.",
-        "url": "https://www.irs.gov/es/newsroom/irs-announces-extension-of-tax-relief-for-farmers-and-ranchers-affected-by-drought-in-49-states-other-regions"
       }
     ]
   }
