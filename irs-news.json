@@ -4,14 +4,14 @@
     "en": "https://www.irs.gov/newsroom",
     "es": "https://www.irs.gov/es/newsroom"
   },
-  "updated_at": "2026-09-25T17:11:07.931Z",
+  "updated_at": "2026-09-25T21:34:54.411Z",
   "locales": {
     "en": [
       {
-        "title": "Statement on IRS operations limited during the lapse in appropriations; regular tax deadlines remain",
-        "date": "Oct. 21, 2025",
-        "summary": "Due to the current lapse in appropriations, IRS operations are limited. However, the underlying tax law remains in effect, and all taxpayers must continue to meet their tax obligations as normal.",
-        "url": "https://www.irs.gov/newsroom/statement-on-irs-operations-limited-during-the-lapse-in-appropriations-regular-tax-deadlines-remain"
+        "title": "IRS launches new mobile app, expanding digital services for taxpayers",
+        "date": "Sept. 25, 2026",
+        "summary": "The IRS today announced the launch of the new IRS mobile app, replacing IRS2Go and expanding the agency’s digital services to give taxpayers more ways to securely access IRS tools and account services from their mobile devices.",
+        "url": "https://www.irs.gov/newsroom/irs-launches-new-mobile-app-expanding-digital-services-for-taxpayers"
       },
       {
         "title": "IRS launches new mobile app, expanding digital services for taxpayers",
@@ -28,16 +28,16 @@
     ],
     "es": [
       {
-        "title": "Declaración acerca de las operaciones del IRS limitadas durante el lapso de asignaciones presupuestarias; los plazos tributarios para contribuyentes se mantienen vigentes",
-        "date": "21 de octubre de 2025",
-        "summary": "Debido al lapso actual en las asignaciones presupuestarias, las operaciones del IRS son limitadas.",
-        "url": "https://www.irs.gov/es/newsroom/statement-on-irs-operations-limited-during-the-lapse-in-appropriations-regular-tax-deadlines-remain"
+        "title": "El IRS lanza nueva aplicación móvil y amplía servicios digitales para contribuyentes",
+        "date": "25 de septiembre de 2026",
+        "summary": "El IRS anunció hoy el lanzamiento de la nueva aplicación móvil IRS, la cual reemplaza a IRS2Go y amplía los servicios digitales de la agencia para ofrecer a los contribuyentes más formas de acceder de manera segura a las herramientas y servicios de cuenta del IRS desde sus dispositivos móviles.",
+        "url": "https://www.irs.gov/es/newsroom/irs-launches-new-mobile-app-expanding-digital-services-for-taxpayers"
       },
       {
-        "title": "IRS launches new mobile app, expanding digital services for taxpayers",
-        "date": "Sept. 25, 2026",
-        "summary": "The IRS today announced the launch of the new IRS mobile app, replacing IRS2Go and expanding the agency’s digital services to give taxpayers more ways to securely access IRS tools and account services from their mobile devices.",
-        "url": "https://www.irs.gov/newsroom/irs-launches-new-mobile-app-expanding-digital-services-for-taxpayers"
+        "title": "El IRS lanza nueva aplicación móvil y amplía servicios digitales para contribuyentes",
+        "date": "25 de septiembre de 2026",
+        "summary": "El IRS anunció hoy el lanzamiento de la nueva aplicación móvil IRS, la cual reemplaza a IRS2Go y amplía los servicios digitales de la agencia para ofrecer a los contribuyentes más formas de acceder de manera segura a las herramientas y servicios de cuenta del IRS desde sus dispositivos móviles.",
+        "url": "https://www.irs.gov/es/newsroom/irs-launches-new-mobile-app-expanding-digital-services-for-taxpayers"
       },
       {
         "title": "IRS wraps up successful Nationwide Tax Forums with nearly 13,000 attendees",
