@@ -4,7 +4,7 @@
     "en": "https://www.irs.gov/newsroom",
     "es": "https://www.irs.gov/es/newsroom"
   },
-  "updated_at": "2026-09-25T21:34:54.411Z",
+  "updated_at": "2026-09-28T13:54:30.557Z",
   "locales": {
     "en": [
       {
@@ -14,16 +14,16 @@
         "url": "https://www.irs.gov/newsroom/irs-launches-new-mobile-app-expanding-digital-services-for-taxpayers"
       },
       {
+        "title": "Treasury, IRS issue proposed regulations on installment payments for tax on certain farmland sales",
+        "date": "Sept. 28, 2026",
+        "summary": "The Department of the Treasury and the Internal Revenue Service today issued proposed regulations for taxpayers who sell or exchange qualifying farmland to qualified farmers and elect to pay the tax on the gain in four equal annual installments.",
+        "url": "https://www.irs.gov/newsroom/treasury-irs-issue-proposed-regulations-on-installment-payments-for-tax-on-certain-farmland-sales"
+      },
+      {
         "title": "IRS launches new mobile app, expanding digital services for taxpayers",
         "date": "Sept. 25, 2026",
         "summary": "The IRS today announced the launch of the new IRS mobile app, replacing IRS2Go and expanding the agency’s digital services to give taxpayers more ways to securely access IRS tools and account services from their mobile devices.",
         "url": "https://www.irs.gov/newsroom/irs-launches-new-mobile-app-expanding-digital-services-for-taxpayers"
-      },
-      {
-        "title": "IRS wraps up successful Nationwide Tax Forums with nearly 13,000 attendees",
-        "date": "Sept. 21, 2026",
-        "summary": "The Internal Revenue Service last week wrapped up the fifth and final 2026 Tax Forum in San Diego with nearly 13,000 attending the five forums where tax professionals participated in workshops and seminars and received one-on-one assistance with taxpayer cases.",
-        "url": "https://www.irs.gov/newsroom/irs-wraps-up-successful-nationwide-tax-forums-with-nearly-13000-attendees"
       }
     ],
     "es": [
@@ -34,16 +34,16 @@
         "url": "https://www.irs.gov/es/newsroom/irs-launches-new-mobile-app-expanding-digital-services-for-taxpayers"
       },
       {
+        "title": "Treasury, IRS issue proposed regulations on installment payments for tax on certain farmland sales",
+        "date": "Sept. 28, 2026",
+        "summary": "The Department of the Treasury and the Internal Revenue Service today issued proposed regulations for taxpayers who sell or exchange qualifying farmland to qualified farmers and elect to pay the tax on the gain in four equal annual installments.",
+        "url": "https://www.irs.gov/newsroom/treasury-irs-issue-proposed-regulations-on-installment-payments-for-tax-on-certain-farmland-sales"
+      },
+      {
         "title": "El IRS lanza nueva aplicación móvil y amplía servicios digitales para contribuyentes",
         "date": "25 de septiembre de 2026",
         "summary": "El IRS anunció hoy el lanzamiento de la nueva aplicación móvil IRS, la cual reemplaza a IRS2Go y amplía los servicios digitales de la agencia para ofrecer a los contribuyentes más formas de acceder de manera segura a las herramientas y servicios de cuenta del IRS desde sus dispositivos móviles.",
         "url": "https://www.irs.gov/es/newsroom/irs-launches-new-mobile-app-expanding-digital-services-for-taxpayers"
-      },
-      {
-        "title": "IRS wraps up successful Nationwide Tax Forums with nearly 13,000 attendees",
-        "date": "Sept. 21, 2026",
-        "summary": "The Internal Revenue Service last week wrapped up the fifth and final 2026 Tax Forum in San Diego with nearly 13,000 attending the five forums where tax professionals participated in workshops and seminars and received one-on-one assistance with taxpayer cases.",
-        "url": "https://www.irs.gov/newsroom/irs-wraps-up-successful-nationwide-tax-forums-with-nearly-13000-attendees"
       }
     ]
   }
