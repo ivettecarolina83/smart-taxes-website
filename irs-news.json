@@ -4,7 +4,7 @@
     "en": "https://www.irs.gov/newsroom",
     "es": "https://www.irs.gov/es/newsroom"
   },
-  "updated_at": "2026-10-01T22:41:07.928Z",
+  "updated_at": "2026-10-02T22:14:02.910Z",
   "locales": {
     "en": [
       {
@@ -14,10 +14,10 @@
         "url": "https://www.irs.gov/newsroom/irs-launches-new-mobile-app-expanding-digital-services-for-taxpayers"
       },
       {
-        "title": "The Trump administration advances the establishment of America’s first nationwide school choice program",
-        "date": "Oct. 1, 2026",
-        "summary": "The Department of the Treasury and the IRS issued proposed regulations to implement the new Federal Scholarship Tax Credit under section 25F, commonly known as the Education Freedom Tax Credit, the first federal tax credit supporting private contributions for K-12 scholarships.",
-        "url": "https://www.irs.gov/newsroom/the-trump-administration-advances-the-establishment-of-americas-first-nationwide-school-choice-program"
+        "title": "IRS reminder: Cybersecurity Awareness Month offers simple steps to protect tax data",
+        "date": "Oct. 2, 2026",
+        "summary": "The Internal Revenue Service today encouraged taxpayers to take simple steps to strengthen online security during Cybersecurity Awareness Month.",
+        "url": "https://www.irs.gov/newsroom/irs-reminder-cybersecurity-awareness-month-offers-simple-steps-to-protect-tax-data"
       },
       {
         "title": "The IRS seeks community partners and volunteers to support free tax services",
@@ -34,16 +34,16 @@
         "url": "https://www.irs.gov/es/newsroom/irs-launches-new-mobile-app-expanding-digital-services-for-taxpayers"
       },
       {
-        "title": "The Trump administration advances the establishment of America’s first nationwide school choice program",
-        "date": "Oct. 1, 2026",
-        "summary": "The Department of the Treasury and the IRS issued proposed regulations to implement the new Federal Scholarship Tax Credit under section 25F, commonly known as the Education Freedom Tax Credit, the first federal tax credit supporting private contributions for K-12 scholarships.",
-        "url": "https://www.irs.gov/newsroom/the-trump-administration-advances-the-establishment-of-americas-first-nationwide-school-choice-program"
+        "title": "Recordatorio del IRS: Mes de Concienciación sobre la Ciberseguridad ofrece pasos sencillos para proteger datos tributarios",
+        "date": "2 de octubre de 2026",
+        "summary": "El IRS anima hoy a los contribuyentes a tomar medidas sencillas para fortalecer la seguridad en línea durante el Mes de Concienciación sobre la Ciberseguridad.",
+        "url": "https://www.irs.gov/es/newsroom/irs-reminder-cybersecurity-awareness-month-offers-simple-steps-to-protect-tax-data"
       },
       {
-        "title": "The IRS seeks community partners and volunteers to support free tax services",
-        "date": "Oct. 1, 2026",
-        "summary": "The Internal Revenue Service’s Volunteer Income Tax Assistance (VITA) and Tax Counseling for the Elderly (TCE) programs are seeking volunteers and community partners to help provide free tax preparation services during the upcoming filing season.",
-        "url": "https://www.irs.gov/newsroom/the-irs-seeks-community-partners-and-volunteers-to-support-free-tax-services"
+        "title": "El IRS busca socios comunitarios y voluntarios para apoyar sus servicios gratuitos de impuestos",
+        "date": "1ro de octubre de 2026",
+        "summary": "Los programas de Asistencia Voluntaria a los Contribuyentes y Asesoramiento Tributario para Ancianos del Servicio de Impuestos Internos buscan voluntarios y socios comunitarios para ayudar a brindar servicios gratuitos de preparación de impuestos durante la próxima temporada de presentación de impuestos.",
+        "url": "https://www.irs.gov/es/newsroom/the-irs-seeks-community-partners-and-volunteers-to-support-free-tax-services"
       }
     ]
   }
