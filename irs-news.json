@@ -4,7 +4,7 @@
     "en": "https://www.irs.gov/newsroom",
     "es": "https://www.irs.gov/es/newsroom"
   },
-  "updated_at": "2026-10-16T21:07:55.883Z",
+  "updated_at": "2026-10-21T21:42:33.097Z",
   "locales": {
     "en": [
       {
@@ -14,16 +14,16 @@
         "url": "https://www.irs.gov/newsroom/irs-launches-new-mobile-app-expanding-digital-services-for-taxpayers"
       },
       {
+        "title": "Temporary reporting and recordkeeping relief for certain fuel uses",
+        "date": "Oct. 21, 2026",
+        "summary": "The Internal Revenue Service today announced temporary administrative relief from reporting and recordkeeping requirements relating to taxes imposed by section 4041(a) of the Internal Revenue Code.",
+        "url": "https://www.irs.gov/newsroom/temporary-reporting-and-recordkeeping-relief-for-certain-fuel-uses"
+      },
+      {
         "title": "IRS has begun issuing automatic refunds to individuals who claimed Adoption Tax Credit carryforward from prior years",
         "date": "Oct. 16, 2026",
         "summary": "The Internal Revenue Service has already begun issuing refunds to more than 50,000 taxpayers who benefited from the adoption tax credit carryforward and expects the refund process for most eligible taxpayers to be complete by the end of the year.",
         "url": "https://www.irs.gov/newsroom/irs-has-begun-issuing-automatic-refunds-to-individuals-who-claimed-adoption-tax-credit-carryforward-from-prior-years"
-      },
-      {
-        "title": "IRS announces 2026 Tax Professional Awareness Week, highlighting resources to help tax professionals prepare for the 2027 filing season",
-        "date": "Oct. 16, 2026",
-        "summary": "The Internal Revenue Service today announced Tax Professional Awareness Week, taking place the week of October 19th, which will feature webinars and practical tools to help tax professionals prepare for the upcoming filing season, support accurate tax return preparations and protect taxpayer information.",
-        "url": "https://www.irs.gov/newsroom/irs-announces-2026-tax-professional-awareness-week-highlighting-resources-to-help-tax-professionals-prepare-for-the-2027-filing-season"
       }
     ],
     "es": [
@@ -34,16 +34,16 @@
         "url": "https://www.irs.gov/es/newsroom/irs-launches-new-mobile-app-expanding-digital-services-for-taxpayers"
       },
       {
+        "title": "Temporary reporting and recordkeeping relief for certain fuel uses",
+        "date": "Oct. 21, 2026",
+        "summary": "The Internal Revenue Service today announced temporary administrative relief from reporting and recordkeeping requirements relating to taxes imposed by section 4041(a) of the Internal Revenue Code.",
+        "url": "https://www.irs.gov/newsroom/temporary-reporting-and-recordkeeping-relief-for-certain-fuel-uses"
+      },
+      {
         "title": "IRS has begun issuing automatic refunds to individuals who claimed Adoption Tax Credit carryforward from prior years",
         "date": "Oct. 16, 2026",
         "summary": "The Internal Revenue Service has already begun issuing refunds to more than 50,000 taxpayers who benefited from the adoption tax credit carryforward and expects the refund process for most eligible taxpayers to be complete by the end of the year.",
         "url": "https://www.irs.gov/newsroom/irs-has-begun-issuing-automatic-refunds-to-individuals-who-claimed-adoption-tax-credit-carryforward-from-prior-years"
-      },
-      {
-        "title": "IRS announces 2026 Tax Professional Awareness Week, highlighting resources to help tax professionals prepare for the 2027 filing season",
-        "date": "Oct. 16, 2026",
-        "summary": "The Internal Revenue Service today announced Tax Professional Awareness Week, taking place the week of October 19th, which will feature webinars and practical tools to help tax professionals prepare for the upcoming filing season, support accurate tax return preparations and protect taxpayer information.",
-        "url": "https://www.irs.gov/newsroom/irs-announces-2026-tax-professional-awareness-week-highlighting-resources-to-help-tax-professionals-prepare-for-the-2027-filing-season"
       }
     ]
   }
