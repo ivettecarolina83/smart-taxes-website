@@ -4,7 +4,7 @@
     "en": "https://www.irs.gov/newsroom",
     "es": "https://www.irs.gov/es/newsroom"
   },
-  "updated_at": "2026-10-21T21:42:33.097Z",
+  "updated_at": "2026-10-22T04:44:20.560Z",
   "locales": {
     "en": [
       {
@@ -14,16 +14,16 @@
         "url": "https://www.irs.gov/newsroom/irs-launches-new-mobile-app-expanding-digital-services-for-taxpayers"
       },
       {
+        "title": "Statement on IRS operations limited during the lapse in appropriations; regular tax deadlines remain",
+        "date": "Oct. 21, 2025",
+        "summary": "Due to the current lapse in appropriations, IRS operations are limited. However, the underlying tax law remains in effect, and all taxpayers must continue to meet their tax obligations as normal.",
+        "url": "https://www.irs.gov/newsroom/statement-on-irs-operations-limited-during-the-lapse-in-appropriations-regular-tax-deadlines-remain"
+      },
+      {
         "title": "Temporary reporting and recordkeeping relief for certain fuel uses",
         "date": "Oct. 21, 2026",
         "summary": "The Internal Revenue Service today announced temporary administrative relief from reporting and recordkeeping requirements relating to taxes imposed by section 4041(a) of the Internal Revenue Code.",
         "url": "https://www.irs.gov/newsroom/temporary-reporting-and-recordkeeping-relief-for-certain-fuel-uses"
-      },
-      {
-        "title": "IRS has begun issuing automatic refunds to individuals who claimed Adoption Tax Credit carryforward from prior years",
-        "date": "Oct. 16, 2026",
-        "summary": "The Internal Revenue Service has already begun issuing refunds to more than 50,000 taxpayers who benefited from the adoption tax credit carryforward and expects the refund process for most eligible taxpayers to be complete by the end of the year.",
-        "url": "https://www.irs.gov/newsroom/irs-has-begun-issuing-automatic-refunds-to-individuals-who-claimed-adoption-tax-credit-carryforward-from-prior-years"
       }
     ],
     "es": [
@@ -34,16 +34,16 @@
         "url": "https://www.irs.gov/es/newsroom/irs-launches-new-mobile-app-expanding-digital-services-for-taxpayers"
       },
       {
+        "title": "Declaración acerca de las operaciones del IRS limitadas durante el lapso de asignaciones presupuestarias; los plazos tributarios para contribuyentes se mantienen vigentes",
+        "date": "21 de octubre de 2025",
+        "summary": "Debido al lapso actual en las asignaciones presupuestarias, las operaciones del IRS son limitadas.",
+        "url": "https://www.irs.gov/es/newsroom/statement-on-irs-operations-limited-during-the-lapse-in-appropriations-regular-tax-deadlines-remain"
+      },
+      {
         "title": "Temporary reporting and recordkeeping relief for certain fuel uses",
         "date": "Oct. 21, 2026",
         "summary": "The Internal Revenue Service today announced temporary administrative relief from reporting and recordkeeping requirements relating to taxes imposed by section 4041(a) of the Internal Revenue Code.",
         "url": "https://www.irs.gov/newsroom/temporary-reporting-and-recordkeeping-relief-for-certain-fuel-uses"
-      },
-      {
-        "title": "IRS has begun issuing automatic refunds to individuals who claimed Adoption Tax Credit carryforward from prior years",
-        "date": "Oct. 16, 2026",
-        "summary": "The Internal Revenue Service has already begun issuing refunds to more than 50,000 taxpayers who benefited from the adoption tax credit carryforward and expects the refund process for most eligible taxpayers to be complete by the end of the year.",
-        "url": "https://www.irs.gov/newsroom/irs-has-begun-issuing-automatic-refunds-to-individuals-who-claimed-adoption-tax-credit-carryforward-from-prior-years"
       }
     ]
   }
