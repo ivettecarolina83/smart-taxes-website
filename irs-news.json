@@ -4,7 +4,7 @@
     "en": "https://www.irs.gov/newsroom",
     "es": "https://www.irs.gov/es/newsroom"
   },
-  "updated_at": "2026-10-22T21:35:19.534Z",
+  "updated_at": "2026-10-23T17:06:29.035Z",
   "locales": {
     "en": [
       {
@@ -14,16 +14,16 @@
         "url": "https://www.irs.gov/newsroom/irs-launches-new-mobile-app-expanding-digital-services-for-taxpayers"
       },
       {
+        "title": "IRS reminder: Year-round tax planning can make filing easier",
+        "date": "Oct. 23, 2026",
+        "summary": "The Internal Revenue Service today encouraged taxpayers to take simple steps now to make filing easier and avoid tax-time surprises next year.",
+        "url": "https://www.irs.gov/newsroom/irs-reminder-year-round-tax-planning-can-make-filing-easier"
+      },
+      {
         "title": "Treasury, IRS update retirement plan correction program and establish correction program for individual retirement accounts",
         "date": "Oct. 22, 2026",
         "summary": "The Department of the Treasury and the Internal Revenue Service today issued two revenue procedures that update the correction program for employee retirement plans and create one for Individual Retirement Accounts.",
         "url": "https://www.irs.gov/newsroom/treasury-irs-update-retirement-plan-correction-program-and-establish-correction-program-for-individual-retirement-accounts"
-      },
-      {
-        "title": "IRS reminder: Take steps now to protect tax information",
-        "date": "Oct. 22, 2026",
-        "summary": "The Internal Revenue Service today reminded taxpayers to protect their information from tax-related identity theft by safeguarding their IRS online-account credentials and obtaining an Identity Protection PIN.",
-        "url": "https://www.irs.gov/newsroom/irs-reminder-take-steps-now-to-protect-tax-information"
       }
     ],
     "es": [
@@ -34,16 +34,16 @@
         "url": "https://www.irs.gov/es/newsroom/irs-launches-new-mobile-app-expanding-digital-services-for-taxpayers"
       },
       {
+        "title": "IRS reminder: Year-round tax planning can make filing easier",
+        "date": "Oct. 23, 2026",
+        "summary": "The Internal Revenue Service today encouraged taxpayers to take simple steps now to make filing easier and avoid tax-time surprises next year.",
+        "url": "https://www.irs.gov/newsroom/irs-reminder-year-round-tax-planning-can-make-filing-easier"
+      },
+      {
         "title": "Treasury, IRS update retirement plan correction program and establish correction program for individual retirement accounts",
         "date": "Oct. 22, 2026",
         "summary": "The Department of the Treasury and the Internal Revenue Service today issued two revenue procedures that update the correction program for employee retirement plans and create one for Individual Retirement Accounts.",
         "url": "https://www.irs.gov/newsroom/treasury-irs-update-retirement-plan-correction-program-and-establish-correction-program-for-individual-retirement-accounts"
-      },
-      {
-        "title": "IRS reminder: Take steps now to protect tax information",
-        "date": "Oct. 22, 2026",
-        "summary": "The Internal Revenue Service today reminded taxpayers to protect their information from tax-related identity theft by safeguarding their IRS online-account credentials and obtaining an Identity Protection PIN.",
-        "url": "https://www.irs.gov/newsroom/irs-reminder-take-steps-now-to-protect-tax-information"
       }
     ]
   }
