@@ -4,9 +4,15 @@
     "en": "https://www.irs.gov/newsroom",
     "es": "https://www.irs.gov/es/newsroom"
   },
-  "updated_at": "2026-10-23T21:24:09.582Z",
+  "updated_at": "2026-10-29T22:44:37.775Z",
   "locales": {
     "en": [
+      {
+        "title": "Frank Bisignano Donates to Trump Accounts for Children in Brooklyn, NY",
+        "date": "October 29, 2026",
+        "summary": "Today, Frank J. Bisignano, a native of Brooklyn’s Old Mill Basin neighborhood, announced a donation from The Bisignano Family Fund to the Trump Accounts of children living in his hometown zip code.",
+        "url": "https://www.irs.gov/newsroom/frank-bisignano-donates-to-trump-accounts-for-children-in-brooklyn-ny"
+      },
       {
         "title": "IRS launches new mobile app, expanding digital services for taxpayers",
         "date": "Sept. 25, 2026",
@@ -14,19 +20,19 @@
         "url": "https://www.irs.gov/newsroom/irs-launches-new-mobile-app-expanding-digital-services-for-taxpayers"
       },
       {
-        "title": "IRS reminder: Year-round tax planning can make filing easier",
-        "date": "Oct. 23, 2026",
-        "summary": "The Internal Revenue Service today encouraged taxpayers to take simple steps now to make filing easier and avoid tax-time surprises next year.",
-        "url": "https://www.irs.gov/newsroom/irs-reminder-year-round-tax-planning-can-make-filing-easier"
-      },
-      {
-        "title": "Treasury, IRS update retirement plan correction program and establish correction program for individual retirement accounts",
-        "date": "Oct. 22, 2026",
-        "summary": "The Department of the Treasury and the Internal Revenue Service today issued two revenue procedures that update the correction program for employee retirement plans and create one for Individual Retirement Accounts.",
-        "url": "https://www.irs.gov/newsroom/treasury-irs-update-retirement-plan-correction-program-and-establish-correction-program-for-individual-retirement-accounts"
+        "title": "IRS achieved historic performance in 2026 for American taxpayers, efficiently delivering new tax benefits to working families",
+        "date": "Oct.29, 2026",
+        "summary": "The IRS announced record setting performance on behalf of American taxpayers in fiscal year (FY) 2026. Following the passage of President Donald J. Trump’s landmark Working Families Tax Cuts, the IRS collected the highest tax revenue in history and delivered record high refunds, to more people, and faster than ever before.",
+        "url": "https://www.irs.gov/newsroom/irs-achieved-historic-performance-in-2026-for-american-taxpayers-efficiently-delivering-new-tax-benefits-to-working-families"
       }
     ],
     "es": [
+      {
+        "title": "Frank Bisignano Donates to Trump Accounts for Children in Brooklyn, NY",
+        "date": "October 29, 2026",
+        "summary": "Today, Frank J. Bisignano, a native of Brooklyn’s Old Mill Basin neighborhood, announced a donation from The Bisignano Family Fund to the Trump Accounts of children living in his hometown zip code.",
+        "url": "https://www.irs.gov/newsroom/frank-bisignano-donates-to-trump-accounts-for-children-in-brooklyn-ny"
+      },
       {
         "title": "El IRS lanza nueva aplicación móvil y amplía servicios digitales para contribuyentes",
         "date": "25 de septiembre de 2026",
@@ -34,16 +40,10 @@
         "url": "https://www.irs.gov/es/newsroom/irs-launches-new-mobile-app-expanding-digital-services-for-taxpayers"
       },
       {
-        "title": "Recordatorio del IRS: La planificación tributaria durante todo el año puede facilitar la presentación de impuestos",
-        "date": "23 de octubre de 2026",
-        "summary": "El Servicio de Impuestos Internos instó hoy a los contribuyentes a tomar medidas sencillas desde ahora para facilitar la presentación de sus declaraciones y evitar sorpresas durante la próxima temporada de impuestos.",
-        "url": "https://www.irs.gov/es/newsroom/irs-reminder-year-round-tax-planning-can-make-filing-easier"
-      },
-      {
-        "title": "Treasury, IRS update retirement plan correction program and establish correction program for individual retirement accounts",
-        "date": "Oct. 22, 2026",
-        "summary": "The Department of the Treasury and the Internal Revenue Service today issued two revenue procedures that update the correction program for employee retirement plans and create one for Individual Retirement Accounts.",
-        "url": "https://www.irs.gov/newsroom/treasury-irs-update-retirement-plan-correction-program-and-establish-correction-program-for-individual-retirement-accounts"
+        "title": "IRS achieved historic performance in 2026 for American taxpayers, efficiently delivering new tax benefits to working families",
+        "date": "Oct.29, 2026",
+        "summary": "The IRS announced record setting performance on behalf of American taxpayers in fiscal year (FY) 2026. Following the passage of President Donald J. Trump’s landmark Working Families Tax Cuts, the IRS collected the highest tax revenue in history and delivered record high refunds, to more people, and faster than ever before.",
+        "url": "https://www.irs.gov/newsroom/irs-achieved-historic-performance-in-2026-for-american-taxpayers-efficiently-delivering-new-tax-benefits-to-working-families"
       }
     ]
   }
