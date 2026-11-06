@@ -4,7 +4,7 @@
     "en": "https://www.irs.gov/newsroom",
     "es": "https://www.irs.gov/es/newsroom"
   },
-  "updated_at": "2026-10-30T22:19:07.078Z",
+  "updated_at": "2026-11-06T06:44:14.181Z",
   "locales": {
     "en": [
       {
@@ -20,10 +20,10 @@
         "url": "https://www.irs.gov/newsroom/irs-launches-new-mobile-app-expanding-digital-services-for-taxpayers"
       },
       {
-        "title": "IRS achieved historic performance in 2026 for American taxpayers, efficiently delivering new tax benefits to working families",
-        "date": "Oct.29, 2026",
-        "summary": "The IRS announced record setting performance on behalf of American taxpayers in fiscal year (FY) 2026. Following the passage of President Donald J. Trump’s landmark Working Families Tax Cuts, the IRS collected the highest tax revenue in history and delivered record high refunds, to more people, and faster than ever before.",
-        "url": "https://www.irs.gov/newsroom/irs-achieved-historic-performance-in-2026-for-american-taxpayers-efficiently-delivering-new-tax-benefits-to-working-families"
+        "title": "IRS releases tax inflation adjustments for tax year 2027; taxpayers continue to benefit from the Working Families Tax Cuts",
+        "date": "Nov. 5, 2026",
+        "summary": "The Internal Revenue Service today announced the tax year 2027 annual inflation adjustments for almost 70 tax provisions, including the tax rate schedules, standard deduction amounts and other tax changes. Revenue Procedure 2026-35 provides details about these annual adjustments.",
+        "url": "https://www.irs.gov/newsroom/irs-releases-tax-inflation-adjustments-for-tax-year-2027-taxpayers-continue-to-benefit-from-the-working-families-tax-cuts"
       }
     ],
     "es": [
@@ -40,10 +40,10 @@
         "url": "https://www.irs.gov/es/newsroom/irs-launches-new-mobile-app-expanding-digital-services-for-taxpayers"
       },
       {
-        "title": "IRS achieved historic performance in 2026 for American taxpayers, efficiently delivering new tax benefits to working families",
-        "date": "Oct.29, 2026",
-        "summary": "The IRS announced record setting performance on behalf of American taxpayers in fiscal year (FY) 2026. Following the passage of President Donald J. Trump’s landmark Working Families Tax Cuts, the IRS collected the highest tax revenue in history and delivered record high refunds, to more people, and faster than ever before.",
-        "url": "https://www.irs.gov/newsroom/irs-achieved-historic-performance-in-2026-for-american-taxpayers-efficiently-delivering-new-tax-benefits-to-working-families"
+        "title": "El IRS publica ajustes por inflación para año tributario 2027; contribuyentes siguen beneficiándose de Ley de Recortes de Impuestos para Familias Trabajadoras",
+        "date": "5 de noviembre de 2026",
+        "summary": "El IRS anunció hoy los ajustes anuales por inflación para el año tributario 2027, los cuales afectan a casi 70 disposiciones tributarias, incluidas las tablas de tasas tributarias, los montos de la deducción estándar y otros cambios tributarios. El Procedimiento tributario 2026-35 ofrece detalles acerca de estos ajustes anuales.",
+        "url": "https://www.irs.gov/es/newsroom/irs-releases-tax-inflation-adjustments-for-tax-year-2027-taxpayers-continue-to-benefit-from-the-working-families-tax-cuts"
       }
     ]
   }
