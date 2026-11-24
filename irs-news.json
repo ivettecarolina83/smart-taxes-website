@@ -4,7 +4,7 @@
     "en": "https://www.irs.gov/newsroom",
     "es": "https://www.irs.gov/es/newsroom"
   },
-  "updated_at": "2026-11-18T20:30:04.144Z",
+  "updated_at": "2026-11-24T22:25:57.956Z",
   "locales": {
     "en": [
       {
@@ -14,16 +14,16 @@
         "url": "https://www.irs.gov/newsroom/irs-launches-new-mobile-app-expanding-digital-services-for-taxpayers"
       },
       {
+        "title": "Interest rates increase for the first quarter of 2027",
+        "date": "Nov. 24, 2026",
+        "summary": "The Internal Revenue Service today announced that interest rates will increase for the calendar quarter beginning January 1, 2027.",
+        "url": "https://www.irs.gov/newsroom/interest-rates-increase-for-the-first-quarter-of-2027"
+      },
+      {
         "title": "IRS announces 2027 Tax Counseling for the Elderly and Volunteer Income Tax Assistance program grants",
         "date": "Nov. 18, 2026",
         "summary": "The Internal Revenue Service today announced $58 million in grants to organizations providing free federal tax return preparation, including 49 Tax Counseling for the Elderly and 282 Volunteer Income Tax Assistance applicants.",
         "url": "https://www.irs.gov/newsroom/irs-announces-2027-tax-counseling-for-the-elderly-and-volunteer-income-tax-assistance-program-grants"
-      },
-      {
-        "title": "IRS Advisory Council issues annual public report",
-        "date": "Nov. 18, 2026",
-        "summary": "The Internal Revenue Service Advisory Council today issued its annual public report on a range of new and continuing topics in tax administration related to IRS operations, taxpayer service, compliance, tax-exempt and government entities, and information reporting.",
-        "url": "https://www.irs.gov/newsroom/irs-advisory-council-issues-annual-public-report"
       }
     ],
     "es": [
@@ -34,16 +34,16 @@
         "url": "https://www.irs.gov/es/newsroom/irs-launches-new-mobile-app-expanding-digital-services-for-taxpayers"
       },
       {
+        "title": "Interest rates increase for the first quarter of 2027",
+        "date": "Nov. 24, 2026",
+        "summary": "The Internal Revenue Service today announced that interest rates will increase for the calendar quarter beginning January 1, 2027.",
+        "url": "https://www.irs.gov/newsroom/interest-rates-increase-for-the-first-quarter-of-2027"
+      },
+      {
         "title": "IRS announces 2027 Tax Counseling for the Elderly and Volunteer Income Tax Assistance program grants",
         "date": "Nov. 18, 2026",
         "summary": "The Internal Revenue Service today announced $58 million in grants to organizations providing free federal tax return preparation, including 49 Tax Counseling for the Elderly and 282 Volunteer Income Tax Assistance applicants.",
         "url": "https://www.irs.gov/newsroom/irs-announces-2027-tax-counseling-for-the-elderly-and-volunteer-income-tax-assistance-program-grants"
-      },
-      {
-        "title": "IRS Advisory Council issues annual public report",
-        "date": "Nov. 18, 2026",
-        "summary": "The Internal Revenue Service Advisory Council today issued its annual public report on a range of new and continuing topics in tax administration related to IRS operations, taxpayer service, compliance, tax-exempt and government entities, and information reporting.",
-        "url": "https://www.irs.gov/newsroom/irs-advisory-council-issues-annual-public-report"
       }
     ]
   }
